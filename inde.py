@@ -71,7 +71,7 @@ for input_file_name in input_file_names:
     all_rows.extend(rows)
 
 # Save the concatenated data to a CSV file
-output_file_name = 'all_data_output.csv'
+output_file_name = 'output.csv'
 with open(output_file_name, 'w', newline='') as csvfile:
     csv_writer = csv.writer(csvfile)
     csv_writer.writerows(all_rows)
