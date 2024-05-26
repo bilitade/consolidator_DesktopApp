@@ -3,4 +3,6 @@
  
 
  pyinstaller --name ConsolidatorApp app.py --onefile
-pyinstaller MyApp.spec
+pyinstaller ConsolidatorApp.spec
+
+

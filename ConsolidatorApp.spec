@@ -5,7 +5,10 @@ a = Analysis(
     ['app.py'],
     pathex=[],
     binaries=[],
-    datas=[],
+    datas=[
+        ('output.csv', '.'),
+        ('branches.json', '.'),
+    ],
     hiddenimports=[],
     hookspath=[],
     hooksconfig={},
