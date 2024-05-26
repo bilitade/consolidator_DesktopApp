@@ -8,6 +8,7 @@ a = Analysis(
     datas=[
         ('output.csv', '.'),
         ('branches.json', '.'),
+        ('icon.ico', '.')
     ],
     hiddenimports=[],
     hookspath=[],
@@ -37,4 +38,5 @@ exe = EXE(
     target_arch=None,
     codesign_identity=None,
     entitlements_file=None,
+    icon='./icon.ico'
 )

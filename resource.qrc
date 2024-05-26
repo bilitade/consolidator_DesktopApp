@@ -3,4 +3,7 @@
     <file>images/applogo.png</file>
     <file>images/companylogo.png</file>
   </qresource>
+  <qresource>
+    <file>icon.ico</file>
+  </qresource>
 </RCC>

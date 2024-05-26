@@ -2,4 +2,4 @@ inputfile
 output.csv
 build
 dist
-co
+__pycache__/

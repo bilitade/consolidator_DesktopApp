@@ -13,6 +13,7 @@ class ConsolidatorApp(QMainWindow, Ui_MainWindow):
     def __init__(self) -> None:
         super().__init__()
         self.setupUi(self)
+        self.setWindowTitle("Card File Consolidator App")
         self.data_processor=DataProcessor()
         self.source_directory_line_edit.setText("./inputfile")
         self.tableWidget.setSortingEnabled(True)
@@ -28,7 +29,7 @@ class ConsolidatorApp(QMainWindow, Ui_MainWindow):
                                         "}")
 
         # Manually set the column headers
-        headers = ["4digit  CVV", "PAN ", "Expire Date", "Customer Name", "Encrypted PAN", "Product Type", "Branch Code", "Branch Name", "Request Date"]
+        headers = ["4digit + CVV", "PAN ", "Expire Date", "Customer Name", "Encrypted PAN", "Product Type", "Branch Code", "Branch Name", "Request Date"]
         self.tableWidget.setColumnCount(len(headers))
         self.tableWidget.setHorizontalHeaderLabels(headers)
 
@@ -37,31 +38,56 @@ class ConsolidatorApp(QMainWindow, Ui_MainWindow):
         header.setSectionResizeMode(QHeaderView.Stretch)
 
         # Load CSV data
-       
+        filename=os.path.join(self.base_path,'output.csv')
         self.load_csv()
 
         # Initialize sort order
         self.sort_order = Qt.AscendingOrder
         self.process_button.clicked.connect(self.process_data)
         self.browse_button.clicked.connect(self.browse_folder)
+    # def load_csv(self):
+    #     filename=os.path.join(self.base_path,'output.csv')
+    #     with open(filename, "r", newline="") as file:
+    #         csv_reader = csv.reader(file)
+    #         selected_columns = [0, 1, 2, 3, 7, 9, 10, 11, 12]
+
+    #         # Add data rows to the table
+    #         for row_data in csv_reader:
+    #             row = [row_data[col] for col in selected_columns]
+    #             row_position = self.tableWidget.rowCount()
+    #             self.tableWidget.insertRow(row_position)
+    #             for col, data in enumerate(row):
+    #                 self.tableWidget.setItem(row_position, col, QTableWidgetItem(data))
+
+    #     # Connect sectionClicked signal to sorting function
+    #     self.tableWidget.horizontalHeader().sectionClicked.connect(self.sort_by_column)
+
     def load_csv(self):
-        filename=os.path.join(self.base_path,'output.csv')
-        with open(filename, "r", newline="") as file:
-            csv_reader = csv.reader(file)
-            selected_columns = [0, 1, 2, 3, 7, 9, 10, 11, 12]
+        filename = "./output.csv"
+        
+        # Check if the file exists and is not empty
+        if os.path.exists(filename) and os.path.getsize(filename) > 0:
+            with open(filename, "r", newline="") as file:
+                csv_reader = csv.reader(file)
+                selected_columns = [0, 1, 2, 3, 7, 9, 10, 11, 12]
 
-            # Add data rows to the table
-            for row_data in csv_reader:
-                row = [row_data[col] for col in selected_columns]
-                row_position = self.tableWidget.rowCount()
-                self.tableWidget.insertRow(row_position)
-                for col, data in enumerate(row):
-                    self.tableWidget.setItem(row_position, col, QTableWidgetItem(data))
+                # Clear existing table data before loading new data
+                self.tableWidget.clearContents()
+                self.tableWidget.setRowCount(0)
 
-        # Connect sectionClicked signal to sorting function
-        self.tableWidget.horizontalHeader().sectionClicked.connect(self.sort_by_column)
+                # Add data rows to the table
+                for row_data in csv_reader:
+                    row = [row_data[col] for col in selected_columns]
+                    row_position = self.tableWidget.rowCount()
+                    self.tableWidget.insertRow(row_position)
+                    for col, data in enumerate(row):
+                        self.tableWidget.setItem(row_position, col, QTableWidgetItem(data))
 
-    
+            # Connect sectionClicked signal to sorting function
+            self.tableWidget.horizontalHeader().sectionClicked.connect(self.sort_by_column)
+        else:
+            print("CSV file is empty or does not exist.")
+
     def sort_by_column(self, logical_index):
         self.tableWidget.sortItems(logical_index, self.sort_order)
         # Toggle sort order for next click

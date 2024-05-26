@@ -4,6 +4,7 @@ import os
 import sys
 
 class DataProcessor:
+    base_path = getattr(sys, '_MEIPASS', os.path.abspath(os.path.dirname(__file__)))
     def __init__(self, base_directory=None):
         self.base_directory = base_directory or os.getcwd()
 
@@ -12,7 +13,7 @@ class DataProcessor:
         if specified_directory and os.path.isabs(specified_directory):
             return specified_directory
         else:
-            relative_path = os.path.join(self.base_directory, 'inputfile')
+            relative_path = "./inputfiles"
             if not os.path.exists(relative_path):
                 os.makedirs(relative_path)
             return relative_path
@@ -80,7 +81,7 @@ class DataProcessor:
             rows = self.parse_file(input_file_name, input_directory, branch_data)
             all_rows.extend(rows)
 
-        output_file_name = os.path.join(self.base_directory, 'output.csv')
+        output_file_name='./output.csv'
         self.save_to_csv(output_file_name, all_rows)
 
         print(f"All data has been processed and saved to '{output_file_name}'.")
