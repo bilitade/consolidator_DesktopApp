@@ -24,7 +24,7 @@ class CSVTableView(QMainWindow):
         self.setCentralWidget(central_widget)
 
         # Load CSV data
-        self.load_csv("all_data_output.csv")
+        self.load_csv("output.csv")
 
     def load_csv(self, filename):
         with open(filename, "r", newline="") as file:
@@ -32,7 +32,7 @@ class CSVTableView(QMainWindow):
             self.model = QStandardItemModel()
             for row_num, row_data in enumerate(csv_reader):
                 # Only add desired columns
-                selected_columns = [0, 1, 2, 3, 7, 8, 9, 10, 11, 12]
+                selected_columns = [0, 1, 2, 3, 7,  9, 10, 11, 12]
                 items = [QStandardItem(row_data[col]) for col in selected_columns]
                 self.model.appendRow(items)
         
