@@ -5,5 +5,4 @@ app=QApplication()
 app.setWindowIcon(QIcon(":/icon.ico"))
 window= ConsolidatorApp()
 window.show()
-
 app.exec()

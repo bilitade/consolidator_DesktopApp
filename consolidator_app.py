@@ -1,5 +1,5 @@
 import sys
-from PySide6.QtWidgets import QApplication, QMainWindow, QTableWidgetItem, QTableWidget, QHeaderView, QFileDialog, QHBoxLayout,QDialog,QLabel,QVBoxLayout,QPushButton
+from PySide6.QtWidgets import QApplication, QMainWindow, QTableWidgetItem, QTableWidget, QHeaderView, QFileDialog, QHBoxLayout,QDialog,QLabel,QVBoxLayout,QPushButton,QMessageBox
 from PySide6.QtCore import Qt
 import csv
 import os
@@ -182,19 +182,25 @@ class ConsolidatorApp(QMainWindow, Ui_MainWindow):
             if not save_path.endswith(".csv"):
                 save_path += ".csv"
                 
-            # Open the file for writing
-            with open(save_path, "w", newline="") as file:
-                writer = csv.writer(file)
-                headers = [self.tableWidget.horizontalHeaderItem(i).text() for i in range(self.tableWidget.columnCount())]
-                writer.writerow(headers)
+            try:
+                with open(save_path, "w", newline="") as file:
+                    writer = csv.writer(file)
+                    headers = [self.tableWidget.horizontalHeaderItem(i).text() for i in range(self.tableWidget.columnCount())]
+                    writer.writerow(headers)
 
-                # Write table data
-                for row in range(self.tableWidget.rowCount()):
-                    row_data = []
-                    for column in range(self.tableWidget.columnCount()):
-                        item = self.tableWidget.item(row, column)
-                        row_data.append(item.text() if item else "")
-                    writer.writerow(row_data)
+                    # Write only visible (not hidden) rows to the CSV
+                    for row in range(self.tableWidget.rowCount()):
+                        if not self.tableWidget.isRowHidden(row):
+                            row_data = []
+                            for column in range(self.tableWidget.columnCount()):
+                                item = self.tableWidget.item(row, column)
+                                row_data.append(item.text() if item else "")
+                            writer.writerow(row_data)
+
+                QMessageBox.information(self, "Success", f"Data successfully saved to {save_path}")
+            except Exception as e:
+                QMessageBox.critical(self, "Error", f"Failed to save file: {e}")
+
     def exit_application(self):
         QApplication.quit()
     def show_about_dialog(self):
