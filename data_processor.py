@@ -2,6 +2,7 @@ import csv
 import json
 import os
 import sys
+from PySide6.QtWidgets import QMessageBox
 
 class DataProcessor:
     def __init__(self, base_directory=None):
@@ -9,20 +10,36 @@ class DataProcessor:
         self.base_path = getattr(sys, '_MEIPASS', os.path.abspath(os.path.dirname(__file__)))
 
     def get_input_directory(self, specified_directory=None):
-        if specified_directory and os.path.isabs(specified_directory):
+        if specified_directory:
             return specified_directory
         else:
-            relative_path = os.path.join(self.base_directory, "inputfiles")
-            os.makedirs(relative_path, exist_ok=True)
-            return relative_path
+            return os.path.join(self.base_directory, "inputfiles")
 
-    def load_branch_data(self):
+    def load_json_data(self, filename):
         try:
-            with open(os.path.join(self.base_path, 'branches.json')) as json_file:
+            with open(os.path.join(self.base_path, filename)) as json_file:
                 return json.load(json_file)
         except FileNotFoundError:
-            print("Error: 'branches.json' file not found.")
+            print(f"Error: '{filename}' file not found.")
             return {}
+
+    def load_branch_data(self):
+        branches = self.load_json_data('branches.json')
+        districts = self.load_json_data('districts.json')
+
+        branch_data = {}
+
+        for branch_code, branch_name in branches.items():
+            district = self.find_district(branch_code, districts)
+            branch_data[branch_code] = {'name': branch_name, 'district': district}
+
+        return branch_data
+
+    def find_district(self, branch_code, districts):
+        for district, branch_codes in districts.items():
+            if branch_code in branch_codes:
+                return district
+        return 'Unknown District'
 
     def parse_file(self, file_name, input_directory, branch_data):
         file_path = os.path.join(input_directory, file_name)
@@ -48,12 +65,14 @@ class DataProcessor:
         rows = cleaned_data.split('\n')
         cleaned_rows = [row.split(',') for row in rows if row.strip()]
 
-        branch_name = branch_data.get(branch_code, 'Unknown Branch')
+        branch_info = branch_data.get(branch_code, {'name': 'Unknown Branch', 'district': 'Unknown District'})
+        branch_name = branch_info['name']
+        branch_district = branch_info['district']
         processed_rows = []
 
         for row in cleaned_rows:
             row = [column.strip() for column in row if column.strip()]
-            row.extend([product_name, branch_code, branch_name, date])
+            row.extend([product_name, branch_code, branch_name, branch_district, date])
             processed_rows.append(row)
 
         return processed_rows
@@ -71,21 +90,22 @@ class DataProcessor:
 
     def process(self, specified_directory=None):
         input_directory = self.get_input_directory(specified_directory)
-        branch_data = self.load_branch_data()
-        all_rows = []
+        if not os.path.exists(input_directory):
+            return "No folder exists. Please select the appropriate folder."
 
         input_file_names = self.get_input_file_names(input_directory)
+        if not input_file_names:
+            return "The folder is empty or does not contain embossing files."
+
+        branch_data = self.load_branch_data()
+        all_rows = []
 
         for input_file_name in input_file_names:
             rows = self.parse_file(input_file_name, input_directory, branch_data)
             all_rows.extend(rows)
 
-        output_file_name = os.path.join(self.base_directory, 'output.csv')
+        output_file_name = os.path.join(self.base_directory, './output.csv')
         self.save_to_csv(output_file_name, all_rows)
 
         print(f"All data has been processed and saved to '{output_file_name}'.")
-
-
-if __name__ == "__main__":
-    processor = DataProcessor()
-    processor.process(r"C:\Users\coop\Documents\automation projects\embossing\source_directory")
+        return "Process completed successfully"

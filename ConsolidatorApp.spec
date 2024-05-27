@@ -8,7 +8,8 @@ a = Analysis(
     datas=[
         ('output.csv', '.'),
         ('branches.json', '.'),
-        ('icon.ico', '.')
+        ('branches.json', '.'),
+        ('districts.json', '.')
     ],
     hiddenimports=[],
     hookspath=[],

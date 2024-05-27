@@ -31,7 +31,7 @@ class ConsolidatorApp(QMainWindow, Ui_MainWindow):
         
 
     def init_ui(self):
-        headers = ["4digit + CVV", "PAN", "Expire Date", "Customer Name", "Encrypted PAN", "Product Type", "Branch Code", "Branch Name", "Request Date"]
+        headers = ["4digit + CVV", "PAN", "Expire Date", "Customer Name", "Encrypted PAN", "Product Type", "Branch Code", "Branch Name", "District", "Request Date"]
         self.tableWidget.setColumnCount(len(headers))
         self.tableWidget.setHorizontalHeaderLabels(headers)
         header = self.tableWidget.horizontalHeader()
@@ -80,18 +80,17 @@ class ConsolidatorApp(QMainWindow, Ui_MainWindow):
             try:
                 with open(filename, "r", newline="") as file:
                     csv_reader = csv.reader(file)
-                    selected_columns = [0, 1, 2, 3, 7, 9, 10, 11, 12]
+                    selected_columns = [0, 1, 2, 3, 7, 9, 10, 11, 12,13]
 
                     self.tableWidget.clearContents()
                     self.tableWidget.setRowCount(0)
 
                     for row_data in csv_reader:
-                        if row_data:
-                            row = [row_data[col] for col in selected_columns]
-                            row_position = self.tableWidget.rowCount()
-                            self.tableWidget.insertRow(row_position)
-                            for col, data in enumerate(row):
-                                self.tableWidget.setItem(row_position, col, QTableWidgetItem(data))
+                        row = [row_data[col] for col in selected_columns]
+                        row_position = self.tableWidget.rowCount()
+                        self.tableWidget.insertRow(row_position)
+                        for col, data in enumerate(row):
+                            self.tableWidget.setItem(row_position, col, QTableWidgetItem(data))
 
                 self.tableWidget.horizontalHeader().sectionClicked.connect(self.sort_by_column)
             except Exception as e:
@@ -99,18 +98,20 @@ class ConsolidatorApp(QMainWindow, Ui_MainWindow):
         else:
             print("CSV file does not exist.")
 
-
-
-
     def sort_by_column(self, logical_index):
         self.tableWidget.sortItems(logical_index, self.sort_order)
         self.sort_order = Qt.DescendingOrder if self.sort_order == Qt.AscendingOrder else Qt.AscendingOrder
 
     def process_data(self):
         source_dir = self.source_directory_line_edit.text()
-        self.data_processor.process(source_dir)
-        self.load_csv()
-        self.statusBar().showMessage("Process completed successfully", 5000)
+        result = self.data_processor.process(source_dir)
+        if result == "No folder exists. Please select the appropriate folder.":
+            QMessageBox.critical(self, "Error", result)
+        elif result == "The folder is empty or does not contain embossing files.":
+            QMessageBox.critical(self, "Error", result)
+        else:
+            self.load_csv()
+            self.statusBar().showMessage(result, 5000)
 
     def browse_folder(self):
         folder_path = QFileDialog.getExistingDirectory(self, "Select Directory")
