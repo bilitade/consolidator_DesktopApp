@@ -1,5 +1,6 @@
- pyside6-uic ConsolidatorApp.ui >> ConsolidatorApp_ui.py
- pyside6-rcc resource.qrc -o resource_rc.py
+pyside6-uic ConsolidatorApp.ui >> ConsolidatorApp_ui.py
+pyside6-uic About.ui >> About_ui.py
+pyside6-rcc resource.qrc -o resource_rc.py
  
 
  pyinstaller --name ConsolidatorApp app.py --onefile

@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1213</width>
-    <height>935</height>
+    <width>1439</width>
+    <height>895</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -22,6 +22,7 @@
                 border-radius: 2px;  /* Remove border radius */
                 font-size: 1rem;  /* Font size */
                 margin: 0;  /* Remove margin */
+              
             }
             QPushButton:hover {
                 background-color: #0099CC;  /* Slightly darker blue for hover */
@@ -31,7 +32,7 @@
             }
 
  QLineEdit {
-                padding: 2px;
+                padding: 1px;
                 border: 1px solid #ccc;
                 border-radius: 10px; /* Rounded corners */
                 font-size: 16px;
@@ -39,12 +40,19 @@
             QLineEdit:focus {
                 border: 1px solid #00AEEF; /* Blue border when focused */
             }
+
+QComboBox,QDateEdit{
+   font-size: 14px;
+
+
+}
+
           </string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QGridLayout" name="gridLayout_2">
     <item row="0" column="0">
-     <layout class="QGridLayout" name="gridLayout" columnstretch="0,0,0">
+     <layout class="QGridLayout" name="gridLayout" columnstretch="1,1,1">
       <item row="1" column="2">
        <widget class="QFrame" name="frame_3">
         <property name="frameShape">
@@ -63,6 +71,9 @@
             <widget class="QPushButton" name="search_button">
              <property name="text">
               <string>Search</string>
+             </property>
+             <property name="icon">
+              <iconset theme="edit-find"/>
              </property>
             </widget>
            </item>
@@ -87,50 +98,26 @@
           <number>6</number>
          </property>
          <item>
-          <widget class="QComboBox" name="comboBox_2">
-           <item>
-            <property name="text">
-             <string>Branch</string>
-            </property>
-           </item>
-          </widget>
-         </item>
-         <item>
-          <widget class="QComboBox" name="comboBox">
-           <property name="frame">
-            <bool>true</bool>
-           </property>
-           <item>
-            <property name="text">
-             <string>Product </string>
-            </property>
-           </item>
-          </widget>
-         </item>
-         <item>
-          <widget class="QDateEdit" name="dateEdit">
-           <property name="calendarPopup">
-            <bool>true</bool>
-           </property>
-           <property name="currentSectionIndex">
-            <number>2</number>
-           </property>
-           <property name="timeSpec">
-            <enum>Qt::TimeSpec::UTC</enum>
-           </property>
-           <property name="date">
-            <date>
-             <year>2024</year>
-             <month>1</month>
-             <day>1</day>
-            </date>
+          <widget class="QComboBox" name="branch_comboBox">
+           <property name="placeholderText">
+            <string>Branch</string>
            </property>
           </widget>
          </item>
          <item>
-          <widget class="QPushButton" name="pushButton_4">
+          <widget class="QComboBox" name="product_combobox">
+           <property name="placeholderText">
+            <string>Product</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="reset_filter">
            <property name="text">
-            <string>Filter</string>
+            <string>Reset Filters</string>
+           </property>
+           <property name="icon">
+            <iconset theme="view-refresh"/>
            </property>
           </widget>
          </item>
@@ -163,6 +150,9 @@
              <property name="text">
               <string>Browse</string>
              </property>
+             <property name="icon">
+              <iconset theme="folder"/>
+             </property>
             </widget>
            </item>
           </layout>
@@ -171,6 +161,9 @@
           <widget class="QPushButton" name="process_button">
            <property name="text">
             <string>Process</string>
+           </property>
+           <property name="icon">
+            <iconset theme="document-properties"/>
            </property>
            <property name="flat">
             <bool>false</bool>
@@ -267,7 +260,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1213</width>
+     <width>1439</width>
      <height>33</height>
     </rect>
    </property>
@@ -275,11 +268,14 @@
     <property name="title">
      <string>File</string>
     </property>
+    <addaction name="actionSave_as_CSV"/>
+    <addaction name="actionExit"/>
    </widget>
    <widget class="QMenu" name="menuAbout">
     <property name="title">
      <string>About</string>
     </property>
+    <addaction name="actionDeveloper"/>
    </widget>
    <widget class="QMenu" name="menuHelp">
     <property name="title">
@@ -295,6 +291,21 @@
   <action name="actionDocumentation">
    <property name="text">
     <string>Documentation</string>
+   </property>
+  </action>
+  <action name="actionSave_as_CSV">
+   <property name="text">
+    <string>Save as CSV</string>
+   </property>
+  </action>
+  <action name="actionExit">
+   <property name="text">
+    <string>Exit </string>
+   </property>
+  </action>
+  <action name="actionDeveloper">
+   <property name="text">
+    <string>Developer</string>
    </property>
   </action>
  </widget>
