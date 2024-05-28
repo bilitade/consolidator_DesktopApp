@@ -7331,3 +7331,4558 @@ class Ui_MainWindow(object):
         self.menuHelp.setTitle(QCoreApplication.translate("MainWindow", u"Help", None))
     # retranslateUi
 
+# -*- coding: utf-8 -*-
+
+################################################################################
+## Form generated from reading UI file 'ConsolidatorApp.ui'
+##
+## Created by: Qt User Interface Compiler version 6.7.0
+##
+## WARNING! All changes made in this file will be lost when recompiling UI file!
+################################################################################
+
+from PySide6.QtCore import (QCoreApplication, QDate, QDateTime, QLocale,
+    QMetaObject, QObject, QPoint, QRect,
+    QSize, QTime, QUrl, Qt)
+from PySide6.QtGui import (QAction, QBrush, QColor, QConicalGradient,
+    QCursor, QFont, QFontDatabase, QGradient,
+    QIcon, QImage, QKeySequence, QLinearGradient,
+    QPainter, QPalette, QPixmap, QRadialGradient,
+    QTransform)
+from PySide6.QtWidgets import (QApplication, QComboBox, QFrame, QGridLayout,
+    QHBoxLayout, QHeaderView, QLabel, QLineEdit,
+    QMainWindow, QMenu, QMenuBar, QPushButton,
+    QSizePolicy, QStatusBar, QTableWidget, QTableWidgetItem,
+    QWidget)
+import resource_rc
+
+class Ui_MainWindow(object):
+    def setupUi(self, MainWindow):
+        if not MainWindow.objectName():
+            MainWindow.setObjectName(u"MainWindow")
+        MainWindow.resize(1116, 833)
+        MainWindow.setStyleSheet(u"\n"
+"QPushButton {\n"
+"                background-color: #00AEEF;  /* Primary color */\n"
+"                color: #ffffff;  /* Text color */\n"
+"                padding: 5px 10px;  /* Padding */\n"
+"                border: none;  /* No border */\n"
+"                border-radius: 2px;  /* Remove border radius */\n"
+"                font-size: 1rem;  /* Font size */\n"
+"                margin: 0;  /* Remove margin */\n"
+"               font-size: 12px;\n"
+"              \n"
+"            }\n"
+"            QPushButton:hover {\n"
+"                background-color: #0099CC;  /* Slightly darker blue for hover */\n"
+"\n"
+"            }\n"
+"            QPushButton:pressed {\n"
+"                background-color: #0088BB;  /* Even darker blue for pressed */\n"
+"            }\n"
+"\n"
+" QLineEdit {\n"
+"                padding: 1px;\n"
+"                border: 1px solid #ccc;\n"
+"                font-size: 12px;\n"
+"                border-radius: 5px; /* Rounded corners */\n"
+"             \n"
+"            }\n"
+"          "
+                        "  QLineEdit:focus {\n"
+"                border: 1px solid #00AEEF; /* Blue border when focused */\n"
+"            }\n"
+"\n"
+"QComboBox,QDateEdit{\n"
+"   font-size: 12px;\n"
+"\n"
+"\n"
+"}\n"
+"\n"
+"          ")
+        self.actionDocumentation = QAction(MainWindow)
+        self.actionDocumentation.setObjectName(u"actionDocumentation")
+        self.actionSave_as_CSV = QAction(MainWindow)
+        self.actionSave_as_CSV.setObjectName(u"actionSave_as_CSV")
+        self.actionExit = QAction(MainWindow)
+        self.actionExit.setObjectName(u"actionExit")
+        self.actionDeveloper = QAction(MainWindow)
+        self.actionDeveloper.setObjectName(u"actionDeveloper")
+        self.centralwidget = QWidget(MainWindow)
+        self.centralwidget.setObjectName(u"centralwidget")
+        self.gridLayout_2 = QGridLayout(self.centralwidget)
+        self.gridLayout_2.setObjectName(u"gridLayout_2")
+        self.gridLayout = QGridLayout()
+        self.gridLayout.setObjectName(u"gridLayout")
+        self.frame_3 = QFrame(self.centralwidget)
+        self.frame_3.setObjectName(u"frame_3")
+        self.frame_3.setFrameShape(QFrame.Shape.StyledPanel)
+        self.frame_3.setFrameShadow(QFrame.Shadow.Raised)
+        self.horizontalLayout_4 = QHBoxLayout(self.frame_3)
+        self.horizontalLayout_4.setObjectName(u"horizontalLayout_4")
+        self.horizontalLayout_2 = QHBoxLayout()
+        self.horizontalLayout_2.setObjectName(u"horizontalLayout_2")
+        self.search_line_edit = QLineEdit(self.frame_3)
+        self.search_line_edit.setObjectName(u"search_line_edit")
+
+        self.horizontalLayout_2.addWidget(self.search_line_edit)
+
+        self.search_button = QPushButton(self.frame_3)
+        self.search_button.setObjectName(u"search_button")
+        icon = QIcon(QIcon.fromTheme(u"edit-find"))
+        self.search_button.setIcon(icon)
+
+        self.horizontalLayout_2.addWidget(self.search_button)
+
+
+        self.horizontalLayout_4.addLayout(self.horizontalLayout_2)
+
+
+        self.gridLayout.addWidget(self.frame_3, 1, 2, 1, 1)
+
+        self.frame_4 = QFrame(self.centralwidget)
+        self.frame_4.setObjectName(u"frame_4")
+        self.frame_4.setFrameShape(QFrame.Shape.StyledPanel)
+        self.frame_4.setFrameShadow(QFrame.Shadow.Raised)
+        self.horizontalLayout_6 = QHBoxLayout(self.frame_4)
+        self.horizontalLayout_6.setSpacing(20)
+        self.horizontalLayout_6.setObjectName(u"horizontalLayout_6")
+        self.horizontalLayout_6.setContentsMargins(6, -1, -1, -1)
+        self.branch_comboBox = QComboBox(self.frame_4)
+        self.branch_comboBox.setObjectName(u"branch_comboBox")
+
+        self.horizontalLayout_6.addWidget(self.branch_comboBox)
+
+        self.product_combobox = QComboBox(self.frame_4)
+        self.product_combobox.setObjectName(u"product_combobox")
+
+        self.horizontalLayout_6.addWidget(self.product_combobox)
+
+        self.comboBox = QComboBox(self.frame_4)
+        self.comboBox.setObjectName(u"comboBox")
+
+        self.horizontalLayout_6.addWidget(self.comboBox)
+
+        self.reset_filter = QPushButton(self.frame_4)
+        self.reset_filter.setObjectName(u"reset_filter")
+        icon1 = QIcon(QIcon.fromTheme(u"view-refresh"))
+        self.reset_filter.setIcon(icon1)
+
+        self.horizontalLayout_6.addWidget(self.reset_filter)
+
+
+        self.gridLayout.addWidget(self.frame_4, 1, 1, 1, 1)
+
+        self.frame_2 = QFrame(self.centralwidget)
+        self.frame_2.setObjectName(u"frame_2")
+        self.frame_2.setFrameShape(QFrame.Shape.StyledPanel)
+        self.frame_2.setFrameShadow(QFrame.Shadow.Raised)
+        self.horizontalLayout_5 = QHBoxLayout(self.frame_2)
+        self.horizontalLayout_5.setObjectName(u"horizontalLayout_5")
+        self.horizontalLayout = QHBoxLayout()
+        self.horizontalLayout.setObjectName(u"horizontalLayout")
+        self.label_2 = QLabel(self.frame_2)
+        self.label_2.setObjectName(u"label_2")
+
+        self.horizontalLayout.addWidget(self.label_2)
+
+        self.source_directory_line_edit = QLineEdit(self.frame_2)
+        self.source_directory_line_edit.setObjectName(u"source_directory_line_edit")
+
+        self.horizontalLayout.addWidget(self.source_directory_line_edit)
+
+        self.browse_button = QPushButton(self.frame_2)
+        self.browse_button.setObjectName(u"browse_button")
+        icon2 = QIcon(QIcon.fromTheme(u"folder"))
+        self.browse_button.setIcon(icon2)
+
+        self.horizontalLayout.addWidget(self.browse_button)
+
+
+        self.horizontalLayout_5.addLayout(self.horizontalLayout)
+
+        self.process_button = QPushButton(self.frame_2)
+        self.process_button.setObjectName(u"process_button")
+        icon3 = QIcon(QIcon.fromTheme(u"document-properties"))
+        self.process_button.setIcon(icon3)
+        self.process_button.setFlat(False)
+
+        self.horizontalLayout_5.addWidget(self.process_button)
+
+        self.pushButton = QPushButton(self.frame_2)
+        self.pushButton.setObjectName(u"pushButton")
+        icon4 = QIcon(QIcon.fromTheme(u"document-new"))
+        self.pushButton.setIcon(icon4)
+
+        self.horizontalLayout_5.addWidget(self.pushButton)
+
+
+        self.gridLayout.addWidget(self.frame_2, 1, 0, 1, 1)
+
+        self.tableWidget = QTableWidget(self.centralwidget)
+        if (self.tableWidget.columnCount() < 4):
+            self.tableWidget.setColumnCount(4)
+        __qtablewidgetitem = QTableWidgetItem()
+        self.tableWidget.setHorizontalHeaderItem(0, __qtablewidgetitem)
+        __qtablewidgetitem1 = QTableWidgetItem()
+        self.tableWidget.setHorizontalHeaderItem(1, __qtablewidgetitem1)
+        __qtablewidgetitem2 = QTableWidgetItem()
+        self.tableWidget.setHorizontalHeaderItem(2, __qtablewidgetitem2)
+        __qtablewidgetitem3 = QTableWidgetItem()
+        self.tableWidget.setHorizontalHeaderItem(3, __qtablewidgetitem3)
+        self.tableWidget.setObjectName(u"tableWidget")
+
+        self.gridLayout.addWidget(self.tableWidget, 3, 0, 1, 3)
+
+        self.horizontalLayout_3 = QHBoxLayout()
+        self.horizontalLayout_3.setObjectName(u"horizontalLayout_3")
+        self.label = QLabel(self.centralwidget)
+        self.label.setObjectName(u"label")
+        self.label.setMinimumSize(QSize(156, 146))
+        self.label.setMaximumSize(QSize(156, 156))
+        self.label.setPixmap(QPixmap(u":/images/images/companylogo.png"))
+        self.label.setScaledContents(True)
+
+        self.horizontalLayout_3.addWidget(self.label)
+
+        self.label_3 = QLabel(self.centralwidget)
+        self.label_3.setObjectName(u"label_3")
+        self.label_3.setMinimumSize(QSize(156, 156))
+        self.label_3.setMaximumSize(QSize(156, 156))
+        self.label_3.setPixmap(QPixmap(u":/images/images/applogo.png"))
+        self.label_3.setScaledContents(True)
+
+        self.horizontalLayout_3.addWidget(self.label_3)
+
+
+        self.gridLayout.addLayout(self.horizontalLayout_3, 0, 0, 1, 3)
+
+        self.gridLayout.setColumnStretch(0, 1)
+        self.gridLayout.setColumnStretch(1, 1)
+        self.gridLayout.setColumnStretch(2, 1)
+
+        self.gridLayout_2.addLayout(self.gridLayout, 0, 0, 1, 1)
+
+        MainWindow.setCentralWidget(self.centralwidget)
+        self.menubar = QMenuBar(MainWindow)
+        self.menubar.setObjectName(u"menubar")
+        self.menubar.setGeometry(QRect(0, 0, 1116, 33))
+        self.menuFile = QMenu(self.menubar)
+        self.menuFile.setObjectName(u"menuFile")
+        self.menuAbout = QMenu(self.menubar)
+        self.menuAbout.setObjectName(u"menuAbout")
+        self.menuHelp = QMenu(self.menubar)
+        self.menuHelp.setObjectName(u"menuHelp")
+        MainWindow.setMenuBar(self.menubar)
+        self.statusbar = QStatusBar(MainWindow)
+        self.statusbar.setObjectName(u"statusbar")
+        MainWindow.setStatusBar(self.statusbar)
+
+        self.menubar.addAction(self.menuFile.menuAction())
+        self.menubar.addAction(self.menuAbout.menuAction())
+        self.menubar.addAction(self.menuHelp.menuAction())
+        self.menuFile.addAction(self.actionSave_as_CSV)
+        self.menuFile.addAction(self.actionExit)
+        self.menuAbout.addAction(self.actionDeveloper)
+        self.menuHelp.addAction(self.actionDocumentation)
+
+        self.retranslateUi(MainWindow)
+
+        QMetaObject.connectSlotsByName(MainWindow)
+    # setupUi
+
+    def retranslateUi(self, MainWindow):
+        MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"MainWindow", None))
+        self.actionDocumentation.setText(QCoreApplication.translate("MainWindow", u"Documentation", None))
+        self.actionSave_as_CSV.setText(QCoreApplication.translate("MainWindow", u"Save as CSV", None))
+        self.actionExit.setText(QCoreApplication.translate("MainWindow", u"Exit ", None))
+        self.actionDeveloper.setText(QCoreApplication.translate("MainWindow", u"Developer", None))
+        self.search_button.setText(QCoreApplication.translate("MainWindow", u"Search", None))
+        self.branch_comboBox.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Branch", None))
+        self.product_combobox.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Product", None))
+        self.comboBox.setPlaceholderText(QCoreApplication.translate("MainWindow", u"District", None))
+        self.reset_filter.setText(QCoreApplication.translate("MainWindow", u"Reset Filters", None))
+        self.label_2.setText(QCoreApplication.translate("MainWindow", u"Source Directory ", None))
+#if QT_CONFIG(tooltip)
+        self.browse_button.setToolTip(QCoreApplication.translate("MainWindow", u"choose path to Embossing File", None))
+#endif // QT_CONFIG(tooltip)
+        self.browse_button.setText(QCoreApplication.translate("MainWindow", u"Browse", None))
+#if QT_CONFIG(tooltip)
+        self.process_button.setToolTip(QCoreApplication.translate("MainWindow", u"Process Embossing File to CSV ", None))
+#endif // QT_CONFIG(tooltip)
+        self.process_button.setText(QCoreApplication.translate("MainWindow", u"Process CSV", None))
+#if QT_CONFIG(tooltip)
+        self.pushButton.setToolTip(QCoreApplication.translate("MainWindow", u"Merge Embossing file by Date", None))
+#endif // QT_CONFIG(tooltip)
+        self.pushButton.setText(QCoreApplication.translate("MainWindow", u"Merge Emboss", None))
+        ___qtablewidgetitem = self.tableWidget.horizontalHeaderItem(0)
+        ___qtablewidgetitem.setText(QCoreApplication.translate("MainWindow", u"4-digit + CVV", None));
+        ___qtablewidgetitem1 = self.tableWidget.horizontalHeaderItem(1)
+        ___qtablewidgetitem1.setText(QCoreApplication.translate("MainWindow", u"PAN", None));
+        ___qtablewidgetitem2 = self.tableWidget.horizontalHeaderItem(2)
+        ___qtablewidgetitem2.setText(QCoreApplication.translate("MainWindow", u"Expiry Date", None));
+        ___qtablewidgetitem3 = self.tableWidget.horizontalHeaderItem(3)
+        ___qtablewidgetitem3.setText(QCoreApplication.translate("MainWindow", u"Customer Name", None));
+        self.label.setText("")
+        self.label_3.setText("")
+        self.menuFile.setTitle(QCoreApplication.translate("MainWindow", u"File", None))
+        self.menuAbout.setTitle(QCoreApplication.translate("MainWindow", u"About", None))
+#if QT_CONFIG(tooltip)
+        self.menuHelp.setToolTip("")
+#endif // QT_CONFIG(tooltip)
+        self.menuHelp.setTitle(QCoreApplication.translate("MainWindow", u"Help", None))
+    # retranslateUi
+
+# -*- coding: utf-8 -*-
+
+################################################################################
+## Form generated from reading UI file 'ConsolidatorApp.ui'
+##
+## Created by: Qt User Interface Compiler version 6.7.0
+##
+## WARNING! All changes made in this file will be lost when recompiling UI file!
+################################################################################
+
+from PySide6.QtCore import (QCoreApplication, QDate, QDateTime, QLocale,
+    QMetaObject, QObject, QPoint, QRect,
+    QSize, QTime, QUrl, Qt)
+from PySide6.QtGui import (QAction, QBrush, QColor, QConicalGradient,
+    QCursor, QFont, QFontDatabase, QGradient,
+    QIcon, QImage, QKeySequence, QLinearGradient,
+    QPainter, QPalette, QPixmap, QRadialGradient,
+    QTransform)
+from PySide6.QtWidgets import (QApplication, QComboBox, QFrame, QGridLayout,
+    QHBoxLayout, QHeaderView, QLabel, QLineEdit,
+    QMainWindow, QMenu, QMenuBar, QPushButton,
+    QSizePolicy, QStatusBar, QTableWidget, QTableWidgetItem,
+    QWidget)
+import resource_rc
+
+class Ui_MainWindow(object):
+    def setupUi(self, MainWindow):
+        if not MainWindow.objectName():
+            MainWindow.setObjectName(u"MainWindow")
+        MainWindow.resize(1142, 792)
+        MainWindow.setStyleSheet(u"\n"
+"QPushButton {\n"
+"                background-color: #00AEEF;  /* Primary color */\n"
+"                color: #ffffff;  /* Text color */\n"
+"                padding: 5px 10px;  /* Padding */\n"
+"                border: none;  /* No border */\n"
+"                border-radius: 2px;  /* Remove border radius */\n"
+"                font-size: 1rem;  /* Font size */\n"
+"                margin: 0;  /* Remove margin */\n"
+"               font-size: 12px;\n"
+"              \n"
+"            }\n"
+"            QPushButton:hover {\n"
+"                background-color: #0099CC;  /* Slightly darker blue for hover */\n"
+"\n"
+"            }\n"
+"            QPushButton:pressed {\n"
+"                background-color: #0088BB;  /* Even darker blue for pressed */\n"
+"            }\n"
+"\n"
+" QLineEdit {\n"
+"                padding: 1px;\n"
+"                border: 1px solid #ccc;\n"
+"                font-size: 12px;\n"
+"                border-radius: 5px; /* Rounded corners */\n"
+"             \n"
+"            }\n"
+"          "
+                        "  QLineEdit:focus {\n"
+"                border: 1px solid #00AEEF; /* Blue border when focused */\n"
+"            }\n"
+"\n"
+"QComboBox,QDateEdit{\n"
+"   font-size: 12px;\n"
+"\n"
+"\n"
+"}\n"
+"\n"
+"          ")
+        self.actionDocumentation = QAction(MainWindow)
+        self.actionDocumentation.setObjectName(u"actionDocumentation")
+        self.actionSave_as_CSV = QAction(MainWindow)
+        self.actionSave_as_CSV.setObjectName(u"actionSave_as_CSV")
+        self.actionExit = QAction(MainWindow)
+        self.actionExit.setObjectName(u"actionExit")
+        self.actionDeveloper = QAction(MainWindow)
+        self.actionDeveloper.setObjectName(u"actionDeveloper")
+        self.centralwidget = QWidget(MainWindow)
+        self.centralwidget.setObjectName(u"centralwidget")
+        self.gridLayout_2 = QGridLayout(self.centralwidget)
+        self.gridLayout_2.setObjectName(u"gridLayout_2")
+        self.gridLayout = QGridLayout()
+        self.gridLayout.setObjectName(u"gridLayout")
+        self.frame_3 = QFrame(self.centralwidget)
+        self.frame_3.setObjectName(u"frame_3")
+        self.frame_3.setFrameShape(QFrame.Shape.StyledPanel)
+        self.frame_3.setFrameShadow(QFrame.Shadow.Raised)
+        self.horizontalLayout_4 = QHBoxLayout(self.frame_3)
+        self.horizontalLayout_4.setObjectName(u"horizontalLayout_4")
+        self.horizontalLayout_2 = QHBoxLayout()
+        self.horizontalLayout_2.setObjectName(u"horizontalLayout_2")
+        self.search_line_edit = QLineEdit(self.frame_3)
+        self.search_line_edit.setObjectName(u"search_line_edit")
+
+        self.horizontalLayout_2.addWidget(self.search_line_edit)
+
+        self.search_button = QPushButton(self.frame_3)
+        self.search_button.setObjectName(u"search_button")
+        icon = QIcon(QIcon.fromTheme(u"edit-find"))
+        self.search_button.setIcon(icon)
+
+        self.horizontalLayout_2.addWidget(self.search_button)
+
+
+        self.horizontalLayout_4.addLayout(self.horizontalLayout_2)
+
+
+        self.gridLayout.addWidget(self.frame_3, 1, 2, 1, 1)
+
+        self.frame_4 = QFrame(self.centralwidget)
+        self.frame_4.setObjectName(u"frame_4")
+        self.frame_4.setFrameShape(QFrame.Shape.StyledPanel)
+        self.frame_4.setFrameShadow(QFrame.Shadow.Raised)
+        self.horizontalLayout_6 = QHBoxLayout(self.frame_4)
+        self.horizontalLayout_6.setSpacing(20)
+        self.horizontalLayout_6.setObjectName(u"horizontalLayout_6")
+        self.horizontalLayout_6.setContentsMargins(6, -1, -1, -1)
+        self.branch_comboBox = QComboBox(self.frame_4)
+        self.branch_comboBox.setObjectName(u"branch_comboBox")
+
+        self.horizontalLayout_6.addWidget(self.branch_comboBox)
+
+        self.product_combobox = QComboBox(self.frame_4)
+        self.product_combobox.setObjectName(u"product_combobox")
+
+        self.horizontalLayout_6.addWidget(self.product_combobox)
+
+        self.comboBox = QComboBox(self.frame_4)
+        self.comboBox.setObjectName(u"comboBox")
+
+        self.horizontalLayout_6.addWidget(self.comboBox)
+
+        self.reset_filter = QPushButton(self.frame_4)
+        self.reset_filter.setObjectName(u"reset_filter")
+        icon1 = QIcon(QIcon.fromTheme(u"view-refresh"))
+        self.reset_filter.setIcon(icon1)
+
+        self.horizontalLayout_6.addWidget(self.reset_filter)
+
+
+        self.gridLayout.addWidget(self.frame_4, 1, 1, 1, 1)
+
+        self.frame_2 = QFrame(self.centralwidget)
+        self.frame_2.setObjectName(u"frame_2")
+        self.frame_2.setFrameShape(QFrame.Shape.StyledPanel)
+        self.frame_2.setFrameShadow(QFrame.Shadow.Raised)
+        self.horizontalLayout_5 = QHBoxLayout(self.frame_2)
+        self.horizontalLayout_5.setObjectName(u"horizontalLayout_5")
+        self.horizontalLayout = QHBoxLayout()
+        self.horizontalLayout.setObjectName(u"horizontalLayout")
+        self.label_2 = QLabel(self.frame_2)
+        self.label_2.setObjectName(u"label_2")
+
+        self.horizontalLayout.addWidget(self.label_2)
+
+        self.source_directory_line_edit = QLineEdit(self.frame_2)
+        self.source_directory_line_edit.setObjectName(u"source_directory_line_edit")
+
+        self.horizontalLayout.addWidget(self.source_directory_line_edit)
+
+        self.browse_button = QPushButton(self.frame_2)
+        self.browse_button.setObjectName(u"browse_button")
+        icon2 = QIcon(QIcon.fromTheme(u"folder"))
+        self.browse_button.setIcon(icon2)
+
+        self.horizontalLayout.addWidget(self.browse_button)
+
+
+        self.horizontalLayout_5.addLayout(self.horizontalLayout)
+
+        self.process_button = QPushButton(self.frame_2)
+        self.process_button.setObjectName(u"process_button")
+        icon3 = QIcon(QIcon.fromTheme(u"document-properties"))
+        self.process_button.setIcon(icon3)
+        self.process_button.setFlat(False)
+
+        self.horizontalLayout_5.addWidget(self.process_button)
+
+        self.pushButton = QPushButton(self.frame_2)
+        self.pushButton.setObjectName(u"pushButton")
+        icon4 = QIcon(QIcon.fromTheme(u"document-new"))
+        self.pushButton.setIcon(icon4)
+
+        self.horizontalLayout_5.addWidget(self.pushButton)
+
+
+        self.gridLayout.addWidget(self.frame_2, 1, 0, 1, 1)
+
+        self.tableWidget = QTableWidget(self.centralwidget)
+        if (self.tableWidget.columnCount() < 4):
+            self.tableWidget.setColumnCount(4)
+        __qtablewidgetitem = QTableWidgetItem()
+        self.tableWidget.setHorizontalHeaderItem(0, __qtablewidgetitem)
+        __qtablewidgetitem1 = QTableWidgetItem()
+        self.tableWidget.setHorizontalHeaderItem(1, __qtablewidgetitem1)
+        __qtablewidgetitem2 = QTableWidgetItem()
+        self.tableWidget.setHorizontalHeaderItem(2, __qtablewidgetitem2)
+        __qtablewidgetitem3 = QTableWidgetItem()
+        self.tableWidget.setHorizontalHeaderItem(3, __qtablewidgetitem3)
+        self.tableWidget.setObjectName(u"tableWidget")
+
+        self.gridLayout.addWidget(self.tableWidget, 3, 0, 1, 3)
+
+        self.horizontalLayout_3 = QHBoxLayout()
+        self.horizontalLayout_3.setObjectName(u"horizontalLayout_3")
+        self.label = QLabel(self.centralwidget)
+        self.label.setObjectName(u"label")
+        self.label.setMinimumSize(QSize(156, 146))
+        self.label.setMaximumSize(QSize(156, 156))
+        self.label.setPixmap(QPixmap(u":/images/images/companylogo.png"))
+        self.label.setScaledContents(True)
+
+        self.horizontalLayout_3.addWidget(self.label)
+
+        self.label_3 = QLabel(self.centralwidget)
+        self.label_3.setObjectName(u"label_3")
+        self.label_3.setMinimumSize(QSize(156, 156))
+        self.label_3.setMaximumSize(QSize(156, 156))
+        self.label_3.setPixmap(QPixmap(u":/images/images/applogo.png"))
+        self.label_3.setScaledContents(True)
+
+        self.horizontalLayout_3.addWidget(self.label_3)
+
+
+        self.gridLayout.addLayout(self.horizontalLayout_3, 0, 0, 1, 3)
+
+        self.gridLayout.setColumnStretch(0, 2)
+        self.gridLayout.setColumnStretch(1, 1)
+        self.gridLayout.setColumnStretch(2, 1)
+
+        self.gridLayout_2.addLayout(self.gridLayout, 0, 0, 1, 1)
+
+        MainWindow.setCentralWidget(self.centralwidget)
+        self.menubar = QMenuBar(MainWindow)
+        self.menubar.setObjectName(u"menubar")
+        self.menubar.setGeometry(QRect(0, 0, 1142, 33))
+        self.menuFile = QMenu(self.menubar)
+        self.menuFile.setObjectName(u"menuFile")
+        self.menuAbout = QMenu(self.menubar)
+        self.menuAbout.setObjectName(u"menuAbout")
+        self.menuHelp = QMenu(self.menubar)
+        self.menuHelp.setObjectName(u"menuHelp")
+        MainWindow.setMenuBar(self.menubar)
+        self.statusbar = QStatusBar(MainWindow)
+        self.statusbar.setObjectName(u"statusbar")
+        MainWindow.setStatusBar(self.statusbar)
+
+        self.menubar.addAction(self.menuFile.menuAction())
+        self.menubar.addAction(self.menuAbout.menuAction())
+        self.menubar.addAction(self.menuHelp.menuAction())
+        self.menuFile.addAction(self.actionSave_as_CSV)
+        self.menuFile.addAction(self.actionExit)
+        self.menuAbout.addAction(self.actionDeveloper)
+        self.menuHelp.addAction(self.actionDocumentation)
+
+        self.retranslateUi(MainWindow)
+
+        QMetaObject.connectSlotsByName(MainWindow)
+    # setupUi
+
+    def retranslateUi(self, MainWindow):
+        MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"MainWindow", None))
+        self.actionDocumentation.setText(QCoreApplication.translate("MainWindow", u"Documentation", None))
+        self.actionSave_as_CSV.setText(QCoreApplication.translate("MainWindow", u"Save as CSV", None))
+        self.actionExit.setText(QCoreApplication.translate("MainWindow", u"Exit ", None))
+        self.actionDeveloper.setText(QCoreApplication.translate("MainWindow", u"Developer", None))
+        self.search_button.setText(QCoreApplication.translate("MainWindow", u"Search", None))
+        self.branch_comboBox.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Branch", None))
+        self.product_combobox.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Product", None))
+        self.comboBox.setPlaceholderText(QCoreApplication.translate("MainWindow", u"District", None))
+        self.reset_filter.setText(QCoreApplication.translate("MainWindow", u"Reset Filters", None))
+        self.label_2.setText(QCoreApplication.translate("MainWindow", u"Source Directory ", None))
+#if QT_CONFIG(tooltip)
+        self.browse_button.setToolTip(QCoreApplication.translate("MainWindow", u"choose path to Embossing File", None))
+#endif // QT_CONFIG(tooltip)
+        self.browse_button.setText(QCoreApplication.translate("MainWindow", u"Browse", None))
+#if QT_CONFIG(tooltip)
+        self.process_button.setToolTip(QCoreApplication.translate("MainWindow", u"Process Embossing File to CSV ", None))
+#endif // QT_CONFIG(tooltip)
+        self.process_button.setText(QCoreApplication.translate("MainWindow", u"Process CSV", None))
+#if QT_CONFIG(tooltip)
+        self.pushButton.setToolTip(QCoreApplication.translate("MainWindow", u"Merge Embossing file by Date", None))
+#endif // QT_CONFIG(tooltip)
+        self.pushButton.setText(QCoreApplication.translate("MainWindow", u"Merge Emboss", None))
+        ___qtablewidgetitem = self.tableWidget.horizontalHeaderItem(0)
+        ___qtablewidgetitem.setText(QCoreApplication.translate("MainWindow", u"4-digit + CVV", None));
+        ___qtablewidgetitem1 = self.tableWidget.horizontalHeaderItem(1)
+        ___qtablewidgetitem1.setText(QCoreApplication.translate("MainWindow", u"PAN", None));
+        ___qtablewidgetitem2 = self.tableWidget.horizontalHeaderItem(2)
+        ___qtablewidgetitem2.setText(QCoreApplication.translate("MainWindow", u"Expiry Date", None));
+        ___qtablewidgetitem3 = self.tableWidget.horizontalHeaderItem(3)
+        ___qtablewidgetitem3.setText(QCoreApplication.translate("MainWindow", u"Customer Name", None));
+        self.label.setText("")
+        self.label_3.setText("")
+        self.menuFile.setTitle(QCoreApplication.translate("MainWindow", u"File", None))
+        self.menuAbout.setTitle(QCoreApplication.translate("MainWindow", u"About", None))
+#if QT_CONFIG(tooltip)
+        self.menuHelp.setToolTip("")
+#endif // QT_CONFIG(tooltip)
+        self.menuHelp.setTitle(QCoreApplication.translate("MainWindow", u"Help", None))
+    # retranslateUi
+
+# -*- coding: utf-8 -*-
+
+################################################################################
+## Form generated from reading UI file 'ConsolidatorApp.ui'
+##
+## Created by: Qt User Interface Compiler version 6.7.0
+##
+## WARNING! All changes made in this file will be lost when recompiling UI file!
+################################################################################
+
+from PySide6.QtCore import (QCoreApplication, QDate, QDateTime, QLocale,
+    QMetaObject, QObject, QPoint, QRect,
+    QSize, QTime, QUrl, Qt)
+from PySide6.QtGui import (QAction, QBrush, QColor, QConicalGradient,
+    QCursor, QFont, QFontDatabase, QGradient,
+    QIcon, QImage, QKeySequence, QLinearGradient,
+    QPainter, QPalette, QPixmap, QRadialGradient,
+    QTransform)
+from PySide6.QtWidgets import (QApplication, QComboBox, QFrame, QGridLayout,
+    QHBoxLayout, QHeaderView, QLabel, QLineEdit,
+    QMainWindow, QMenu, QMenuBar, QPushButton,
+    QSizePolicy, QStatusBar, QTableWidget, QTableWidgetItem,
+    QWidget)
+import resource_rc
+
+class Ui_MainWindow(object):
+    def setupUi(self, MainWindow):
+        if not MainWindow.objectName():
+            MainWindow.setObjectName(u"MainWindow")
+        MainWindow.resize(1289, 796)
+        MainWindow.setStyleSheet(u"\n"
+"QPushButton {\n"
+"                background-color: #00AEEF;  /* Primary color */\n"
+"                color: #ffffff;  /* Text color */\n"
+"                padding: 5px 10px;  /* Padding */\n"
+"                border: none;  /* No border */\n"
+"                border-radius: 2px;  /* Remove border radius */\n"
+"                font-size: 1rem;  /* Font size */\n"
+"                margin: 0;  /* Remove margin */\n"
+"               font-size: 12px;\n"
+"              \n"
+"            }\n"
+"            QPushButton:hover {\n"
+"                background-color: #0099CC;  /* Slightly darker blue for hover */\n"
+"\n"
+"            }\n"
+"            QPushButton:pressed {\n"
+"                background-color: #0088BB;  /* Even darker blue for pressed */\n"
+"            }\n"
+"\n"
+" QLineEdit {\n"
+"                padding: 1px;\n"
+"                border: 1px solid #ccc;\n"
+"                font-size: 12px;\n"
+"                border-radius: 5px; /* Rounded corners */\n"
+"             \n"
+"            }\n"
+"          "
+                        "  QLineEdit:focus {\n"
+"                border: 1px solid #00AEEF; /* Blue border when focused */\n"
+"            }\n"
+"\n"
+"QComboBox,QDateEdit{\n"
+"   font-size: 12px;\n"
+"\n"
+"\n"
+"}\n"
+"\n"
+"          ")
+        self.actionDocumentation = QAction(MainWindow)
+        self.actionDocumentation.setObjectName(u"actionDocumentation")
+        self.actionSave_as_CSV = QAction(MainWindow)
+        self.actionSave_as_CSV.setObjectName(u"actionSave_as_CSV")
+        self.actionExit = QAction(MainWindow)
+        self.actionExit.setObjectName(u"actionExit")
+        self.actionDeveloper = QAction(MainWindow)
+        self.actionDeveloper.setObjectName(u"actionDeveloper")
+        self.centralwidget = QWidget(MainWindow)
+        self.centralwidget.setObjectName(u"centralwidget")
+        self.gridLayout_2 = QGridLayout(self.centralwidget)
+        self.gridLayout_2.setObjectName(u"gridLayout_2")
+        self.gridLayout = QGridLayout()
+        self.gridLayout.setObjectName(u"gridLayout")
+        self.frame_3 = QFrame(self.centralwidget)
+        self.frame_3.setObjectName(u"frame_3")
+        self.frame_3.setFrameShape(QFrame.Shape.StyledPanel)
+        self.frame_3.setFrameShadow(QFrame.Shadow.Raised)
+        self.horizontalLayout_4 = QHBoxLayout(self.frame_3)
+        self.horizontalLayout_4.setObjectName(u"horizontalLayout_4")
+        self.horizontalLayout_2 = QHBoxLayout()
+        self.horizontalLayout_2.setObjectName(u"horizontalLayout_2")
+        self.search_line_edit = QLineEdit(self.frame_3)
+        self.search_line_edit.setObjectName(u"search_line_edit")
+
+        self.horizontalLayout_2.addWidget(self.search_line_edit)
+
+        self.search_button = QPushButton(self.frame_3)
+        self.search_button.setObjectName(u"search_button")
+        icon = QIcon(QIcon.fromTheme(u"edit-find"))
+        self.search_button.setIcon(icon)
+
+        self.horizontalLayout_2.addWidget(self.search_button)
+
+
+        self.horizontalLayout_4.addLayout(self.horizontalLayout_2)
+
+
+        self.gridLayout.addWidget(self.frame_3, 1, 2, 1, 1)
+
+        self.frame_4 = QFrame(self.centralwidget)
+        self.frame_4.setObjectName(u"frame_4")
+        self.frame_4.setFrameShape(QFrame.Shape.StyledPanel)
+        self.frame_4.setFrameShadow(QFrame.Shadow.Raised)
+        self.horizontalLayout_6 = QHBoxLayout(self.frame_4)
+        self.horizontalLayout_6.setSpacing(20)
+        self.horizontalLayout_6.setObjectName(u"horizontalLayout_6")
+        self.horizontalLayout_6.setContentsMargins(6, -1, -1, -1)
+        self.branch_comboBox = QComboBox(self.frame_4)
+        self.branch_comboBox.setObjectName(u"branch_comboBox")
+
+        self.horizontalLayout_6.addWidget(self.branch_comboBox)
+
+        self.product_combobox = QComboBox(self.frame_4)
+        self.product_combobox.setObjectName(u"product_combobox")
+
+        self.horizontalLayout_6.addWidget(self.product_combobox)
+
+        self.comboBox = QComboBox(self.frame_4)
+        self.comboBox.setObjectName(u"comboBox")
+
+        self.horizontalLayout_6.addWidget(self.comboBox)
+
+        self.reset_filter = QPushButton(self.frame_4)
+        self.reset_filter.setObjectName(u"reset_filter")
+        icon1 = QIcon(QIcon.fromTheme(u"view-refresh"))
+        self.reset_filter.setIcon(icon1)
+
+        self.horizontalLayout_6.addWidget(self.reset_filter)
+
+
+        self.gridLayout.addWidget(self.frame_4, 1, 1, 1, 1)
+
+        self.frame_2 = QFrame(self.centralwidget)
+        self.frame_2.setObjectName(u"frame_2")
+        self.frame_2.setFrameShape(QFrame.Shape.StyledPanel)
+        self.frame_2.setFrameShadow(QFrame.Shadow.Raised)
+        self.horizontalLayout_5 = QHBoxLayout(self.frame_2)
+        self.horizontalLayout_5.setObjectName(u"horizontalLayout_5")
+        self.horizontalLayout = QHBoxLayout()
+        self.horizontalLayout.setObjectName(u"horizontalLayout")
+        self.label_2 = QLabel(self.frame_2)
+        self.label_2.setObjectName(u"label_2")
+
+        self.horizontalLayout.addWidget(self.label_2)
+
+        self.source_directory_line_edit = QLineEdit(self.frame_2)
+        self.source_directory_line_edit.setObjectName(u"source_directory_line_edit")
+
+        self.horizontalLayout.addWidget(self.source_directory_line_edit)
+
+        self.browse_button = QPushButton(self.frame_2)
+        self.browse_button.setObjectName(u"browse_button")
+        icon2 = QIcon(QIcon.fromTheme(u"folder"))
+        self.browse_button.setIcon(icon2)
+
+        self.horizontalLayout.addWidget(self.browse_button)
+
+
+        self.horizontalLayout_5.addLayout(self.horizontalLayout)
+
+        self.process_button = QPushButton(self.frame_2)
+        self.process_button.setObjectName(u"process_button")
+        icon3 = QIcon(QIcon.fromTheme(u"document-properties"))
+        self.process_button.setIcon(icon3)
+        self.process_button.setFlat(False)
+
+        self.horizontalLayout_5.addWidget(self.process_button)
+
+        self.pushButton = QPushButton(self.frame_2)
+        self.pushButton.setObjectName(u"pushButton")
+        icon4 = QIcon(QIcon.fromTheme(u"document-new"))
+        self.pushButton.setIcon(icon4)
+
+        self.horizontalLayout_5.addWidget(self.pushButton)
+
+
+        self.gridLayout.addWidget(self.frame_2, 1, 0, 1, 1)
+
+        self.tableWidget = QTableWidget(self.centralwidget)
+        if (self.tableWidget.columnCount() < 4):
+            self.tableWidget.setColumnCount(4)
+        __qtablewidgetitem = QTableWidgetItem()
+        self.tableWidget.setHorizontalHeaderItem(0, __qtablewidgetitem)
+        __qtablewidgetitem1 = QTableWidgetItem()
+        self.tableWidget.setHorizontalHeaderItem(1, __qtablewidgetitem1)
+        __qtablewidgetitem2 = QTableWidgetItem()
+        self.tableWidget.setHorizontalHeaderItem(2, __qtablewidgetitem2)
+        __qtablewidgetitem3 = QTableWidgetItem()
+        self.tableWidget.setHorizontalHeaderItem(3, __qtablewidgetitem3)
+        self.tableWidget.setObjectName(u"tableWidget")
+
+        self.gridLayout.addWidget(self.tableWidget, 3, 0, 1, 3)
+
+        self.horizontalLayout_3 = QHBoxLayout()
+        self.horizontalLayout_3.setObjectName(u"horizontalLayout_3")
+        self.label = QLabel(self.centralwidget)
+        self.label.setObjectName(u"label")
+        self.label.setMinimumSize(QSize(156, 146))
+        self.label.setMaximumSize(QSize(156, 156))
+        self.label.setPixmap(QPixmap(u":/images/images/companylogo.png"))
+        self.label.setScaledContents(True)
+
+        self.horizontalLayout_3.addWidget(self.label)
+
+        self.label_3 = QLabel(self.centralwidget)
+        self.label_3.setObjectName(u"label_3")
+        self.label_3.setMinimumSize(QSize(156, 156))
+        self.label_3.setMaximumSize(QSize(156, 156))
+        self.label_3.setPixmap(QPixmap(u":/images/images/applogo.png"))
+        self.label_3.setScaledContents(True)
+
+        self.horizontalLayout_3.addWidget(self.label_3)
+
+
+        self.gridLayout.addLayout(self.horizontalLayout_3, 0, 0, 1, 3)
+
+        self.gridLayout.setColumnStretch(0, 2)
+        self.gridLayout.setColumnStretch(1, 1)
+        self.gridLayout.setColumnStretch(2, 1)
+
+        self.gridLayout_2.addLayout(self.gridLayout, 0, 0, 1, 1)
+
+        MainWindow.setCentralWidget(self.centralwidget)
+        self.menubar = QMenuBar(MainWindow)
+        self.menubar.setObjectName(u"menubar")
+        self.menubar.setGeometry(QRect(0, 0, 1289, 33))
+        self.menuFile = QMenu(self.menubar)
+        self.menuFile.setObjectName(u"menuFile")
+        self.menuAbout = QMenu(self.menubar)
+        self.menuAbout.setObjectName(u"menuAbout")
+        self.menuHelp = QMenu(self.menubar)
+        self.menuHelp.setObjectName(u"menuHelp")
+        MainWindow.setMenuBar(self.menubar)
+        self.statusbar = QStatusBar(MainWindow)
+        self.statusbar.setObjectName(u"statusbar")
+        MainWindow.setStatusBar(self.statusbar)
+
+        self.menubar.addAction(self.menuFile.menuAction())
+        self.menubar.addAction(self.menuAbout.menuAction())
+        self.menubar.addAction(self.menuHelp.menuAction())
+        self.menuFile.addAction(self.actionSave_as_CSV)
+        self.menuFile.addAction(self.actionExit)
+        self.menuAbout.addAction(self.actionDeveloper)
+        self.menuHelp.addAction(self.actionDocumentation)
+
+        self.retranslateUi(MainWindow)
+
+        QMetaObject.connectSlotsByName(MainWindow)
+    # setupUi
+
+    def retranslateUi(self, MainWindow):
+        MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"MainWindow", None))
+        self.actionDocumentation.setText(QCoreApplication.translate("MainWindow", u"Documentation", None))
+        self.actionSave_as_CSV.setText(QCoreApplication.translate("MainWindow", u"Save as CSV", None))
+        self.actionExit.setText(QCoreApplication.translate("MainWindow", u"Exit ", None))
+        self.actionDeveloper.setText(QCoreApplication.translate("MainWindow", u"Developer", None))
+        self.search_button.setText(QCoreApplication.translate("MainWindow", u"Search", None))
+        self.branch_comboBox.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Branch", None))
+        self.product_combobox.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Product", None))
+        self.comboBox.setPlaceholderText(QCoreApplication.translate("MainWindow", u"District", None))
+        self.reset_filter.setText(QCoreApplication.translate("MainWindow", u"Reset Filters", None))
+        self.label_2.setText(QCoreApplication.translate("MainWindow", u"Source Directory ", None))
+#if QT_CONFIG(tooltip)
+        self.browse_button.setToolTip(QCoreApplication.translate("MainWindow", u"choose path to Embossing File", None))
+#endif // QT_CONFIG(tooltip)
+        self.browse_button.setText(QCoreApplication.translate("MainWindow", u"Browse", None))
+#if QT_CONFIG(tooltip)
+        self.process_button.setToolTip(QCoreApplication.translate("MainWindow", u"Process Embossing File to CSV ", None))
+#endif // QT_CONFIG(tooltip)
+        self.process_button.setText(QCoreApplication.translate("MainWindow", u"Process CSV", None))
+#if QT_CONFIG(tooltip)
+        self.pushButton.setToolTip(QCoreApplication.translate("MainWindow", u"Merge Embossing file by Date", None))
+#endif // QT_CONFIG(tooltip)
+        self.pushButton.setText(QCoreApplication.translate("MainWindow", u"Merge Emboss", None))
+        ___qtablewidgetitem = self.tableWidget.horizontalHeaderItem(0)
+        ___qtablewidgetitem.setText(QCoreApplication.translate("MainWindow", u"4-digit + CVV", None));
+        ___qtablewidgetitem1 = self.tableWidget.horizontalHeaderItem(1)
+        ___qtablewidgetitem1.setText(QCoreApplication.translate("MainWindow", u"PAN", None));
+        ___qtablewidgetitem2 = self.tableWidget.horizontalHeaderItem(2)
+        ___qtablewidgetitem2.setText(QCoreApplication.translate("MainWindow", u"Expiry Date", None));
+        ___qtablewidgetitem3 = self.tableWidget.horizontalHeaderItem(3)
+        ___qtablewidgetitem3.setText(QCoreApplication.translate("MainWindow", u"Customer Name", None));
+        self.label.setText("")
+        self.label_3.setText("")
+        self.menuFile.setTitle(QCoreApplication.translate("MainWindow", u"File", None))
+        self.menuAbout.setTitle(QCoreApplication.translate("MainWindow", u"About", None))
+#if QT_CONFIG(tooltip)
+        self.menuHelp.setToolTip("")
+#endif // QT_CONFIG(tooltip)
+        self.menuHelp.setTitle(QCoreApplication.translate("MainWindow", u"Help", None))
+    # retranslateUi
+
+# -*- coding: utf-8 -*-
+
+################################################################################
+## Form generated from reading UI file 'ConsolidatorApp.ui'
+##
+## Created by: Qt User Interface Compiler version 6.7.0
+##
+## WARNING! All changes made in this file will be lost when recompiling UI file!
+################################################################################
+
+from PySide6.QtCore import (QCoreApplication, QDate, QDateTime, QLocale,
+    QMetaObject, QObject, QPoint, QRect,
+    QSize, QTime, QUrl, Qt)
+from PySide6.QtGui import (QAction, QBrush, QColor, QConicalGradient,
+    QCursor, QFont, QFontDatabase, QGradient,
+    QIcon, QImage, QKeySequence, QLinearGradient,
+    QPainter, QPalette, QPixmap, QRadialGradient,
+    QTransform)
+from PySide6.QtWidgets import (QApplication, QComboBox, QFrame, QGridLayout,
+    QHBoxLayout, QHeaderView, QLabel, QLineEdit,
+    QMainWindow, QMenu, QMenuBar, QPushButton,
+    QSizePolicy, QStatusBar, QTableWidget, QTableWidgetItem,
+    QWidget)
+import resource_rc
+
+class Ui_MainWindow(object):
+    def setupUi(self, MainWindow):
+        if not MainWindow.objectName():
+            MainWindow.setObjectName(u"MainWindow")
+        MainWindow.resize(1289, 796)
+        MainWindow.setStyleSheet(u"\n"
+"QPushButton {\n"
+"                background-color: #00AEEF;  /* Primary color */\n"
+"                color: #ffffff;  /* Text color */\n"
+"                padding: 5px 10px;  /* Padding */\n"
+"                border: none;  /* No border */\n"
+"                border-radius: 2px;  /* Remove border radius */\n"
+"                font-size: 1rem;  /* Font size */\n"
+"                margin: 0;  /* Remove margin */\n"
+"               font-size: 12px;\n"
+"              \n"
+"            }\n"
+"            QPushButton:hover {\n"
+"                background-color: #0099CC;  /* Slightly darker blue for hover */\n"
+"\n"
+"            }\n"
+"            QPushButton:pressed {\n"
+"                background-color: #0088BB;  /* Even darker blue for pressed */\n"
+"            }\n"
+"\n"
+" QLineEdit {\n"
+"                padding: 1px;\n"
+"                border: 1px solid #ccc;\n"
+"                font-size: 12px;\n"
+"                border-radius: 5px; /* Rounded corners */\n"
+"             \n"
+"            }\n"
+"          "
+                        "  QLineEdit:focus {\n"
+"                border: 1px solid #00AEEF; /* Blue border when focused */\n"
+"            }\n"
+"\n"
+"QComboBox,QDateEdit{\n"
+"   font-size: 12px;\n"
+"\n"
+"\n"
+"}\n"
+"\n"
+"          ")
+        self.actionDocumentation = QAction(MainWindow)
+        self.actionDocumentation.setObjectName(u"actionDocumentation")
+        self.actionSave_as_CSV = QAction(MainWindow)
+        self.actionSave_as_CSV.setObjectName(u"actionSave_as_CSV")
+        self.actionExit = QAction(MainWindow)
+        self.actionExit.setObjectName(u"actionExit")
+        self.actionDeveloper = QAction(MainWindow)
+        self.actionDeveloper.setObjectName(u"actionDeveloper")
+        self.centralwidget = QWidget(MainWindow)
+        self.centralwidget.setObjectName(u"centralwidget")
+        self.gridLayout_2 = QGridLayout(self.centralwidget)
+        self.gridLayout_2.setObjectName(u"gridLayout_2")
+        self.gridLayout = QGridLayout()
+        self.gridLayout.setObjectName(u"gridLayout")
+        self.frame_3 = QFrame(self.centralwidget)
+        self.frame_3.setObjectName(u"frame_3")
+        self.frame_3.setFrameShape(QFrame.Shape.StyledPanel)
+        self.frame_3.setFrameShadow(QFrame.Shadow.Raised)
+        self.horizontalLayout_4 = QHBoxLayout(self.frame_3)
+        self.horizontalLayout_4.setObjectName(u"horizontalLayout_4")
+        self.horizontalLayout_2 = QHBoxLayout()
+        self.horizontalLayout_2.setObjectName(u"horizontalLayout_2")
+        self.search_line_edit = QLineEdit(self.frame_3)
+        self.search_line_edit.setObjectName(u"search_line_edit")
+
+        self.horizontalLayout_2.addWidget(self.search_line_edit)
+
+        self.search_button = QPushButton(self.frame_3)
+        self.search_button.setObjectName(u"search_button")
+        icon = QIcon(QIcon.fromTheme(u"edit-find"))
+        self.search_button.setIcon(icon)
+
+        self.horizontalLayout_2.addWidget(self.search_button)
+
+
+        self.horizontalLayout_4.addLayout(self.horizontalLayout_2)
+
+
+        self.gridLayout.addWidget(self.frame_3, 1, 2, 1, 1)
+
+        self.frame_4 = QFrame(self.centralwidget)
+        self.frame_4.setObjectName(u"frame_4")
+        self.frame_4.setFrameShape(QFrame.Shape.StyledPanel)
+        self.frame_4.setFrameShadow(QFrame.Shadow.Raised)
+        self.horizontalLayout_6 = QHBoxLayout(self.frame_4)
+        self.horizontalLayout_6.setSpacing(20)
+        self.horizontalLayout_6.setObjectName(u"horizontalLayout_6")
+        self.horizontalLayout_6.setContentsMargins(6, -1, -1, -1)
+        self.branch_comboBox = QComboBox(self.frame_4)
+        self.branch_comboBox.setObjectName(u"branch_comboBox")
+
+        self.horizontalLayout_6.addWidget(self.branch_comboBox)
+
+        self.product_combobox = QComboBox(self.frame_4)
+        self.product_combobox.setObjectName(u"product_combobox")
+
+        self.horizontalLayout_6.addWidget(self.product_combobox)
+
+        self.district_comboBox = QComboBox(self.frame_4)
+        self.district_comboBox.setObjectName(u"district_comboBox")
+
+        self.horizontalLayout_6.addWidget(self.district_comboBox)
+
+        self.reset_filter = QPushButton(self.frame_4)
+        self.reset_filter.setObjectName(u"reset_filter")
+        icon1 = QIcon(QIcon.fromTheme(u"view-refresh"))
+        self.reset_filter.setIcon(icon1)
+
+        self.horizontalLayout_6.addWidget(self.reset_filter)
+
+
+        self.gridLayout.addWidget(self.frame_4, 1, 1, 1, 1)
+
+        self.frame_2 = QFrame(self.centralwidget)
+        self.frame_2.setObjectName(u"frame_2")
+        self.frame_2.setFrameShape(QFrame.Shape.StyledPanel)
+        self.frame_2.setFrameShadow(QFrame.Shadow.Raised)
+        self.horizontalLayout_5 = QHBoxLayout(self.frame_2)
+        self.horizontalLayout_5.setObjectName(u"horizontalLayout_5")
+        self.horizontalLayout = QHBoxLayout()
+        self.horizontalLayout.setObjectName(u"horizontalLayout")
+        self.label_2 = QLabel(self.frame_2)
+        self.label_2.setObjectName(u"label_2")
+
+        self.horizontalLayout.addWidget(self.label_2)
+
+        self.source_directory_line_edit = QLineEdit(self.frame_2)
+        self.source_directory_line_edit.setObjectName(u"source_directory_line_edit")
+
+        self.horizontalLayout.addWidget(self.source_directory_line_edit)
+
+        self.browse_button = QPushButton(self.frame_2)
+        self.browse_button.setObjectName(u"browse_button")
+        icon2 = QIcon(QIcon.fromTheme(u"folder"))
+        self.browse_button.setIcon(icon2)
+
+        self.horizontalLayout.addWidget(self.browse_button)
+
+
+        self.horizontalLayout_5.addLayout(self.horizontalLayout)
+
+        self.process_button = QPushButton(self.frame_2)
+        self.process_button.setObjectName(u"process_button")
+        icon3 = QIcon(QIcon.fromTheme(u"document-properties"))
+        self.process_button.setIcon(icon3)
+        self.process_button.setFlat(False)
+
+        self.horizontalLayout_5.addWidget(self.process_button)
+
+        self.merge_embossbutton = QPushButton(self.frame_2)
+        self.merge_embossbutton.setObjectName(u"merge_embossbutton")
+        icon4 = QIcon(QIcon.fromTheme(u"document-new"))
+        self.merge_embossbutton.setIcon(icon4)
+
+        self.horizontalLayout_5.addWidget(self.merge_embossbutton)
+
+
+        self.gridLayout.addWidget(self.frame_2, 1, 0, 1, 1)
+
+        self.tableWidget = QTableWidget(self.centralwidget)
+        if (self.tableWidget.columnCount() < 4):
+            self.tableWidget.setColumnCount(4)
+        __qtablewidgetitem = QTableWidgetItem()
+        self.tableWidget.setHorizontalHeaderItem(0, __qtablewidgetitem)
+        __qtablewidgetitem1 = QTableWidgetItem()
+        self.tableWidget.setHorizontalHeaderItem(1, __qtablewidgetitem1)
+        __qtablewidgetitem2 = QTableWidgetItem()
+        self.tableWidget.setHorizontalHeaderItem(2, __qtablewidgetitem2)
+        __qtablewidgetitem3 = QTableWidgetItem()
+        self.tableWidget.setHorizontalHeaderItem(3, __qtablewidgetitem3)
+        self.tableWidget.setObjectName(u"tableWidget")
+
+        self.gridLayout.addWidget(self.tableWidget, 3, 0, 1, 3)
+
+        self.horizontalLayout_3 = QHBoxLayout()
+        self.horizontalLayout_3.setObjectName(u"horizontalLayout_3")
+        self.label = QLabel(self.centralwidget)
+        self.label.setObjectName(u"label")
+        self.label.setMinimumSize(QSize(156, 146))
+        self.label.setMaximumSize(QSize(156, 156))
+        self.label.setPixmap(QPixmap(u":/images/images/companylogo.png"))
+        self.label.setScaledContents(True)
+
+        self.horizontalLayout_3.addWidget(self.label)
+
+        self.label_3 = QLabel(self.centralwidget)
+        self.label_3.setObjectName(u"label_3")
+        self.label_3.setMinimumSize(QSize(156, 156))
+        self.label_3.setMaximumSize(QSize(156, 156))
+        self.label_3.setPixmap(QPixmap(u":/images/images/applogo.png"))
+        self.label_3.setScaledContents(True)
+
+        self.horizontalLayout_3.addWidget(self.label_3)
+
+
+        self.gridLayout.addLayout(self.horizontalLayout_3, 0, 0, 1, 3)
+
+        self.gridLayout.setColumnStretch(0, 2)
+        self.gridLayout.setColumnStretch(1, 1)
+        self.gridLayout.setColumnStretch(2, 1)
+
+        self.gridLayout_2.addLayout(self.gridLayout, 0, 0, 1, 1)
+
+        MainWindow.setCentralWidget(self.centralwidget)
+        self.menubar = QMenuBar(MainWindow)
+        self.menubar.setObjectName(u"menubar")
+        self.menubar.setGeometry(QRect(0, 0, 1289, 33))
+        self.menuFile = QMenu(self.menubar)
+        self.menuFile.setObjectName(u"menuFile")
+        self.menuAbout = QMenu(self.menubar)
+        self.menuAbout.setObjectName(u"menuAbout")
+        self.menuHelp = QMenu(self.menubar)
+        self.menuHelp.setObjectName(u"menuHelp")
+        MainWindow.setMenuBar(self.menubar)
+        self.statusbar = QStatusBar(MainWindow)
+        self.statusbar.setObjectName(u"statusbar")
+        MainWindow.setStatusBar(self.statusbar)
+
+        self.menubar.addAction(self.menuFile.menuAction())
+        self.menubar.addAction(self.menuAbout.menuAction())
+        self.menubar.addAction(self.menuHelp.menuAction())
+        self.menuFile.addAction(self.actionSave_as_CSV)
+        self.menuFile.addAction(self.actionExit)
+        self.menuAbout.addAction(self.actionDeveloper)
+        self.menuHelp.addAction(self.actionDocumentation)
+
+        self.retranslateUi(MainWindow)
+
+        QMetaObject.connectSlotsByName(MainWindow)
+    # setupUi
+
+    def retranslateUi(self, MainWindow):
+        MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"MainWindow", None))
+        self.actionDocumentation.setText(QCoreApplication.translate("MainWindow", u"Documentation", None))
+        self.actionSave_as_CSV.setText(QCoreApplication.translate("MainWindow", u"Save as CSV", None))
+        self.actionExit.setText(QCoreApplication.translate("MainWindow", u"Exit ", None))
+        self.actionDeveloper.setText(QCoreApplication.translate("MainWindow", u"Developer", None))
+        self.search_button.setText(QCoreApplication.translate("MainWindow", u"Search", None))
+        self.branch_comboBox.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Branch", None))
+        self.product_combobox.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Product", None))
+        self.district_comboBox.setPlaceholderText(QCoreApplication.translate("MainWindow", u"District", None))
+        self.reset_filter.setText(QCoreApplication.translate("MainWindow", u"Reset Filters", None))
+        self.label_2.setText(QCoreApplication.translate("MainWindow", u"Source Directory ", None))
+#if QT_CONFIG(tooltip)
+        self.browse_button.setToolTip(QCoreApplication.translate("MainWindow", u"choose path to Embossing File", None))
+#endif // QT_CONFIG(tooltip)
+        self.browse_button.setText(QCoreApplication.translate("MainWindow", u"Browse", None))
+#if QT_CONFIG(tooltip)
+        self.process_button.setToolTip(QCoreApplication.translate("MainWindow", u"Process Embossing File to CSV ", None))
+#endif // QT_CONFIG(tooltip)
+        self.process_button.setText(QCoreApplication.translate("MainWindow", u"Process CSV", None))
+#if QT_CONFIG(tooltip)
+        self.merge_embossbutton.setToolTip(QCoreApplication.translate("MainWindow", u"Merge Embossing file by Date", None))
+#endif // QT_CONFIG(tooltip)
+        self.merge_embossbutton.setText(QCoreApplication.translate("MainWindow", u"Merge Emboss", None))
+        ___qtablewidgetitem = self.tableWidget.horizontalHeaderItem(0)
+        ___qtablewidgetitem.setText(QCoreApplication.translate("MainWindow", u"4-digit + CVV", None));
+        ___qtablewidgetitem1 = self.tableWidget.horizontalHeaderItem(1)
+        ___qtablewidgetitem1.setText(QCoreApplication.translate("MainWindow", u"PAN", None));
+        ___qtablewidgetitem2 = self.tableWidget.horizontalHeaderItem(2)
+        ___qtablewidgetitem2.setText(QCoreApplication.translate("MainWindow", u"Expiry Date", None));
+        ___qtablewidgetitem3 = self.tableWidget.horizontalHeaderItem(3)
+        ___qtablewidgetitem3.setText(QCoreApplication.translate("MainWindow", u"Customer Name", None));
+        self.label.setText("")
+        self.label_3.setText("")
+        self.menuFile.setTitle(QCoreApplication.translate("MainWindow", u"File", None))
+        self.menuAbout.setTitle(QCoreApplication.translate("MainWindow", u"About", None))
+#if QT_CONFIG(tooltip)
+        self.menuHelp.setToolTip("")
+#endif // QT_CONFIG(tooltip)
+        self.menuHelp.setTitle(QCoreApplication.translate("MainWindow", u"Help", None))
+    # retranslateUi
+
+# -*- coding: utf-8 -*-
+
+################################################################################
+## Form generated from reading UI file 'ConsolidatorApp.ui'
+##
+## Created by: Qt User Interface Compiler version 6.7.0
+##
+## WARNING! All changes made in this file will be lost when recompiling UI file!
+################################################################################
+
+from PySide6.QtCore import (QCoreApplication, QDate, QDateTime, QLocale,
+    QMetaObject, QObject, QPoint, QRect,
+    QSize, QTime, QUrl, Qt)
+from PySide6.QtGui import (QAction, QBrush, QColor, QConicalGradient,
+    QCursor, QFont, QFontDatabase, QGradient,
+    QIcon, QImage, QKeySequence, QLinearGradient,
+    QPainter, QPalette, QPixmap, QRadialGradient,
+    QTransform)
+from PySide6.QtWidgets import (QApplication, QComboBox, QFrame, QGridLayout,
+    QHBoxLayout, QHeaderView, QLabel, QLineEdit,
+    QMainWindow, QMenu, QMenuBar, QPushButton,
+    QSizePolicy, QStatusBar, QTableWidget, QTableWidgetItem,
+    QWidget)
+import resource_rc
+
+class Ui_MainWindow(object):
+    def setupUi(self, MainWindow):
+        if not MainWindow.objectName():
+            MainWindow.setObjectName(u"MainWindow")
+        MainWindow.resize(1289, 796)
+        MainWindow.setStyleSheet(u"\n"
+"QPushButton {\n"
+"                background-color: #00AEEF;  /* Primary color */\n"
+"                color: #ffffff;  /* Text color */\n"
+"                padding: 5px 10px;  /* Padding */\n"
+"                border: none;  /* No border */\n"
+"                border-radius: 2px;  /* Remove border radius */\n"
+"                font-size: 1rem;  /* Font size */\n"
+"                margin: 0;  /* Remove margin */\n"
+"               font-size: 12px;\n"
+"              \n"
+"            }\n"
+"            QPushButton:hover {\n"
+"                background-color: #0099CC;  /* Slightly darker blue for hover */\n"
+"\n"
+"            }\n"
+"            QPushButton:pressed {\n"
+"                background-color: #0088BB;  /* Even darker blue for pressed */\n"
+"            }\n"
+"\n"
+" QLineEdit {\n"
+"                padding: 1px;\n"
+"                border: 1px solid #ccc;\n"
+"                font-size: 12px;\n"
+"                border-radius: 5px; /* Rounded corners */\n"
+"             \n"
+"            }\n"
+"          "
+                        "  QLineEdit:focus {\n"
+"                border: 1px solid #00AEEF; /* Blue border when focused */\n"
+"            }\n"
+"\n"
+"QComboBox,QDateEdit{\n"
+"   font-size: 12px;\n"
+"\n"
+"\n"
+"}\n"
+"\n"
+"          ")
+        self.actionDocumentation = QAction(MainWindow)
+        self.actionDocumentation.setObjectName(u"actionDocumentation")
+        self.actionSave_as_CSV = QAction(MainWindow)
+        self.actionSave_as_CSV.setObjectName(u"actionSave_as_CSV")
+        self.actionExit = QAction(MainWindow)
+        self.actionExit.setObjectName(u"actionExit")
+        self.actionDeveloper = QAction(MainWindow)
+        self.actionDeveloper.setObjectName(u"actionDeveloper")
+        self.centralwidget = QWidget(MainWindow)
+        self.centralwidget.setObjectName(u"centralwidget")
+        self.gridLayout_2 = QGridLayout(self.centralwidget)
+        self.gridLayout_2.setObjectName(u"gridLayout_2")
+        self.gridLayout = QGridLayout()
+        self.gridLayout.setObjectName(u"gridLayout")
+        self.frame_3 = QFrame(self.centralwidget)
+        self.frame_3.setObjectName(u"frame_3")
+        self.frame_3.setFrameShape(QFrame.Shape.StyledPanel)
+        self.frame_3.setFrameShadow(QFrame.Shadow.Raised)
+        self.horizontalLayout_4 = QHBoxLayout(self.frame_3)
+        self.horizontalLayout_4.setObjectName(u"horizontalLayout_4")
+        self.horizontalLayout_2 = QHBoxLayout()
+        self.horizontalLayout_2.setObjectName(u"horizontalLayout_2")
+        self.search_line_edit = QLineEdit(self.frame_3)
+        self.search_line_edit.setObjectName(u"search_line_edit")
+
+        self.horizontalLayout_2.addWidget(self.search_line_edit)
+
+        self.search_button = QPushButton(self.frame_3)
+        self.search_button.setObjectName(u"search_button")
+        icon = QIcon(QIcon.fromTheme(u"edit-find"))
+        self.search_button.setIcon(icon)
+
+        self.horizontalLayout_2.addWidget(self.search_button)
+
+
+        self.horizontalLayout_4.addLayout(self.horizontalLayout_2)
+
+
+        self.gridLayout.addWidget(self.frame_3, 1, 2, 1, 1)
+
+        self.frame_4 = QFrame(self.centralwidget)
+        self.frame_4.setObjectName(u"frame_4")
+        self.frame_4.setFrameShape(QFrame.Shape.StyledPanel)
+        self.frame_4.setFrameShadow(QFrame.Shadow.Raised)
+        self.horizontalLayout_6 = QHBoxLayout(self.frame_4)
+        self.horizontalLayout_6.setSpacing(20)
+        self.horizontalLayout_6.setObjectName(u"horizontalLayout_6")
+        self.horizontalLayout_6.setContentsMargins(6, -1, -1, -1)
+        self.branch_comboBox = QComboBox(self.frame_4)
+        self.branch_comboBox.setObjectName(u"branch_comboBox")
+
+        self.horizontalLayout_6.addWidget(self.branch_comboBox)
+
+        self.product_combobox = QComboBox(self.frame_4)
+        self.product_combobox.setObjectName(u"product_combobox")
+
+        self.horizontalLayout_6.addWidget(self.product_combobox)
+
+        self.district_comboBox = QComboBox(self.frame_4)
+        self.district_comboBox.setObjectName(u"district_comboBox")
+
+        self.horizontalLayout_6.addWidget(self.district_comboBox)
+
+        self.reset_filter = QPushButton(self.frame_4)
+        self.reset_filter.setObjectName(u"reset_filter")
+        icon1 = QIcon(QIcon.fromTheme(u"view-refresh"))
+        self.reset_filter.setIcon(icon1)
+
+        self.horizontalLayout_6.addWidget(self.reset_filter)
+
+
+        self.gridLayout.addWidget(self.frame_4, 1, 1, 1, 1)
+
+        self.frame_2 = QFrame(self.centralwidget)
+        self.frame_2.setObjectName(u"frame_2")
+        self.frame_2.setFrameShape(QFrame.Shape.StyledPanel)
+        self.frame_2.setFrameShadow(QFrame.Shadow.Raised)
+        self.horizontalLayout_5 = QHBoxLayout(self.frame_2)
+        self.horizontalLayout_5.setObjectName(u"horizontalLayout_5")
+        self.horizontalLayout = QHBoxLayout()
+        self.horizontalLayout.setObjectName(u"horizontalLayout")
+        self.label_2 = QLabel(self.frame_2)
+        self.label_2.setObjectName(u"label_2")
+
+        self.horizontalLayout.addWidget(self.label_2)
+
+        self.source_directory_line_edit = QLineEdit(self.frame_2)
+        self.source_directory_line_edit.setObjectName(u"source_directory_line_edit")
+
+        self.horizontalLayout.addWidget(self.source_directory_line_edit)
+
+        self.browse_button = QPushButton(self.frame_2)
+        self.browse_button.setObjectName(u"browse_button")
+        icon2 = QIcon(QIcon.fromTheme(u"folder"))
+        self.browse_button.setIcon(icon2)
+
+        self.horizontalLayout.addWidget(self.browse_button)
+
+
+        self.horizontalLayout_5.addLayout(self.horizontalLayout)
+
+        self.process_button = QPushButton(self.frame_2)
+        self.process_button.setObjectName(u"process_button")
+        icon3 = QIcon(QIcon.fromTheme(u"document-properties"))
+        self.process_button.setIcon(icon3)
+        self.process_button.setFlat(False)
+
+        self.horizontalLayout_5.addWidget(self.process_button)
+
+        self.merge_embossbutton = QPushButton(self.frame_2)
+        self.merge_embossbutton.setObjectName(u"merge_embossbutton")
+        icon4 = QIcon(QIcon.fromTheme(u"document-new"))
+        self.merge_embossbutton.setIcon(icon4)
+
+        self.horizontalLayout_5.addWidget(self.merge_embossbutton)
+
+
+        self.gridLayout.addWidget(self.frame_2, 1, 0, 1, 1)
+
+        self.tableWidget = QTableWidget(self.centralwidget)
+        if (self.tableWidget.columnCount() < 4):
+            self.tableWidget.setColumnCount(4)
+        __qtablewidgetitem = QTableWidgetItem()
+        self.tableWidget.setHorizontalHeaderItem(0, __qtablewidgetitem)
+        __qtablewidgetitem1 = QTableWidgetItem()
+        self.tableWidget.setHorizontalHeaderItem(1, __qtablewidgetitem1)
+        __qtablewidgetitem2 = QTableWidgetItem()
+        self.tableWidget.setHorizontalHeaderItem(2, __qtablewidgetitem2)
+        __qtablewidgetitem3 = QTableWidgetItem()
+        self.tableWidget.setHorizontalHeaderItem(3, __qtablewidgetitem3)
+        self.tableWidget.setObjectName(u"tableWidget")
+
+        self.gridLayout.addWidget(self.tableWidget, 3, 0, 1, 3)
+
+        self.horizontalLayout_3 = QHBoxLayout()
+        self.horizontalLayout_3.setObjectName(u"horizontalLayout_3")
+        self.label = QLabel(self.centralwidget)
+        self.label.setObjectName(u"label")
+        self.label.setMinimumSize(QSize(156, 146))
+        self.label.setMaximumSize(QSize(156, 156))
+        self.label.setPixmap(QPixmap(u":/images/images/companylogo.png"))
+        self.label.setScaledContents(True)
+
+        self.horizontalLayout_3.addWidget(self.label)
+
+        self.label_3 = QLabel(self.centralwidget)
+        self.label_3.setObjectName(u"label_3")
+        self.label_3.setMinimumSize(QSize(156, 156))
+        self.label_3.setMaximumSize(QSize(156, 156))
+        self.label_3.setPixmap(QPixmap(u":/images/images/applogo.png"))
+        self.label_3.setScaledContents(True)
+
+        self.horizontalLayout_3.addWidget(self.label_3)
+
+
+        self.gridLayout.addLayout(self.horizontalLayout_3, 0, 0, 1, 3)
+
+        self.gridLayout.setColumnStretch(0, 2)
+        self.gridLayout.setColumnStretch(1, 1)
+        self.gridLayout.setColumnStretch(2, 1)
+
+        self.gridLayout_2.addLayout(self.gridLayout, 0, 0, 1, 1)
+
+        MainWindow.setCentralWidget(self.centralwidget)
+        self.menubar = QMenuBar(MainWindow)
+        self.menubar.setObjectName(u"menubar")
+        self.menubar.setGeometry(QRect(0, 0, 1289, 33))
+        self.menuFile = QMenu(self.menubar)
+        self.menuFile.setObjectName(u"menuFile")
+        self.menuAbout = QMenu(self.menubar)
+        self.menuAbout.setObjectName(u"menuAbout")
+        self.menuHelp = QMenu(self.menubar)
+        self.menuHelp.setObjectName(u"menuHelp")
+        MainWindow.setMenuBar(self.menubar)
+        self.statusbar = QStatusBar(MainWindow)
+        self.statusbar.setObjectName(u"statusbar")
+        MainWindow.setStatusBar(self.statusbar)
+
+        self.menubar.addAction(self.menuFile.menuAction())
+        self.menubar.addAction(self.menuAbout.menuAction())
+        self.menubar.addAction(self.menuHelp.menuAction())
+        self.menuFile.addAction(self.actionSave_as_CSV)
+        self.menuFile.addAction(self.actionExit)
+        self.menuAbout.addAction(self.actionDeveloper)
+        self.menuHelp.addAction(self.actionDocumentation)
+
+        self.retranslateUi(MainWindow)
+
+        QMetaObject.connectSlotsByName(MainWindow)
+    # setupUi
+
+    def retranslateUi(self, MainWindow):
+        MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"MainWindow", None))
+        self.actionDocumentation.setText(QCoreApplication.translate("MainWindow", u"Documentation", None))
+        self.actionSave_as_CSV.setText(QCoreApplication.translate("MainWindow", u"Save as CSV", None))
+        self.actionExit.setText(QCoreApplication.translate("MainWindow", u"Exit ", None))
+        self.actionDeveloper.setText(QCoreApplication.translate("MainWindow", u"Developer", None))
+        self.search_button.setText(QCoreApplication.translate("MainWindow", u"Search", None))
+        self.branch_comboBox.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Branch", None))
+        self.product_combobox.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Product", None))
+        self.district_comboBox.setPlaceholderText(QCoreApplication.translate("MainWindow", u"District", None))
+        self.reset_filter.setText(QCoreApplication.translate("MainWindow", u"Reset Filters", None))
+        self.label_2.setText(QCoreApplication.translate("MainWindow", u"Source Directory ", None))
+#if QT_CONFIG(tooltip)
+        self.browse_button.setToolTip(QCoreApplication.translate("MainWindow", u"choose path to Embossing File", None))
+#endif // QT_CONFIG(tooltip)
+        self.browse_button.setText(QCoreApplication.translate("MainWindow", u"Browse", None))
+#if QT_CONFIG(tooltip)
+        self.process_button.setToolTip(QCoreApplication.translate("MainWindow", u"Process Embossing File to CSV ", None))
+#endif // QT_CONFIG(tooltip)
+        self.process_button.setText(QCoreApplication.translate("MainWindow", u"Process CSV", None))
+#if QT_CONFIG(tooltip)
+        self.merge_embossbutton.setToolTip(QCoreApplication.translate("MainWindow", u"Merge Embossing file by Date", None))
+#endif // QT_CONFIG(tooltip)
+        self.merge_embossbutton.setText(QCoreApplication.translate("MainWindow", u"Merge Emboss", None))
+        ___qtablewidgetitem = self.tableWidget.horizontalHeaderItem(0)
+        ___qtablewidgetitem.setText(QCoreApplication.translate("MainWindow", u"4-digit + CVV", None));
+        ___qtablewidgetitem1 = self.tableWidget.horizontalHeaderItem(1)
+        ___qtablewidgetitem1.setText(QCoreApplication.translate("MainWindow", u"PAN", None));
+        ___qtablewidgetitem2 = self.tableWidget.horizontalHeaderItem(2)
+        ___qtablewidgetitem2.setText(QCoreApplication.translate("MainWindow", u"Expiry Date", None));
+        ___qtablewidgetitem3 = self.tableWidget.horizontalHeaderItem(3)
+        ___qtablewidgetitem3.setText(QCoreApplication.translate("MainWindow", u"Customer Name", None));
+        self.label.setText("")
+        self.label_3.setText("")
+        self.menuFile.setTitle(QCoreApplication.translate("MainWindow", u"File", None))
+        self.menuAbout.setTitle(QCoreApplication.translate("MainWindow", u"About", None))
+#if QT_CONFIG(tooltip)
+        self.menuHelp.setToolTip("")
+#endif // QT_CONFIG(tooltip)
+        self.menuHelp.setTitle(QCoreApplication.translate("MainWindow", u"Help", None))
+    # retranslateUi
+
+# -*- coding: utf-8 -*-
+
+################################################################################
+## Form generated from reading UI file 'ConsolidatorApp.ui'
+##
+## Created by: Qt User Interface Compiler version 6.7.0
+##
+## WARNING! All changes made in this file will be lost when recompiling UI file!
+################################################################################
+
+from PySide6.QtCore import (QCoreApplication, QDate, QDateTime, QLocale,
+    QMetaObject, QObject, QPoint, QRect,
+    QSize, QTime, QUrl, Qt)
+from PySide6.QtGui import (QAction, QBrush, QColor, QConicalGradient,
+    QCursor, QFont, QFontDatabase, QGradient,
+    QIcon, QImage, QKeySequence, QLinearGradient,
+    QPainter, QPalette, QPixmap, QRadialGradient,
+    QTransform)
+from PySide6.QtWidgets import (QApplication, QComboBox, QFrame, QGridLayout,
+    QHBoxLayout, QHeaderView, QLabel, QLineEdit,
+    QMainWindow, QMenu, QMenuBar, QPushButton,
+    QSizePolicy, QStatusBar, QTableWidget, QTableWidgetItem,
+    QWidget)
+import resource_rc
+
+class Ui_MainWindow(object):
+    def setupUi(self, MainWindow):
+        if not MainWindow.objectName():
+            MainWindow.setObjectName(u"MainWindow")
+        MainWindow.resize(1289, 796)
+        MainWindow.setStyleSheet(u"\n"
+"QPushButton {\n"
+"                background-color: #00AEEF;  /* Primary color */\n"
+"                color: #ffffff;  /* Text color */\n"
+"                padding: 5px 10px;  /* Padding */\n"
+"                border: none;  /* No border */\n"
+"                border-radius: 2px;  /* Remove border radius */\n"
+"                font-size: 1rem;  /* Font size */\n"
+"                margin: 0;  /* Remove margin */\n"
+"               font-size: 12px;\n"
+"              \n"
+"            }\n"
+"            QPushButton:hover {\n"
+"                background-color: #0099CC;  /* Slightly darker blue for hover */\n"
+"\n"
+"            }\n"
+"            QPushButton:pressed {\n"
+"                background-color: #0088BB;  /* Even darker blue for pressed */\n"
+"            }\n"
+"\n"
+" QLineEdit {\n"
+"                padding: 1px;\n"
+"                border: 1px solid #ccc;\n"
+"                font-size: 12px;\n"
+"                border-radius: 5px; /* Rounded corners */\n"
+"             \n"
+"            }\n"
+"          "
+                        "  QLineEdit:focus {\n"
+"                border: 1px solid #00AEEF; /* Blue border when focused */\n"
+"            }\n"
+"\n"
+"QComboBox,QDateEdit{\n"
+"   font-size: 12px;\n"
+"\n"
+"\n"
+"}\n"
+"\n"
+"          ")
+        self.actionDocumentation = QAction(MainWindow)
+        self.actionDocumentation.setObjectName(u"actionDocumentation")
+        self.actionSave_as_CSV = QAction(MainWindow)
+        self.actionSave_as_CSV.setObjectName(u"actionSave_as_CSV")
+        self.actionExit = QAction(MainWindow)
+        self.actionExit.setObjectName(u"actionExit")
+        self.actionDeveloper = QAction(MainWindow)
+        self.actionDeveloper.setObjectName(u"actionDeveloper")
+        self.centralwidget = QWidget(MainWindow)
+        self.centralwidget.setObjectName(u"centralwidget")
+        self.gridLayout_2 = QGridLayout(self.centralwidget)
+        self.gridLayout_2.setObjectName(u"gridLayout_2")
+        self.gridLayout = QGridLayout()
+        self.gridLayout.setObjectName(u"gridLayout")
+        self.frame_3 = QFrame(self.centralwidget)
+        self.frame_3.setObjectName(u"frame_3")
+        self.frame_3.setFrameShape(QFrame.Shape.StyledPanel)
+        self.frame_3.setFrameShadow(QFrame.Shadow.Raised)
+        self.horizontalLayout_4 = QHBoxLayout(self.frame_3)
+        self.horizontalLayout_4.setObjectName(u"horizontalLayout_4")
+        self.horizontalLayout_2 = QHBoxLayout()
+        self.horizontalLayout_2.setObjectName(u"horizontalLayout_2")
+        self.search_line_edit = QLineEdit(self.frame_3)
+        self.search_line_edit.setObjectName(u"search_line_edit")
+
+        self.horizontalLayout_2.addWidget(self.search_line_edit)
+
+        self.search_button = QPushButton(self.frame_3)
+        self.search_button.setObjectName(u"search_button")
+        icon = QIcon(QIcon.fromTheme(u"edit-find"))
+        self.search_button.setIcon(icon)
+
+        self.horizontalLayout_2.addWidget(self.search_button)
+
+
+        self.horizontalLayout_4.addLayout(self.horizontalLayout_2)
+
+
+        self.gridLayout.addWidget(self.frame_3, 1, 2, 1, 1)
+
+        self.frame_4 = QFrame(self.centralwidget)
+        self.frame_4.setObjectName(u"frame_4")
+        self.frame_4.setFrameShape(QFrame.Shape.StyledPanel)
+        self.frame_4.setFrameShadow(QFrame.Shadow.Raised)
+        self.horizontalLayout_6 = QHBoxLayout(self.frame_4)
+        self.horizontalLayout_6.setSpacing(20)
+        self.horizontalLayout_6.setObjectName(u"horizontalLayout_6")
+        self.horizontalLayout_6.setContentsMargins(6, -1, -1, -1)
+        self.branch_comboBox = QComboBox(self.frame_4)
+        self.branch_comboBox.setObjectName(u"branch_comboBox")
+
+        self.horizontalLayout_6.addWidget(self.branch_comboBox)
+
+        self.product_combobox = QComboBox(self.frame_4)
+        self.product_combobox.setObjectName(u"product_combobox")
+
+        self.horizontalLayout_6.addWidget(self.product_combobox)
+
+        self.district_comboBox = QComboBox(self.frame_4)
+        self.district_comboBox.setObjectName(u"district_comboBox")
+
+        self.horizontalLayout_6.addWidget(self.district_comboBox)
+
+        self.reset_filter = QPushButton(self.frame_4)
+        self.reset_filter.setObjectName(u"reset_filter")
+        icon1 = QIcon(QIcon.fromTheme(u"view-refresh"))
+        self.reset_filter.setIcon(icon1)
+
+        self.horizontalLayout_6.addWidget(self.reset_filter)
+
+
+        self.gridLayout.addWidget(self.frame_4, 1, 1, 1, 1)
+
+        self.frame_2 = QFrame(self.centralwidget)
+        self.frame_2.setObjectName(u"frame_2")
+        self.frame_2.setFrameShape(QFrame.Shape.StyledPanel)
+        self.frame_2.setFrameShadow(QFrame.Shadow.Raised)
+        self.horizontalLayout_5 = QHBoxLayout(self.frame_2)
+        self.horizontalLayout_5.setObjectName(u"horizontalLayout_5")
+        self.horizontalLayout = QHBoxLayout()
+        self.horizontalLayout.setObjectName(u"horizontalLayout")
+        self.label_2 = QLabel(self.frame_2)
+        self.label_2.setObjectName(u"label_2")
+
+        self.horizontalLayout.addWidget(self.label_2)
+
+        self.source_directory_line_edit = QLineEdit(self.frame_2)
+        self.source_directory_line_edit.setObjectName(u"source_directory_line_edit")
+
+        self.horizontalLayout.addWidget(self.source_directory_line_edit)
+
+        self.browse_button = QPushButton(self.frame_2)
+        self.browse_button.setObjectName(u"browse_button")
+        icon2 = QIcon(QIcon.fromTheme(u"folder"))
+        self.browse_button.setIcon(icon2)
+
+        self.horizontalLayout.addWidget(self.browse_button)
+
+
+        self.horizontalLayout_5.addLayout(self.horizontalLayout)
+
+        self.process_button = QPushButton(self.frame_2)
+        self.process_button.setObjectName(u"process_button")
+        icon3 = QIcon(QIcon.fromTheme(u"document-properties"))
+        self.process_button.setIcon(icon3)
+        self.process_button.setFlat(False)
+
+        self.horizontalLayout_5.addWidget(self.process_button)
+
+        self.merge_embossbutton = QPushButton(self.frame_2)
+        self.merge_embossbutton.setObjectName(u"merge_embossbutton")
+        icon4 = QIcon(QIcon.fromTheme(u"document-new"))
+        self.merge_embossbutton.setIcon(icon4)
+
+        self.horizontalLayout_5.addWidget(self.merge_embossbutton)
+
+
+        self.gridLayout.addWidget(self.frame_2, 1, 0, 1, 1)
+
+        self.tableWidget = QTableWidget(self.centralwidget)
+        if (self.tableWidget.columnCount() < 4):
+            self.tableWidget.setColumnCount(4)
+        __qtablewidgetitem = QTableWidgetItem()
+        self.tableWidget.setHorizontalHeaderItem(0, __qtablewidgetitem)
+        __qtablewidgetitem1 = QTableWidgetItem()
+        self.tableWidget.setHorizontalHeaderItem(1, __qtablewidgetitem1)
+        __qtablewidgetitem2 = QTableWidgetItem()
+        self.tableWidget.setHorizontalHeaderItem(2, __qtablewidgetitem2)
+        __qtablewidgetitem3 = QTableWidgetItem()
+        self.tableWidget.setHorizontalHeaderItem(3, __qtablewidgetitem3)
+        self.tableWidget.setObjectName(u"tableWidget")
+
+        self.gridLayout.addWidget(self.tableWidget, 3, 0, 1, 3)
+
+        self.horizontalLayout_3 = QHBoxLayout()
+        self.horizontalLayout_3.setObjectName(u"horizontalLayout_3")
+        self.label = QLabel(self.centralwidget)
+        self.label.setObjectName(u"label")
+        self.label.setMinimumSize(QSize(156, 146))
+        self.label.setMaximumSize(QSize(156, 156))
+        self.label.setPixmap(QPixmap(u":/images/images/companylogo.png"))
+        self.label.setScaledContents(True)
+
+        self.horizontalLayout_3.addWidget(self.label)
+
+        self.label_3 = QLabel(self.centralwidget)
+        self.label_3.setObjectName(u"label_3")
+        self.label_3.setMinimumSize(QSize(156, 156))
+        self.label_3.setMaximumSize(QSize(156, 156))
+        self.label_3.setPixmap(QPixmap(u":/images/images/applogo.png"))
+        self.label_3.setScaledContents(True)
+
+        self.horizontalLayout_3.addWidget(self.label_3)
+
+
+        self.gridLayout.addLayout(self.horizontalLayout_3, 0, 0, 1, 3)
+
+
+        self.gridLayout_2.addLayout(self.gridLayout, 0, 0, 1, 1)
+
+        MainWindow.setCentralWidget(self.centralwidget)
+        self.menubar = QMenuBar(MainWindow)
+        self.menubar.setObjectName(u"menubar")
+        self.menubar.setGeometry(QRect(0, 0, 1289, 33))
+        self.menuFile = QMenu(self.menubar)
+        self.menuFile.setObjectName(u"menuFile")
+        self.menuAbout = QMenu(self.menubar)
+        self.menuAbout.setObjectName(u"menuAbout")
+        self.menuHelp = QMenu(self.menubar)
+        self.menuHelp.setObjectName(u"menuHelp")
+        MainWindow.setMenuBar(self.menubar)
+        self.statusbar = QStatusBar(MainWindow)
+        self.statusbar.setObjectName(u"statusbar")
+        MainWindow.setStatusBar(self.statusbar)
+
+        self.menubar.addAction(self.menuFile.menuAction())
+        self.menubar.addAction(self.menuAbout.menuAction())
+        self.menubar.addAction(self.menuHelp.menuAction())
+        self.menuFile.addAction(self.actionSave_as_CSV)
+        self.menuFile.addAction(self.actionExit)
+        self.menuAbout.addAction(self.actionDeveloper)
+        self.menuHelp.addAction(self.actionDocumentation)
+
+        self.retranslateUi(MainWindow)
+
+        QMetaObject.connectSlotsByName(MainWindow)
+    # setupUi
+
+    def retranslateUi(self, MainWindow):
+        MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"MainWindow", None))
+        self.actionDocumentation.setText(QCoreApplication.translate("MainWindow", u"Documentation", None))
+        self.actionSave_as_CSV.setText(QCoreApplication.translate("MainWindow", u"Save as CSV", None))
+        self.actionExit.setText(QCoreApplication.translate("MainWindow", u"Exit ", None))
+        self.actionDeveloper.setText(QCoreApplication.translate("MainWindow", u"Developer", None))
+        self.search_button.setText(QCoreApplication.translate("MainWindow", u"Search", None))
+        self.branch_comboBox.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Branch", None))
+        self.product_combobox.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Product", None))
+        self.district_comboBox.setPlaceholderText(QCoreApplication.translate("MainWindow", u"District", None))
+        self.reset_filter.setText(QCoreApplication.translate("MainWindow", u"Reset Filters", None))
+        self.label_2.setText(QCoreApplication.translate("MainWindow", u"Source Directory ", None))
+#if QT_CONFIG(tooltip)
+        self.browse_button.setToolTip(QCoreApplication.translate("MainWindow", u"choose path to Embossing File", None))
+#endif // QT_CONFIG(tooltip)
+        self.browse_button.setText(QCoreApplication.translate("MainWindow", u"Browse", None))
+#if QT_CONFIG(tooltip)
+        self.process_button.setToolTip(QCoreApplication.translate("MainWindow", u"Process Embossing File to CSV ", None))
+#endif // QT_CONFIG(tooltip)
+        self.process_button.setText(QCoreApplication.translate("MainWindow", u"Process CSV", None))
+#if QT_CONFIG(tooltip)
+        self.merge_embossbutton.setToolTip(QCoreApplication.translate("MainWindow", u"Merge Embossing file by Date", None))
+#endif // QT_CONFIG(tooltip)
+        self.merge_embossbutton.setText(QCoreApplication.translate("MainWindow", u"Merge Emboss", None))
+        ___qtablewidgetitem = self.tableWidget.horizontalHeaderItem(0)
+        ___qtablewidgetitem.setText(QCoreApplication.translate("MainWindow", u"4-digit + CVV", None));
+        ___qtablewidgetitem1 = self.tableWidget.horizontalHeaderItem(1)
+        ___qtablewidgetitem1.setText(QCoreApplication.translate("MainWindow", u"PAN", None));
+        ___qtablewidgetitem2 = self.tableWidget.horizontalHeaderItem(2)
+        ___qtablewidgetitem2.setText(QCoreApplication.translate("MainWindow", u"Expiry Date", None));
+        ___qtablewidgetitem3 = self.tableWidget.horizontalHeaderItem(3)
+        ___qtablewidgetitem3.setText(QCoreApplication.translate("MainWindow", u"Customer Name", None));
+        self.label.setText("")
+        self.label_3.setText("")
+        self.menuFile.setTitle(QCoreApplication.translate("MainWindow", u"File", None))
+        self.menuAbout.setTitle(QCoreApplication.translate("MainWindow", u"About", None))
+#if QT_CONFIG(tooltip)
+        self.menuHelp.setToolTip("")
+#endif // QT_CONFIG(tooltip)
+        self.menuHelp.setTitle(QCoreApplication.translate("MainWindow", u"Help", None))
+    # retranslateUi
+
+# -*- coding: utf-8 -*-
+
+################################################################################
+## Form generated from reading UI file 'ConsolidatorApp.ui'
+##
+## Created by: Qt User Interface Compiler version 6.7.0
+##
+## WARNING! All changes made in this file will be lost when recompiling UI file!
+################################################################################
+
+from PySide6.QtCore import (QCoreApplication, QDate, QDateTime, QLocale,
+    QMetaObject, QObject, QPoint, QRect,
+    QSize, QTime, QUrl, Qt)
+from PySide6.QtGui import (QAction, QBrush, QColor, QConicalGradient,
+    QCursor, QFont, QFontDatabase, QGradient,
+    QIcon, QImage, QKeySequence, QLinearGradient,
+    QPainter, QPalette, QPixmap, QRadialGradient,
+    QTransform)
+from PySide6.QtWidgets import (QApplication, QComboBox, QFrame, QGridLayout,
+    QHBoxLayout, QHeaderView, QLabel, QLineEdit,
+    QMainWindow, QMenu, QMenuBar, QPushButton,
+    QSizePolicy, QStatusBar, QTableWidget, QTableWidgetItem,
+    QWidget)
+import resource_rc
+
+class Ui_MainWindow(object):
+    def setupUi(self, MainWindow):
+        if not MainWindow.objectName():
+            MainWindow.setObjectName(u"MainWindow")
+        MainWindow.resize(1197, 786)
+        MainWindow.setStyleSheet(u"\n"
+"QPushButton {\n"
+"                background-color: #00AEEF;  /* Primary color */\n"
+"                color: #ffffff;  /* Text color */\n"
+"                padding: 5px 10px;  /* Padding */\n"
+"                border: none;  /* No border */\n"
+"                border-radius: 2px;  /* Remove border radius */\n"
+"                font-size: 1rem;  /* Font size */\n"
+"                margin: 0;  /* Remove margin */\n"
+"               font-size: 12px;\n"
+"              \n"
+"            }\n"
+"            QPushButton:hover {\n"
+"                background-color: #0099CC;  /* Slightly darker blue for hover */\n"
+"\n"
+"            }\n"
+"            QPushButton:pressed {\n"
+"                background-color: #0088BB;  /* Even darker blue for pressed */\n"
+"            }\n"
+"\n"
+" QLineEdit {\n"
+"                padding: 1px;\n"
+"                border: 1px solid #ccc;\n"
+"                font-size: 12px;\n"
+"                border-radius: 5px; /* Rounded corners */\n"
+"             \n"
+"            }\n"
+"          "
+                        "  QLineEdit:focus {\n"
+"                border: 1px solid #00AEEF; /* Blue border when focused */\n"
+"            }\n"
+"\n"
+"QComboBox,QDateEdit{\n"
+"   font-size: 12px;\n"
+"\n"
+"\n"
+"}\n"
+"\n"
+"          ")
+        self.actionDocumentation = QAction(MainWindow)
+        self.actionDocumentation.setObjectName(u"actionDocumentation")
+        self.actionSave_as_CSV = QAction(MainWindow)
+        self.actionSave_as_CSV.setObjectName(u"actionSave_as_CSV")
+        self.actionExit = QAction(MainWindow)
+        self.actionExit.setObjectName(u"actionExit")
+        self.actionDeveloper = QAction(MainWindow)
+        self.actionDeveloper.setObjectName(u"actionDeveloper")
+        self.centralwidget = QWidget(MainWindow)
+        self.centralwidget.setObjectName(u"centralwidget")
+        self.gridLayout_2 = QGridLayout(self.centralwidget)
+        self.gridLayout_2.setObjectName(u"gridLayout_2")
+        self.gridLayout = QGridLayout()
+        self.gridLayout.setObjectName(u"gridLayout")
+        self.frame_3 = QFrame(self.centralwidget)
+        self.frame_3.setObjectName(u"frame_3")
+        self.frame_3.setFrameShape(QFrame.Shape.StyledPanel)
+        self.frame_3.setFrameShadow(QFrame.Shadow.Raised)
+        self.horizontalLayout_4 = QHBoxLayout(self.frame_3)
+        self.horizontalLayout_4.setObjectName(u"horizontalLayout_4")
+        self.horizontalLayout_2 = QHBoxLayout()
+        self.horizontalLayout_2.setObjectName(u"horizontalLayout_2")
+        self.search_line_edit = QLineEdit(self.frame_3)
+        self.search_line_edit.setObjectName(u"search_line_edit")
+
+        self.horizontalLayout_2.addWidget(self.search_line_edit)
+
+        self.search_button = QPushButton(self.frame_3)
+        self.search_button.setObjectName(u"search_button")
+        icon = QIcon(QIcon.fromTheme(u"edit-find"))
+        self.search_button.setIcon(icon)
+
+        self.horizontalLayout_2.addWidget(self.search_button)
+
+
+        self.horizontalLayout_4.addLayout(self.horizontalLayout_2)
+
+
+        self.gridLayout.addWidget(self.frame_3, 1, 2, 1, 1)
+
+        self.frame_4 = QFrame(self.centralwidget)
+        self.frame_4.setObjectName(u"frame_4")
+        self.frame_4.setFrameShape(QFrame.Shape.StyledPanel)
+        self.frame_4.setFrameShadow(QFrame.Shadow.Raised)
+        self.horizontalLayout_6 = QHBoxLayout(self.frame_4)
+        self.horizontalLayout_6.setSpacing(20)
+        self.horizontalLayout_6.setObjectName(u"horizontalLayout_6")
+        self.horizontalLayout_6.setContentsMargins(6, -1, -1, -1)
+        self.branch_comboBox = QComboBox(self.frame_4)
+        self.branch_comboBox.setObjectName(u"branch_comboBox")
+
+        self.horizontalLayout_6.addWidget(self.branch_comboBox)
+
+        self.product_combobox = QComboBox(self.frame_4)
+        self.product_combobox.setObjectName(u"product_combobox")
+
+        self.horizontalLayout_6.addWidget(self.product_combobox)
+
+        self.district_comboBox = QComboBox(self.frame_4)
+        self.district_comboBox.setObjectName(u"district_comboBox")
+
+        self.horizontalLayout_6.addWidget(self.district_comboBox)
+
+        self.reset_filter = QPushButton(self.frame_4)
+        self.reset_filter.setObjectName(u"reset_filter")
+        icon1 = QIcon(QIcon.fromTheme(u"view-refresh"))
+        self.reset_filter.setIcon(icon1)
+
+        self.horizontalLayout_6.addWidget(self.reset_filter)
+
+
+        self.gridLayout.addWidget(self.frame_4, 1, 1, 1, 1)
+
+        self.frame_2 = QFrame(self.centralwidget)
+        self.frame_2.setObjectName(u"frame_2")
+        self.frame_2.setFrameShape(QFrame.Shape.StyledPanel)
+        self.frame_2.setFrameShadow(QFrame.Shadow.Raised)
+        self.horizontalLayout_5 = QHBoxLayout(self.frame_2)
+        self.horizontalLayout_5.setObjectName(u"horizontalLayout_5")
+        self.horizontalLayout = QHBoxLayout()
+        self.horizontalLayout.setObjectName(u"horizontalLayout")
+        self.label_2 = QLabel(self.frame_2)
+        self.label_2.setObjectName(u"label_2")
+
+        self.horizontalLayout.addWidget(self.label_2)
+
+        self.source_directory_line_edit = QLineEdit(self.frame_2)
+        self.source_directory_line_edit.setObjectName(u"source_directory_line_edit")
+
+        self.horizontalLayout.addWidget(self.source_directory_line_edit)
+
+        self.browse_button = QPushButton(self.frame_2)
+        self.browse_button.setObjectName(u"browse_button")
+        icon2 = QIcon(QIcon.fromTheme(u"folder"))
+        self.browse_button.setIcon(icon2)
+
+        self.horizontalLayout.addWidget(self.browse_button)
+
+
+        self.horizontalLayout_5.addLayout(self.horizontalLayout)
+
+        self.process_button = QPushButton(self.frame_2)
+        self.process_button.setObjectName(u"process_button")
+        icon3 = QIcon(QIcon.fromTheme(u"document-properties"))
+        self.process_button.setIcon(icon3)
+        self.process_button.setFlat(False)
+
+        self.horizontalLayout_5.addWidget(self.process_button)
+
+        self.merge_embossbutton = QPushButton(self.frame_2)
+        self.merge_embossbutton.setObjectName(u"merge_embossbutton")
+        icon4 = QIcon(QIcon.fromTheme(u"document-new"))
+        self.merge_embossbutton.setIcon(icon4)
+
+        self.horizontalLayout_5.addWidget(self.merge_embossbutton)
+
+
+        self.gridLayout.addWidget(self.frame_2, 1, 0, 1, 1)
+
+        self.tableWidget = QTableWidget(self.centralwidget)
+        if (self.tableWidget.columnCount() < 4):
+            self.tableWidget.setColumnCount(4)
+        __qtablewidgetitem = QTableWidgetItem()
+        self.tableWidget.setHorizontalHeaderItem(0, __qtablewidgetitem)
+        __qtablewidgetitem1 = QTableWidgetItem()
+        self.tableWidget.setHorizontalHeaderItem(1, __qtablewidgetitem1)
+        __qtablewidgetitem2 = QTableWidgetItem()
+        self.tableWidget.setHorizontalHeaderItem(2, __qtablewidgetitem2)
+        __qtablewidgetitem3 = QTableWidgetItem()
+        self.tableWidget.setHorizontalHeaderItem(3, __qtablewidgetitem3)
+        self.tableWidget.setObjectName(u"tableWidget")
+
+        self.gridLayout.addWidget(self.tableWidget, 3, 0, 1, 3)
+
+        self.horizontalLayout_3 = QHBoxLayout()
+        self.horizontalLayout_3.setObjectName(u"horizontalLayout_3")
+        self.label = QLabel(self.centralwidget)
+        self.label.setObjectName(u"label")
+        self.label.setMinimumSize(QSize(156, 146))
+        self.label.setMaximumSize(QSize(156, 156))
+        self.label.setPixmap(QPixmap(u":/images/images/companylogo.png"))
+        self.label.setScaledContents(True)
+
+        self.horizontalLayout_3.addWidget(self.label)
+
+        self.label_3 = QLabel(self.centralwidget)
+        self.label_3.setObjectName(u"label_3")
+        self.label_3.setMinimumSize(QSize(156, 156))
+        self.label_3.setMaximumSize(QSize(156, 156))
+        self.label_3.setPixmap(QPixmap(u":/images/images/applogo.png"))
+        self.label_3.setScaledContents(True)
+
+        self.horizontalLayout_3.addWidget(self.label_3)
+
+
+        self.gridLayout.addLayout(self.horizontalLayout_3, 0, 0, 1, 3)
+
+        self.gridLayout.setColumnStretch(0, 3)
+        self.gridLayout.setColumnStretch(1, 1)
+        self.gridLayout.setColumnStretch(2, 1)
+
+        self.gridLayout_2.addLayout(self.gridLayout, 0, 0, 1, 1)
+
+        MainWindow.setCentralWidget(self.centralwidget)
+        self.menubar = QMenuBar(MainWindow)
+        self.menubar.setObjectName(u"menubar")
+        self.menubar.setGeometry(QRect(0, 0, 1197, 33))
+        self.menuFile = QMenu(self.menubar)
+        self.menuFile.setObjectName(u"menuFile")
+        self.menuAbout = QMenu(self.menubar)
+        self.menuAbout.setObjectName(u"menuAbout")
+        self.menuHelp = QMenu(self.menubar)
+        self.menuHelp.setObjectName(u"menuHelp")
+        MainWindow.setMenuBar(self.menubar)
+        self.statusbar = QStatusBar(MainWindow)
+        self.statusbar.setObjectName(u"statusbar")
+        MainWindow.setStatusBar(self.statusbar)
+
+        self.menubar.addAction(self.menuFile.menuAction())
+        self.menubar.addAction(self.menuAbout.menuAction())
+        self.menubar.addAction(self.menuHelp.menuAction())
+        self.menuFile.addAction(self.actionSave_as_CSV)
+        self.menuFile.addAction(self.actionExit)
+        self.menuAbout.addAction(self.actionDeveloper)
+        self.menuHelp.addAction(self.actionDocumentation)
+
+        self.retranslateUi(MainWindow)
+
+        QMetaObject.connectSlotsByName(MainWindow)
+    # setupUi
+
+    def retranslateUi(self, MainWindow):
+        MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"MainWindow", None))
+        self.actionDocumentation.setText(QCoreApplication.translate("MainWindow", u"Documentation", None))
+        self.actionSave_as_CSV.setText(QCoreApplication.translate("MainWindow", u"Save as CSV", None))
+        self.actionExit.setText(QCoreApplication.translate("MainWindow", u"Exit ", None))
+        self.actionDeveloper.setText(QCoreApplication.translate("MainWindow", u"Developer", None))
+        self.search_button.setText(QCoreApplication.translate("MainWindow", u"Search", None))
+        self.branch_comboBox.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Branch", None))
+        self.product_combobox.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Product", None))
+        self.district_comboBox.setPlaceholderText(QCoreApplication.translate("MainWindow", u"District", None))
+        self.reset_filter.setText(QCoreApplication.translate("MainWindow", u"Reset Filters", None))
+        self.label_2.setText(QCoreApplication.translate("MainWindow", u"Source Directory ", None))
+#if QT_CONFIG(tooltip)
+        self.browse_button.setToolTip(QCoreApplication.translate("MainWindow", u"choose path to Embossing File", None))
+#endif // QT_CONFIG(tooltip)
+        self.browse_button.setText(QCoreApplication.translate("MainWindow", u"Browse", None))
+#if QT_CONFIG(tooltip)
+        self.process_button.setToolTip(QCoreApplication.translate("MainWindow", u"Process Embossing File to CSV ", None))
+#endif // QT_CONFIG(tooltip)
+        self.process_button.setText(QCoreApplication.translate("MainWindow", u"Process CSV", None))
+#if QT_CONFIG(tooltip)
+        self.merge_embossbutton.setToolTip(QCoreApplication.translate("MainWindow", u"Merge Embossing file by Date", None))
+#endif // QT_CONFIG(tooltip)
+        self.merge_embossbutton.setText(QCoreApplication.translate("MainWindow", u"Merge Emboss", None))
+        ___qtablewidgetitem = self.tableWidget.horizontalHeaderItem(0)
+        ___qtablewidgetitem.setText(QCoreApplication.translate("MainWindow", u"4-digit + CVV", None));
+        ___qtablewidgetitem1 = self.tableWidget.horizontalHeaderItem(1)
+        ___qtablewidgetitem1.setText(QCoreApplication.translate("MainWindow", u"PAN", None));
+        ___qtablewidgetitem2 = self.tableWidget.horizontalHeaderItem(2)
+        ___qtablewidgetitem2.setText(QCoreApplication.translate("MainWindow", u"Expiry Date", None));
+        ___qtablewidgetitem3 = self.tableWidget.horizontalHeaderItem(3)
+        ___qtablewidgetitem3.setText(QCoreApplication.translate("MainWindow", u"Customer Name", None));
+        self.label.setText("")
+        self.label_3.setText("")
+        self.menuFile.setTitle(QCoreApplication.translate("MainWindow", u"File", None))
+        self.menuAbout.setTitle(QCoreApplication.translate("MainWindow", u"About", None))
+#if QT_CONFIG(tooltip)
+        self.menuHelp.setToolTip("")
+#endif // QT_CONFIG(tooltip)
+        self.menuHelp.setTitle(QCoreApplication.translate("MainWindow", u"Help", None))
+    # retranslateUi
+
+# -*- coding: utf-8 -*-
+
+################################################################################
+## Form generated from reading UI file 'ConsolidatorApp.ui'
+##
+## Created by: Qt User Interface Compiler version 6.7.0
+##
+## WARNING! All changes made in this file will be lost when recompiling UI file!
+################################################################################
+
+from PySide6.QtCore import (QCoreApplication, QDate, QDateTime, QLocale,
+    QMetaObject, QObject, QPoint, QRect,
+    QSize, QTime, QUrl, Qt)
+from PySide6.QtGui import (QAction, QBrush, QColor, QConicalGradient,
+    QCursor, QFont, QFontDatabase, QGradient,
+    QIcon, QImage, QKeySequence, QLinearGradient,
+    QPainter, QPalette, QPixmap, QRadialGradient,
+    QTransform)
+from PySide6.QtWidgets import (QApplication, QComboBox, QFrame, QGridLayout,
+    QHBoxLayout, QHeaderView, QLabel, QLineEdit,
+    QMainWindow, QMenu, QMenuBar, QPushButton,
+    QSizePolicy, QStatusBar, QTableWidget, QTableWidgetItem,
+    QWidget)
+import resource_rc
+
+class Ui_MainWindow(object):
+    def setupUi(self, MainWindow):
+        if not MainWindow.objectName():
+            MainWindow.setObjectName(u"MainWindow")
+        MainWindow.resize(1370, 792)
+        MainWindow.setStyleSheet(u"\n"
+"QPushButton {\n"
+"                background-color: #00AEEF;  /* Primary color */\n"
+"                color: #ffffff;  /* Text color */\n"
+"                padding: 5px 10px;  /* Padding */\n"
+"                border: none;  /* No border */\n"
+"                border-radius: 2px;  /* Remove border radius */\n"
+"                font-size: 1rem;  /* Font size */\n"
+"                margin: 0;  /* Remove margin */\n"
+"               font-size: 12px;\n"
+"              \n"
+"            }\n"
+"            QPushButton:hover {\n"
+"                background-color: #0099CC;  /* Slightly darker blue for hover */\n"
+"\n"
+"            }\n"
+"            QPushButton:pressed {\n"
+"                background-color: #0088BB;  /* Even darker blue for pressed */\n"
+"            }\n"
+"\n"
+" QLineEdit {\n"
+"                padding: 1px;\n"
+"                border: 1px solid #ccc;\n"
+"                font-size: 12px;\n"
+"                border-radius: 5px; /* Rounded corners */\n"
+"             \n"
+"            }\n"
+"          "
+                        "  QLineEdit:focus {\n"
+"                border: 1px solid #00AEEF; /* Blue border when focused */\n"
+"            }\n"
+"\n"
+"QComboBox,QDateEdit{\n"
+"   font-size: 12px;\n"
+"\n"
+"\n"
+"}\n"
+"\n"
+"          ")
+        self.actionDocumentation = QAction(MainWindow)
+        self.actionDocumentation.setObjectName(u"actionDocumentation")
+        self.actionSave_as_CSV = QAction(MainWindow)
+        self.actionSave_as_CSV.setObjectName(u"actionSave_as_CSV")
+        self.actionExit = QAction(MainWindow)
+        self.actionExit.setObjectName(u"actionExit")
+        self.actionDeveloper = QAction(MainWindow)
+        self.actionDeveloper.setObjectName(u"actionDeveloper")
+        self.centralwidget = QWidget(MainWindow)
+        self.centralwidget.setObjectName(u"centralwidget")
+        self.gridLayout_2 = QGridLayout(self.centralwidget)
+        self.gridLayout_2.setObjectName(u"gridLayout_2")
+        self.gridLayout = QGridLayout()
+        self.gridLayout.setObjectName(u"gridLayout")
+        self.frame_3 = QFrame(self.centralwidget)
+        self.frame_3.setObjectName(u"frame_3")
+        self.frame_3.setFrameShape(QFrame.Shape.StyledPanel)
+        self.frame_3.setFrameShadow(QFrame.Shadow.Raised)
+        self.horizontalLayout_4 = QHBoxLayout(self.frame_3)
+        self.horizontalLayout_4.setObjectName(u"horizontalLayout_4")
+        self.horizontalLayout_2 = QHBoxLayout()
+        self.horizontalLayout_2.setObjectName(u"horizontalLayout_2")
+        self.search_line_edit = QLineEdit(self.frame_3)
+        self.search_line_edit.setObjectName(u"search_line_edit")
+
+        self.horizontalLayout_2.addWidget(self.search_line_edit)
+
+        self.search_button = QPushButton(self.frame_3)
+        self.search_button.setObjectName(u"search_button")
+        icon = QIcon(QIcon.fromTheme(u"edit-find"))
+        self.search_button.setIcon(icon)
+
+        self.horizontalLayout_2.addWidget(self.search_button)
+
+
+        self.horizontalLayout_4.addLayout(self.horizontalLayout_2)
+
+
+        self.gridLayout.addWidget(self.frame_3, 1, 2, 1, 1)
+
+        self.frame_4 = QFrame(self.centralwidget)
+        self.frame_4.setObjectName(u"frame_4")
+        self.frame_4.setFrameShape(QFrame.Shape.StyledPanel)
+        self.frame_4.setFrameShadow(QFrame.Shadow.Raised)
+        self.horizontalLayout_6 = QHBoxLayout(self.frame_4)
+        self.horizontalLayout_6.setSpacing(20)
+        self.horizontalLayout_6.setObjectName(u"horizontalLayout_6")
+        self.horizontalLayout_6.setContentsMargins(6, -1, -1, -1)
+        self.branch_comboBox = QComboBox(self.frame_4)
+        self.branch_comboBox.setObjectName(u"branch_comboBox")
+
+        self.horizontalLayout_6.addWidget(self.branch_comboBox)
+
+        self.product_combobox = QComboBox(self.frame_4)
+        self.product_combobox.setObjectName(u"product_combobox")
+
+        self.horizontalLayout_6.addWidget(self.product_combobox)
+
+        self.district_comboBox = QComboBox(self.frame_4)
+        self.district_comboBox.setObjectName(u"district_comboBox")
+
+        self.horizontalLayout_6.addWidget(self.district_comboBox)
+
+        self.reset_filter = QPushButton(self.frame_4)
+        self.reset_filter.setObjectName(u"reset_filter")
+        icon1 = QIcon(QIcon.fromTheme(u"view-refresh"))
+        self.reset_filter.setIcon(icon1)
+
+        self.horizontalLayout_6.addWidget(self.reset_filter)
+
+
+        self.gridLayout.addWidget(self.frame_4, 1, 1, 1, 1)
+
+        self.frame_2 = QFrame(self.centralwidget)
+        self.frame_2.setObjectName(u"frame_2")
+        self.frame_2.setFrameShape(QFrame.Shape.StyledPanel)
+        self.frame_2.setFrameShadow(QFrame.Shadow.Raised)
+        self.horizontalLayout_5 = QHBoxLayout(self.frame_2)
+        self.horizontalLayout_5.setObjectName(u"horizontalLayout_5")
+        self.horizontalLayout = QHBoxLayout()
+        self.horizontalLayout.setObjectName(u"horizontalLayout")
+        self.label_2 = QLabel(self.frame_2)
+        self.label_2.setObjectName(u"label_2")
+
+        self.horizontalLayout.addWidget(self.label_2)
+
+        self.source_directory_line_edit = QLineEdit(self.frame_2)
+        self.source_directory_line_edit.setObjectName(u"source_directory_line_edit")
+
+        self.horizontalLayout.addWidget(self.source_directory_line_edit)
+
+        self.browse_button = QPushButton(self.frame_2)
+        self.browse_button.setObjectName(u"browse_button")
+        icon2 = QIcon(QIcon.fromTheme(u"folder"))
+        self.browse_button.setIcon(icon2)
+
+        self.horizontalLayout.addWidget(self.browse_button)
+
+
+        self.horizontalLayout_5.addLayout(self.horizontalLayout)
+
+        self.process_button = QPushButton(self.frame_2)
+        self.process_button.setObjectName(u"process_button")
+        icon3 = QIcon(QIcon.fromTheme(u"document-properties"))
+        self.process_button.setIcon(icon3)
+        self.process_button.setFlat(False)
+
+        self.horizontalLayout_5.addWidget(self.process_button)
+
+        self.merge_embossbutton = QPushButton(self.frame_2)
+        self.merge_embossbutton.setObjectName(u"merge_embossbutton")
+        icon4 = QIcon(QIcon.fromTheme(u"document-new"))
+        self.merge_embossbutton.setIcon(icon4)
+
+        self.horizontalLayout_5.addWidget(self.merge_embossbutton)
+
+
+        self.gridLayout.addWidget(self.frame_2, 1, 0, 1, 1)
+
+        self.tableWidget = QTableWidget(self.centralwidget)
+        if (self.tableWidget.columnCount() < 4):
+            self.tableWidget.setColumnCount(4)
+        __qtablewidgetitem = QTableWidgetItem()
+        self.tableWidget.setHorizontalHeaderItem(0, __qtablewidgetitem)
+        __qtablewidgetitem1 = QTableWidgetItem()
+        self.tableWidget.setHorizontalHeaderItem(1, __qtablewidgetitem1)
+        __qtablewidgetitem2 = QTableWidgetItem()
+        self.tableWidget.setHorizontalHeaderItem(2, __qtablewidgetitem2)
+        __qtablewidgetitem3 = QTableWidgetItem()
+        self.tableWidget.setHorizontalHeaderItem(3, __qtablewidgetitem3)
+        self.tableWidget.setObjectName(u"tableWidget")
+
+        self.gridLayout.addWidget(self.tableWidget, 3, 0, 1, 3)
+
+        self.horizontalLayout_3 = QHBoxLayout()
+        self.horizontalLayout_3.setObjectName(u"horizontalLayout_3")
+        self.label = QLabel(self.centralwidget)
+        self.label.setObjectName(u"label")
+        self.label.setMinimumSize(QSize(156, 146))
+        self.label.setMaximumSize(QSize(156, 156))
+        self.label.setPixmap(QPixmap(u":/images/images/companylogo.png"))
+        self.label.setScaledContents(True)
+
+        self.horizontalLayout_3.addWidget(self.label)
+
+        self.label_3 = QLabel(self.centralwidget)
+        self.label_3.setObjectName(u"label_3")
+        self.label_3.setMinimumSize(QSize(156, 156))
+        self.label_3.setMaximumSize(QSize(156, 156))
+        self.label_3.setPixmap(QPixmap(u":/images/images/applogo.png"))
+        self.label_3.setScaledContents(True)
+
+        self.horizontalLayout_3.addWidget(self.label_3)
+
+
+        self.gridLayout.addLayout(self.horizontalLayout_3, 0, 0, 1, 3)
+
+        self.gridLayout.setColumnStretch(0, 3)
+        self.gridLayout.setColumnStretch(1, 1)
+        self.gridLayout.setColumnStretch(2, 1)
+
+        self.gridLayout_2.addLayout(self.gridLayout, 0, 0, 1, 1)
+
+        MainWindow.setCentralWidget(self.centralwidget)
+        self.menubar = QMenuBar(MainWindow)
+        self.menubar.setObjectName(u"menubar")
+        self.menubar.setGeometry(QRect(0, 0, 1370, 33))
+        self.menuFile = QMenu(self.menubar)
+        self.menuFile.setObjectName(u"menuFile")
+        self.menuAbout = QMenu(self.menubar)
+        self.menuAbout.setObjectName(u"menuAbout")
+        self.menuHelp = QMenu(self.menubar)
+        self.menuHelp.setObjectName(u"menuHelp")
+        MainWindow.setMenuBar(self.menubar)
+        self.statusbar = QStatusBar(MainWindow)
+        self.statusbar.setObjectName(u"statusbar")
+        MainWindow.setStatusBar(self.statusbar)
+
+        self.menubar.addAction(self.menuFile.menuAction())
+        self.menubar.addAction(self.menuAbout.menuAction())
+        self.menubar.addAction(self.menuHelp.menuAction())
+        self.menuFile.addAction(self.actionSave_as_CSV)
+        self.menuFile.addAction(self.actionExit)
+        self.menuAbout.addAction(self.actionDeveloper)
+        self.menuHelp.addAction(self.actionDocumentation)
+
+        self.retranslateUi(MainWindow)
+
+        QMetaObject.connectSlotsByName(MainWindow)
+    # setupUi
+
+    def retranslateUi(self, MainWindow):
+        MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"MainWindow", None))
+        self.actionDocumentation.setText(QCoreApplication.translate("MainWindow", u"Documentation", None))
+        self.actionSave_as_CSV.setText(QCoreApplication.translate("MainWindow", u"Save as CSV", None))
+        self.actionExit.setText(QCoreApplication.translate("MainWindow", u"Exit ", None))
+        self.actionDeveloper.setText(QCoreApplication.translate("MainWindow", u"Developer", None))
+        self.search_button.setText(QCoreApplication.translate("MainWindow", u"Search", None))
+        self.branch_comboBox.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Branch", None))
+        self.product_combobox.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Product", None))
+        self.district_comboBox.setPlaceholderText(QCoreApplication.translate("MainWindow", u"District", None))
+        self.reset_filter.setText(QCoreApplication.translate("MainWindow", u"Reset Filters", None))
+        self.label_2.setText(QCoreApplication.translate("MainWindow", u"Source Directory ", None))
+#if QT_CONFIG(tooltip)
+        self.browse_button.setToolTip(QCoreApplication.translate("MainWindow", u"choose path to Embossing File", None))
+#endif // QT_CONFIG(tooltip)
+        self.browse_button.setText(QCoreApplication.translate("MainWindow", u"Browse", None))
+#if QT_CONFIG(tooltip)
+        self.process_button.setToolTip(QCoreApplication.translate("MainWindow", u"Process Embossing File to CSV ", None))
+#endif // QT_CONFIG(tooltip)
+        self.process_button.setText(QCoreApplication.translate("MainWindow", u"Process CSV", None))
+#if QT_CONFIG(tooltip)
+        self.merge_embossbutton.setToolTip(QCoreApplication.translate("MainWindow", u"Merge Embossing file by Date", None))
+#endif // QT_CONFIG(tooltip)
+        self.merge_embossbutton.setText(QCoreApplication.translate("MainWindow", u"Merge Emboss", None))
+        ___qtablewidgetitem = self.tableWidget.horizontalHeaderItem(0)
+        ___qtablewidgetitem.setText(QCoreApplication.translate("MainWindow", u"4-digit + CVV", None));
+        ___qtablewidgetitem1 = self.tableWidget.horizontalHeaderItem(1)
+        ___qtablewidgetitem1.setText(QCoreApplication.translate("MainWindow", u"PAN", None));
+        ___qtablewidgetitem2 = self.tableWidget.horizontalHeaderItem(2)
+        ___qtablewidgetitem2.setText(QCoreApplication.translate("MainWindow", u"Expiry Date", None));
+        ___qtablewidgetitem3 = self.tableWidget.horizontalHeaderItem(3)
+        ___qtablewidgetitem3.setText(QCoreApplication.translate("MainWindow", u"Customer Name", None));
+        self.label.setText("")
+        self.label_3.setText("")
+        self.menuFile.setTitle(QCoreApplication.translate("MainWindow", u"File", None))
+        self.menuAbout.setTitle(QCoreApplication.translate("MainWindow", u"About", None))
+#if QT_CONFIG(tooltip)
+        self.menuHelp.setToolTip("")
+#endif // QT_CONFIG(tooltip)
+        self.menuHelp.setTitle(QCoreApplication.translate("MainWindow", u"Help", None))
+    # retranslateUi
+
+# -*- coding: utf-8 -*-
+
+################################################################################
+## Form generated from reading UI file 'ConsolidatorApp.ui'
+##
+## Created by: Qt User Interface Compiler version 6.7.0
+##
+## WARNING! All changes made in this file will be lost when recompiling UI file!
+################################################################################
+
+from PySide6.QtCore import (QCoreApplication, QDate, QDateTime, QLocale,
+    QMetaObject, QObject, QPoint, QRect,
+    QSize, QTime, QUrl, Qt)
+from PySide6.QtGui import (QAction, QBrush, QColor, QConicalGradient,
+    QCursor, QFont, QFontDatabase, QGradient,
+    QIcon, QImage, QKeySequence, QLinearGradient,
+    QPainter, QPalette, QPixmap, QRadialGradient,
+    QTransform)
+from PySide6.QtWidgets import (QApplication, QComboBox, QFrame, QGridLayout,
+    QHBoxLayout, QHeaderView, QLabel, QLineEdit,
+    QMainWindow, QMenu, QMenuBar, QPushButton,
+    QSizePolicy, QStatusBar, QTableWidget, QTableWidgetItem,
+    QWidget)
+import resource_rc
+
+class Ui_MainWindow(object):
+    def setupUi(self, MainWindow):
+        if not MainWindow.objectName():
+            MainWindow.setObjectName(u"MainWindow")
+        MainWindow.resize(1370, 792)
+        MainWindow.setStyleSheet(u"\n"
+"QPushButton {\n"
+"                background-color: #00AEEF;  /* Primary color */\n"
+"                color: #ffffff;  /* Text color */\n"
+"                padding: 5px 10px;  /* Padding */\n"
+"                border: none;  /* No border */\n"
+"                border-radius: 2px;  /* Remove border radius */\n"
+"                font-size: 1rem;  /* Font size */\n"
+"                margin: 0;  /* Remove margin */\n"
+"               font-size: 12px;\n"
+"              \n"
+"            }\n"
+"            QPushButton:hover {\n"
+"                background-color: #0099CC;  /* Slightly darker blue for hover */\n"
+"\n"
+"            }\n"
+"            QPushButton:pressed {\n"
+"                background-color: #0088BB;  /* Even darker blue for pressed */\n"
+"            }\n"
+"\n"
+" QLineEdit {\n"
+"                padding: 1px;\n"
+"                border: 1px solid #ccc;\n"
+"                font-size: 12px;\n"
+"                border-radius: 5px; /* Rounded corners */\n"
+"             \n"
+"            }\n"
+"          "
+                        "  QLineEdit:focus {\n"
+"                border: 1px solid #00AEEF; /* Blue border when focused */\n"
+"            }\n"
+"\n"
+"QComboBox,QDateEdit{\n"
+"   font-size: 12px;\n"
+"\n"
+"\n"
+"}\n"
+"\n"
+"          ")
+        self.actionDocumentation = QAction(MainWindow)
+        self.actionDocumentation.setObjectName(u"actionDocumentation")
+        self.actionSave_as_CSV = QAction(MainWindow)
+        self.actionSave_as_CSV.setObjectName(u"actionSave_as_CSV")
+        self.actionExit = QAction(MainWindow)
+        self.actionExit.setObjectName(u"actionExit")
+        self.actionDeveloper = QAction(MainWindow)
+        self.actionDeveloper.setObjectName(u"actionDeveloper")
+        self.centralwidget = QWidget(MainWindow)
+        self.centralwidget.setObjectName(u"centralwidget")
+        self.gridLayout_2 = QGridLayout(self.centralwidget)
+        self.gridLayout_2.setObjectName(u"gridLayout_2")
+        self.gridLayout = QGridLayout()
+        self.gridLayout.setObjectName(u"gridLayout")
+        self.frame_3 = QFrame(self.centralwidget)
+        self.frame_3.setObjectName(u"frame_3")
+        self.frame_3.setFrameShape(QFrame.Shape.StyledPanel)
+        self.frame_3.setFrameShadow(QFrame.Shadow.Raised)
+        self.horizontalLayout_4 = QHBoxLayout(self.frame_3)
+        self.horizontalLayout_4.setObjectName(u"horizontalLayout_4")
+        self.horizontalLayout_2 = QHBoxLayout()
+        self.horizontalLayout_2.setObjectName(u"horizontalLayout_2")
+        self.search_line_edit = QLineEdit(self.frame_3)
+        self.search_line_edit.setObjectName(u"search_line_edit")
+
+        self.horizontalLayout_2.addWidget(self.search_line_edit)
+
+        self.search_button = QPushButton(self.frame_3)
+        self.search_button.setObjectName(u"search_button")
+        icon = QIcon(QIcon.fromTheme(u"edit-find"))
+        self.search_button.setIcon(icon)
+
+        self.horizontalLayout_2.addWidget(self.search_button)
+
+
+        self.horizontalLayout_4.addLayout(self.horizontalLayout_2)
+
+
+        self.gridLayout.addWidget(self.frame_3, 1, 2, 1, 1)
+
+        self.frame_4 = QFrame(self.centralwidget)
+        self.frame_4.setObjectName(u"frame_4")
+        self.frame_4.setFrameShape(QFrame.Shape.StyledPanel)
+        self.frame_4.setFrameShadow(QFrame.Shadow.Raised)
+        self.horizontalLayout_6 = QHBoxLayout(self.frame_4)
+        self.horizontalLayout_6.setSpacing(20)
+        self.horizontalLayout_6.setObjectName(u"horizontalLayout_6")
+        self.horizontalLayout_6.setContentsMargins(6, -1, -1, -1)
+        self.branch_comboBox = QComboBox(self.frame_4)
+        self.branch_comboBox.setObjectName(u"branch_comboBox")
+
+        self.horizontalLayout_6.addWidget(self.branch_comboBox)
+
+        self.product_combobox = QComboBox(self.frame_4)
+        self.product_combobox.setObjectName(u"product_combobox")
+
+        self.horizontalLayout_6.addWidget(self.product_combobox)
+
+        self.district_comboBox = QComboBox(self.frame_4)
+        self.district_comboBox.setObjectName(u"district_comboBox")
+
+        self.horizontalLayout_6.addWidget(self.district_comboBox)
+
+        self.reset_filter = QPushButton(self.frame_4)
+        self.reset_filter.setObjectName(u"reset_filter")
+        icon1 = QIcon(QIcon.fromTheme(u"view-refresh"))
+        self.reset_filter.setIcon(icon1)
+
+        self.horizontalLayout_6.addWidget(self.reset_filter)
+
+        self.horizontalLayout_6.setStretch(0, 2)
+        self.horizontalLayout_6.setStretch(1, 2)
+        self.horizontalLayout_6.setStretch(2, 1)
+        self.horizontalLayout_6.setStretch(3, 1)
+
+        self.gridLayout.addWidget(self.frame_4, 1, 1, 1, 1)
+
+        self.frame_2 = QFrame(self.centralwidget)
+        self.frame_2.setObjectName(u"frame_2")
+        self.frame_2.setFrameShape(QFrame.Shape.StyledPanel)
+        self.frame_2.setFrameShadow(QFrame.Shadow.Raised)
+        self.horizontalLayout_5 = QHBoxLayout(self.frame_2)
+        self.horizontalLayout_5.setObjectName(u"horizontalLayout_5")
+        self.horizontalLayout = QHBoxLayout()
+        self.horizontalLayout.setObjectName(u"horizontalLayout")
+        self.label_2 = QLabel(self.frame_2)
+        self.label_2.setObjectName(u"label_2")
+
+        self.horizontalLayout.addWidget(self.label_2)
+
+        self.source_directory_line_edit = QLineEdit(self.frame_2)
+        self.source_directory_line_edit.setObjectName(u"source_directory_line_edit")
+
+        self.horizontalLayout.addWidget(self.source_directory_line_edit)
+
+        self.browse_button = QPushButton(self.frame_2)
+        self.browse_button.setObjectName(u"browse_button")
+        icon2 = QIcon(QIcon.fromTheme(u"folder"))
+        self.browse_button.setIcon(icon2)
+
+        self.horizontalLayout.addWidget(self.browse_button)
+
+
+        self.horizontalLayout_5.addLayout(self.horizontalLayout)
+
+        self.process_button = QPushButton(self.frame_2)
+        self.process_button.setObjectName(u"process_button")
+        icon3 = QIcon(QIcon.fromTheme(u"document-properties"))
+        self.process_button.setIcon(icon3)
+        self.process_button.setFlat(False)
+
+        self.horizontalLayout_5.addWidget(self.process_button)
+
+        self.merge_embossbutton = QPushButton(self.frame_2)
+        self.merge_embossbutton.setObjectName(u"merge_embossbutton")
+        icon4 = QIcon(QIcon.fromTheme(u"document-new"))
+        self.merge_embossbutton.setIcon(icon4)
+
+        self.horizontalLayout_5.addWidget(self.merge_embossbutton)
+
+
+        self.gridLayout.addWidget(self.frame_2, 1, 0, 1, 1)
+
+        self.tableWidget = QTableWidget(self.centralwidget)
+        if (self.tableWidget.columnCount() < 4):
+            self.tableWidget.setColumnCount(4)
+        __qtablewidgetitem = QTableWidgetItem()
+        self.tableWidget.setHorizontalHeaderItem(0, __qtablewidgetitem)
+        __qtablewidgetitem1 = QTableWidgetItem()
+        self.tableWidget.setHorizontalHeaderItem(1, __qtablewidgetitem1)
+        __qtablewidgetitem2 = QTableWidgetItem()
+        self.tableWidget.setHorizontalHeaderItem(2, __qtablewidgetitem2)
+        __qtablewidgetitem3 = QTableWidgetItem()
+        self.tableWidget.setHorizontalHeaderItem(3, __qtablewidgetitem3)
+        self.tableWidget.setObjectName(u"tableWidget")
+
+        self.gridLayout.addWidget(self.tableWidget, 3, 0, 1, 3)
+
+        self.horizontalLayout_3 = QHBoxLayout()
+        self.horizontalLayout_3.setObjectName(u"horizontalLayout_3")
+        self.label = QLabel(self.centralwidget)
+        self.label.setObjectName(u"label")
+        self.label.setMinimumSize(QSize(156, 146))
+        self.label.setMaximumSize(QSize(156, 156))
+        self.label.setPixmap(QPixmap(u":/images/images/companylogo.png"))
+        self.label.setScaledContents(True)
+
+        self.horizontalLayout_3.addWidget(self.label)
+
+        self.label_3 = QLabel(self.centralwidget)
+        self.label_3.setObjectName(u"label_3")
+        self.label_3.setMinimumSize(QSize(156, 156))
+        self.label_3.setMaximumSize(QSize(156, 156))
+        self.label_3.setPixmap(QPixmap(u":/images/images/applogo.png"))
+        self.label_3.setScaledContents(True)
+
+        self.horizontalLayout_3.addWidget(self.label_3)
+
+
+        self.gridLayout.addLayout(self.horizontalLayout_3, 0, 0, 1, 3)
+
+        self.gridLayout.setColumnStretch(0, 3)
+        self.gridLayout.setColumnStretch(1, 1)
+        self.gridLayout.setColumnStretch(2, 1)
+
+        self.gridLayout_2.addLayout(self.gridLayout, 0, 0, 1, 1)
+
+        MainWindow.setCentralWidget(self.centralwidget)
+        self.menubar = QMenuBar(MainWindow)
+        self.menubar.setObjectName(u"menubar")
+        self.menubar.setGeometry(QRect(0, 0, 1370, 33))
+        self.menuFile = QMenu(self.menubar)
+        self.menuFile.setObjectName(u"menuFile")
+        self.menuAbout = QMenu(self.menubar)
+        self.menuAbout.setObjectName(u"menuAbout")
+        self.menuHelp = QMenu(self.menubar)
+        self.menuHelp.setObjectName(u"menuHelp")
+        MainWindow.setMenuBar(self.menubar)
+        self.statusbar = QStatusBar(MainWindow)
+        self.statusbar.setObjectName(u"statusbar")
+        MainWindow.setStatusBar(self.statusbar)
+
+        self.menubar.addAction(self.menuFile.menuAction())
+        self.menubar.addAction(self.menuAbout.menuAction())
+        self.menubar.addAction(self.menuHelp.menuAction())
+        self.menuFile.addAction(self.actionSave_as_CSV)
+        self.menuFile.addAction(self.actionExit)
+        self.menuAbout.addAction(self.actionDeveloper)
+        self.menuHelp.addAction(self.actionDocumentation)
+
+        self.retranslateUi(MainWindow)
+
+        QMetaObject.connectSlotsByName(MainWindow)
+    # setupUi
+
+    def retranslateUi(self, MainWindow):
+        MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"MainWindow", None))
+        self.actionDocumentation.setText(QCoreApplication.translate("MainWindow", u"Documentation", None))
+        self.actionSave_as_CSV.setText(QCoreApplication.translate("MainWindow", u"Save as CSV", None))
+        self.actionExit.setText(QCoreApplication.translate("MainWindow", u"Exit ", None))
+        self.actionDeveloper.setText(QCoreApplication.translate("MainWindow", u"Developer", None))
+        self.search_button.setText(QCoreApplication.translate("MainWindow", u"Search", None))
+        self.branch_comboBox.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Branch", None))
+        self.product_combobox.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Product", None))
+        self.district_comboBox.setPlaceholderText(QCoreApplication.translate("MainWindow", u"District", None))
+        self.reset_filter.setText(QCoreApplication.translate("MainWindow", u"Reset Filters", None))
+        self.label_2.setText(QCoreApplication.translate("MainWindow", u"Source Directory ", None))
+#if QT_CONFIG(tooltip)
+        self.browse_button.setToolTip(QCoreApplication.translate("MainWindow", u"choose path to Embossing File", None))
+#endif // QT_CONFIG(tooltip)
+        self.browse_button.setText(QCoreApplication.translate("MainWindow", u"Browse", None))
+#if QT_CONFIG(tooltip)
+        self.process_button.setToolTip(QCoreApplication.translate("MainWindow", u"Process Embossing File to CSV ", None))
+#endif // QT_CONFIG(tooltip)
+        self.process_button.setText(QCoreApplication.translate("MainWindow", u"Process CSV", None))
+#if QT_CONFIG(tooltip)
+        self.merge_embossbutton.setToolTip(QCoreApplication.translate("MainWindow", u"Merge Embossing file by Date", None))
+#endif // QT_CONFIG(tooltip)
+        self.merge_embossbutton.setText(QCoreApplication.translate("MainWindow", u"Merge Emboss", None))
+        ___qtablewidgetitem = self.tableWidget.horizontalHeaderItem(0)
+        ___qtablewidgetitem.setText(QCoreApplication.translate("MainWindow", u"4-digit + CVV", None));
+        ___qtablewidgetitem1 = self.tableWidget.horizontalHeaderItem(1)
+        ___qtablewidgetitem1.setText(QCoreApplication.translate("MainWindow", u"PAN", None));
+        ___qtablewidgetitem2 = self.tableWidget.horizontalHeaderItem(2)
+        ___qtablewidgetitem2.setText(QCoreApplication.translate("MainWindow", u"Expiry Date", None));
+        ___qtablewidgetitem3 = self.tableWidget.horizontalHeaderItem(3)
+        ___qtablewidgetitem3.setText(QCoreApplication.translate("MainWindow", u"Customer Name", None));
+        self.label.setText("")
+        self.label_3.setText("")
+        self.menuFile.setTitle(QCoreApplication.translate("MainWindow", u"File", None))
+        self.menuAbout.setTitle(QCoreApplication.translate("MainWindow", u"About", None))
+#if QT_CONFIG(tooltip)
+        self.menuHelp.setToolTip("")
+#endif // QT_CONFIG(tooltip)
+        self.menuHelp.setTitle(QCoreApplication.translate("MainWindow", u"Help", None))
+    # retranslateUi
+
+# -*- coding: utf-8 -*-
+
+################################################################################
+## Form generated from reading UI file 'ConsolidatorApp.ui'
+##
+## Created by: Qt User Interface Compiler version 6.7.0
+##
+## WARNING! All changes made in this file will be lost when recompiling UI file!
+################################################################################
+
+from PySide6.QtCore import (QCoreApplication, QDate, QDateTime, QLocale,
+    QMetaObject, QObject, QPoint, QRect,
+    QSize, QTime, QUrl, Qt)
+from PySide6.QtGui import (QAction, QBrush, QColor, QConicalGradient,
+    QCursor, QFont, QFontDatabase, QGradient,
+    QIcon, QImage, QKeySequence, QLinearGradient,
+    QPainter, QPalette, QPixmap, QRadialGradient,
+    QTransform)
+from PySide6.QtWidgets import (QApplication, QComboBox, QFrame, QGridLayout,
+    QHBoxLayout, QHeaderView, QLabel, QLineEdit,
+    QMainWindow, QMenu, QMenuBar, QPushButton,
+    QSizePolicy, QStatusBar, QTableWidget, QTableWidgetItem,
+    QWidget)
+import resource_rc
+
+class Ui_MainWindow(object):
+    def setupUi(self, MainWindow):
+        if not MainWindow.objectName():
+            MainWindow.setObjectName(u"MainWindow")
+        MainWindow.resize(1332, 794)
+        MainWindow.setStyleSheet(u"\n"
+"QPushButton {\n"
+"                background-color: #00AEEF;  /* Primary color */\n"
+"                color: #ffffff;  /* Text color */\n"
+"                padding: 5px 10px;  /* Padding */\n"
+"                border: none;  /* No border */\n"
+"                border-radius: 2px;  /* Remove border radius */\n"
+"                font-size: 1rem;  /* Font size */\n"
+"                margin: 0;  /* Remove margin */\n"
+"               font-size: 12px;\n"
+"              \n"
+"            }\n"
+"            QPushButton:hover {\n"
+"                background-color: #0099CC;  /* Slightly darker blue for hover */\n"
+"\n"
+"            }\n"
+"            QPushButton:pressed {\n"
+"                background-color: #0088BB;  /* Even darker blue for pressed */\n"
+"            }\n"
+"\n"
+" QLineEdit {\n"
+"                padding: 1px;\n"
+"                border: 1px solid #ccc;\n"
+"                font-size: 12px;\n"
+"                border-radius: 5px; /* Rounded corners */\n"
+"             \n"
+"            }\n"
+"          "
+                        "  QLineEdit:focus {\n"
+"                border: 1px solid #00AEEF; /* Blue border when focused */\n"
+"            }\n"
+"\n"
+"QComboBox,QDateEdit{\n"
+"   font-size: 12px;\n"
+"\n"
+"\n"
+"}\n"
+"\n"
+"          ")
+        self.actionDocumentation = QAction(MainWindow)
+        self.actionDocumentation.setObjectName(u"actionDocumentation")
+        self.actionSave_as_CSV = QAction(MainWindow)
+        self.actionSave_as_CSV.setObjectName(u"actionSave_as_CSV")
+        self.actionExit = QAction(MainWindow)
+        self.actionExit.setObjectName(u"actionExit")
+        self.actionDeveloper = QAction(MainWindow)
+        self.actionDeveloper.setObjectName(u"actionDeveloper")
+        self.centralwidget = QWidget(MainWindow)
+        self.centralwidget.setObjectName(u"centralwidget")
+        self.gridLayout_2 = QGridLayout(self.centralwidget)
+        self.gridLayout_2.setObjectName(u"gridLayout_2")
+        self.gridLayout = QGridLayout()
+        self.gridLayout.setObjectName(u"gridLayout")
+        self.frame_3 = QFrame(self.centralwidget)
+        self.frame_3.setObjectName(u"frame_3")
+        self.frame_3.setFrameShape(QFrame.Shape.StyledPanel)
+        self.frame_3.setFrameShadow(QFrame.Shadow.Raised)
+        self.horizontalLayout_4 = QHBoxLayout(self.frame_3)
+        self.horizontalLayout_4.setObjectName(u"horizontalLayout_4")
+        self.horizontalLayout_2 = QHBoxLayout()
+        self.horizontalLayout_2.setObjectName(u"horizontalLayout_2")
+        self.search_line_edit = QLineEdit(self.frame_3)
+        self.search_line_edit.setObjectName(u"search_line_edit")
+
+        self.horizontalLayout_2.addWidget(self.search_line_edit)
+
+        self.search_button = QPushButton(self.frame_3)
+        self.search_button.setObjectName(u"search_button")
+        icon = QIcon(QIcon.fromTheme(u"edit-find"))
+        self.search_button.setIcon(icon)
+
+        self.horizontalLayout_2.addWidget(self.search_button)
+
+
+        self.horizontalLayout_4.addLayout(self.horizontalLayout_2)
+
+
+        self.gridLayout.addWidget(self.frame_3, 1, 2, 1, 1)
+
+        self.frame_4 = QFrame(self.centralwidget)
+        self.frame_4.setObjectName(u"frame_4")
+        self.frame_4.setFrameShape(QFrame.Shape.StyledPanel)
+        self.frame_4.setFrameShadow(QFrame.Shadow.Raised)
+        self.horizontalLayout_6 = QHBoxLayout(self.frame_4)
+        self.horizontalLayout_6.setSpacing(20)
+        self.horizontalLayout_6.setObjectName(u"horizontalLayout_6")
+        self.horizontalLayout_6.setContentsMargins(6, -1, -1, -1)
+        self.branch_comboBox = QComboBox(self.frame_4)
+        self.branch_comboBox.setObjectName(u"branch_comboBox")
+
+        self.horizontalLayout_6.addWidget(self.branch_comboBox)
+
+        self.product_combobox = QComboBox(self.frame_4)
+        self.product_combobox.setObjectName(u"product_combobox")
+
+        self.horizontalLayout_6.addWidget(self.product_combobox)
+
+        self.district_comboBox = QComboBox(self.frame_4)
+        self.district_comboBox.setObjectName(u"district_comboBox")
+
+        self.horizontalLayout_6.addWidget(self.district_comboBox)
+
+        self.reset_filter = QPushButton(self.frame_4)
+        self.reset_filter.setObjectName(u"reset_filter")
+        icon1 = QIcon(QIcon.fromTheme(u"view-refresh"))
+        self.reset_filter.setIcon(icon1)
+
+        self.horizontalLayout_6.addWidget(self.reset_filter)
+
+        self.horizontalLayout_6.setStretch(0, 2)
+        self.horizontalLayout_6.setStretch(1, 2)
+        self.horizontalLayout_6.setStretch(2, 1)
+        self.horizontalLayout_6.setStretch(3, 1)
+
+        self.gridLayout.addWidget(self.frame_4, 1, 1, 1, 1)
+
+        self.frame_2 = QFrame(self.centralwidget)
+        self.frame_2.setObjectName(u"frame_2")
+        self.frame_2.setFrameShape(QFrame.Shape.StyledPanel)
+        self.frame_2.setFrameShadow(QFrame.Shadow.Raised)
+        self.horizontalLayout_5 = QHBoxLayout(self.frame_2)
+        self.horizontalLayout_5.setObjectName(u"horizontalLayout_5")
+        self.horizontalLayout = QHBoxLayout()
+        self.horizontalLayout.setObjectName(u"horizontalLayout")
+        self.label_2 = QLabel(self.frame_2)
+        self.label_2.setObjectName(u"label_2")
+
+        self.horizontalLayout.addWidget(self.label_2)
+
+        self.source_directory_line_edit = QLineEdit(self.frame_2)
+        self.source_directory_line_edit.setObjectName(u"source_directory_line_edit")
+
+        self.horizontalLayout.addWidget(self.source_directory_line_edit)
+
+        self.browse_button = QPushButton(self.frame_2)
+        self.browse_button.setObjectName(u"browse_button")
+        icon2 = QIcon(QIcon.fromTheme(u"folder"))
+        self.browse_button.setIcon(icon2)
+
+        self.horizontalLayout.addWidget(self.browse_button)
+
+
+        self.horizontalLayout_5.addLayout(self.horizontalLayout)
+
+        self.process_button = QPushButton(self.frame_2)
+        self.process_button.setObjectName(u"process_button")
+        icon3 = QIcon(QIcon.fromTheme(u"document-properties"))
+        self.process_button.setIcon(icon3)
+        self.process_button.setFlat(False)
+
+        self.horizontalLayout_5.addWidget(self.process_button)
+
+        self.merge_embossbutton = QPushButton(self.frame_2)
+        self.merge_embossbutton.setObjectName(u"merge_embossbutton")
+        icon4 = QIcon(QIcon.fromTheme(u"document-new"))
+        self.merge_embossbutton.setIcon(icon4)
+
+        self.horizontalLayout_5.addWidget(self.merge_embossbutton)
+
+
+        self.gridLayout.addWidget(self.frame_2, 1, 0, 1, 1)
+
+        self.tableWidget = QTableWidget(self.centralwidget)
+        if (self.tableWidget.columnCount() < 4):
+            self.tableWidget.setColumnCount(4)
+        __qtablewidgetitem = QTableWidgetItem()
+        self.tableWidget.setHorizontalHeaderItem(0, __qtablewidgetitem)
+        __qtablewidgetitem1 = QTableWidgetItem()
+        self.tableWidget.setHorizontalHeaderItem(1, __qtablewidgetitem1)
+        __qtablewidgetitem2 = QTableWidgetItem()
+        self.tableWidget.setHorizontalHeaderItem(2, __qtablewidgetitem2)
+        __qtablewidgetitem3 = QTableWidgetItem()
+        self.tableWidget.setHorizontalHeaderItem(3, __qtablewidgetitem3)
+        self.tableWidget.setObjectName(u"tableWidget")
+
+        self.gridLayout.addWidget(self.tableWidget, 3, 0, 1, 3)
+
+        self.horizontalLayout_3 = QHBoxLayout()
+        self.horizontalLayout_3.setObjectName(u"horizontalLayout_3")
+        self.label = QLabel(self.centralwidget)
+        self.label.setObjectName(u"label")
+        self.label.setMinimumSize(QSize(156, 146))
+        self.label.setMaximumSize(QSize(156, 156))
+        self.label.setPixmap(QPixmap(u":/images/images/companylogo.png"))
+        self.label.setScaledContents(True)
+
+        self.horizontalLayout_3.addWidget(self.label)
+
+        self.label_3 = QLabel(self.centralwidget)
+        self.label_3.setObjectName(u"label_3")
+        self.label_3.setMinimumSize(QSize(156, 156))
+        self.label_3.setMaximumSize(QSize(156, 156))
+        self.label_3.setPixmap(QPixmap(u":/images/images/applogo.png"))
+        self.label_3.setScaledContents(True)
+
+        self.horizontalLayout_3.addWidget(self.label_3)
+
+
+        self.gridLayout.addLayout(self.horizontalLayout_3, 0, 0, 1, 3)
+
+        self.gridLayout.setColumnStretch(0, 3)
+        self.gridLayout.setColumnStretch(1, 1)
+        self.gridLayout.setColumnStretch(2, 1)
+
+        self.gridLayout_2.addLayout(self.gridLayout, 0, 0, 1, 1)
+
+        MainWindow.setCentralWidget(self.centralwidget)
+        self.menubar = QMenuBar(MainWindow)
+        self.menubar.setObjectName(u"menubar")
+        self.menubar.setGeometry(QRect(0, 0, 1332, 33))
+        self.menuFile = QMenu(self.menubar)
+        self.menuFile.setObjectName(u"menuFile")
+        self.menuAbout = QMenu(self.menubar)
+        self.menuAbout.setObjectName(u"menuAbout")
+        self.menuHelp = QMenu(self.menubar)
+        self.menuHelp.setObjectName(u"menuHelp")
+        MainWindow.setMenuBar(self.menubar)
+        self.statusbar = QStatusBar(MainWindow)
+        self.statusbar.setObjectName(u"statusbar")
+        MainWindow.setStatusBar(self.statusbar)
+
+        self.menubar.addAction(self.menuFile.menuAction())
+        self.menubar.addAction(self.menuAbout.menuAction())
+        self.menubar.addAction(self.menuHelp.menuAction())
+        self.menuFile.addAction(self.actionSave_as_CSV)
+        self.menuFile.addAction(self.actionExit)
+        self.menuAbout.addAction(self.actionDeveloper)
+        self.menuHelp.addAction(self.actionDocumentation)
+
+        self.retranslateUi(MainWindow)
+
+        QMetaObject.connectSlotsByName(MainWindow)
+    # setupUi
+
+    def retranslateUi(self, MainWindow):
+        MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"MainWindow", None))
+        self.actionDocumentation.setText(QCoreApplication.translate("MainWindow", u"Documentation", None))
+        self.actionSave_as_CSV.setText(QCoreApplication.translate("MainWindow", u"Save as CSV", None))
+        self.actionExit.setText(QCoreApplication.translate("MainWindow", u"Exit ", None))
+        self.actionDeveloper.setText(QCoreApplication.translate("MainWindow", u"Developer", None))
+        self.search_button.setText(QCoreApplication.translate("MainWindow", u"Search", None))
+        self.branch_comboBox.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Branch", None))
+        self.product_combobox.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Product", None))
+        self.district_comboBox.setPlaceholderText(QCoreApplication.translate("MainWindow", u"District", None))
+        self.reset_filter.setText(QCoreApplication.translate("MainWindow", u"Reset Filters", None))
+        self.label_2.setText(QCoreApplication.translate("MainWindow", u"Source Directory ", None))
+#if QT_CONFIG(tooltip)
+        self.browse_button.setToolTip(QCoreApplication.translate("MainWindow", u"choose path to Embossing File", None))
+#endif // QT_CONFIG(tooltip)
+        self.browse_button.setText(QCoreApplication.translate("MainWindow", u"Browse", None))
+#if QT_CONFIG(tooltip)
+        self.process_button.setToolTip(QCoreApplication.translate("MainWindow", u"Process Embossing File to CSV ", None))
+#endif // QT_CONFIG(tooltip)
+        self.process_button.setText(QCoreApplication.translate("MainWindow", u"Process CSV", None))
+#if QT_CONFIG(tooltip)
+        self.merge_embossbutton.setToolTip(QCoreApplication.translate("MainWindow", u"Merge Embossing file by Date", None))
+#endif // QT_CONFIG(tooltip)
+        self.merge_embossbutton.setText(QCoreApplication.translate("MainWindow", u"Merge Emboss", None))
+        ___qtablewidgetitem = self.tableWidget.horizontalHeaderItem(0)
+        ___qtablewidgetitem.setText(QCoreApplication.translate("MainWindow", u"4-digit + CVV", None));
+        ___qtablewidgetitem1 = self.tableWidget.horizontalHeaderItem(1)
+        ___qtablewidgetitem1.setText(QCoreApplication.translate("MainWindow", u"PAN", None));
+        ___qtablewidgetitem2 = self.tableWidget.horizontalHeaderItem(2)
+        ___qtablewidgetitem2.setText(QCoreApplication.translate("MainWindow", u"Expiry Date", None));
+        ___qtablewidgetitem3 = self.tableWidget.horizontalHeaderItem(3)
+        ___qtablewidgetitem3.setText(QCoreApplication.translate("MainWindow", u"Customer Name", None));
+        self.label.setText("")
+        self.label_3.setText("")
+        self.menuFile.setTitle(QCoreApplication.translate("MainWindow", u"File", None))
+        self.menuAbout.setTitle(QCoreApplication.translate("MainWindow", u"About", None))
+#if QT_CONFIG(tooltip)
+        self.menuHelp.setToolTip("")
+#endif // QT_CONFIG(tooltip)
+        self.menuHelp.setTitle(QCoreApplication.translate("MainWindow", u"Help", None))
+    # retranslateUi
+
+# -*- coding: utf-8 -*-
+
+################################################################################
+## Form generated from reading UI file 'ConsolidatorApp.ui'
+##
+## Created by: Qt User Interface Compiler version 6.7.0
+##
+## WARNING! All changes made in this file will be lost when recompiling UI file!
+################################################################################
+
+from PySide6.QtCore import (QCoreApplication, QDate, QDateTime, QLocale,
+    QMetaObject, QObject, QPoint, QRect,
+    QSize, QTime, QUrl, Qt)
+from PySide6.QtGui import (QAction, QBrush, QColor, QConicalGradient,
+    QCursor, QFont, QFontDatabase, QGradient,
+    QIcon, QImage, QKeySequence, QLinearGradient,
+    QPainter, QPalette, QPixmap, QRadialGradient,
+    QTransform)
+from PySide6.QtWidgets import (QApplication, QComboBox, QFrame, QGridLayout,
+    QHBoxLayout, QHeaderView, QLabel, QLineEdit,
+    QMainWindow, QMenu, QMenuBar, QPushButton,
+    QSizePolicy, QStatusBar, QTableWidget, QTableWidgetItem,
+    QWidget)
+import resource_rc
+
+class Ui_MainWindow(object):
+    def setupUi(self, MainWindow):
+        if not MainWindow.objectName():
+            MainWindow.setObjectName(u"MainWindow")
+        MainWindow.resize(1518, 812)
+        MainWindow.setStyleSheet(u"\n"
+"QPushButton {\n"
+"                background-color: #00AEEF;  /* Primary color */\n"
+"                color: #ffffff;  /* Text color */\n"
+"                padding: 5px 10px;  /* Padding */\n"
+"                border: none;  /* No border */\n"
+"                border-radius: 2px;  /* Remove border radius */\n"
+"                font-size: 1rem;  /* Font size */\n"
+"                margin: 0;  /* Remove margin */\n"
+"               font-size: 12px;\n"
+"              \n"
+"            }\n"
+"            QPushButton:hover {\n"
+"                background-color: #0099CC;  /* Slightly darker blue for hover */\n"
+"\n"
+"            }\n"
+"            QPushButton:pressed {\n"
+"                background-color: #0088BB;  /* Even darker blue for pressed */\n"
+"            }\n"
+"\n"
+" QLineEdit {\n"
+"                padding: 1px;\n"
+"                border: 1px solid #ccc;\n"
+"                font-size: 12px;\n"
+"                border-radius: 5px; /* Rounded corners */\n"
+"             \n"
+"            }\n"
+"          "
+                        "  QLineEdit:focus {\n"
+"                border: 1px solid #00AEEF; /* Blue border when focused */\n"
+"            }\n"
+"\n"
+"QComboBox,QDateEdit{\n"
+"   font-size: 12px;\n"
+"\n"
+"\n"
+"}\n"
+"\n"
+"          ")
+        self.actionDocumentation = QAction(MainWindow)
+        self.actionDocumentation.setObjectName(u"actionDocumentation")
+        self.actionSave_as_CSV = QAction(MainWindow)
+        self.actionSave_as_CSV.setObjectName(u"actionSave_as_CSV")
+        self.actionExit = QAction(MainWindow)
+        self.actionExit.setObjectName(u"actionExit")
+        self.actionDeveloper = QAction(MainWindow)
+        self.actionDeveloper.setObjectName(u"actionDeveloper")
+        self.centralwidget = QWidget(MainWindow)
+        self.centralwidget.setObjectName(u"centralwidget")
+        self.gridLayout_2 = QGridLayout(self.centralwidget)
+        self.gridLayout_2.setObjectName(u"gridLayout_2")
+        self.gridLayout = QGridLayout()
+        self.gridLayout.setObjectName(u"gridLayout")
+        self.frame_3 = QFrame(self.centralwidget)
+        self.frame_3.setObjectName(u"frame_3")
+        self.frame_3.setFrameShape(QFrame.Shape.StyledPanel)
+        self.frame_3.setFrameShadow(QFrame.Shadow.Raised)
+        self.horizontalLayout_4 = QHBoxLayout(self.frame_3)
+        self.horizontalLayout_4.setObjectName(u"horizontalLayout_4")
+        self.horizontalLayout_2 = QHBoxLayout()
+        self.horizontalLayout_2.setObjectName(u"horizontalLayout_2")
+        self.search_line_edit = QLineEdit(self.frame_3)
+        self.search_line_edit.setObjectName(u"search_line_edit")
+
+        self.horizontalLayout_2.addWidget(self.search_line_edit)
+
+        self.search_button = QPushButton(self.frame_3)
+        self.search_button.setObjectName(u"search_button")
+        icon = QIcon(QIcon.fromTheme(u"edit-find"))
+        self.search_button.setIcon(icon)
+
+        self.horizontalLayout_2.addWidget(self.search_button)
+
+
+        self.horizontalLayout_4.addLayout(self.horizontalLayout_2)
+
+
+        self.gridLayout.addWidget(self.frame_3, 1, 2, 1, 1)
+
+        self.frame_4 = QFrame(self.centralwidget)
+        self.frame_4.setObjectName(u"frame_4")
+        self.frame_4.setFrameShape(QFrame.Shape.StyledPanel)
+        self.frame_4.setFrameShadow(QFrame.Shadow.Raised)
+        self.horizontalLayout_6 = QHBoxLayout(self.frame_4)
+        self.horizontalLayout_6.setSpacing(20)
+        self.horizontalLayout_6.setObjectName(u"horizontalLayout_6")
+        self.horizontalLayout_6.setContentsMargins(6, -1, -1, -1)
+        self.branch_comboBox = QComboBox(self.frame_4)
+        self.branch_comboBox.setObjectName(u"branch_comboBox")
+
+        self.horizontalLayout_6.addWidget(self.branch_comboBox)
+
+        self.product_combobox = QComboBox(self.frame_4)
+        self.product_combobox.setObjectName(u"product_combobox")
+
+        self.horizontalLayout_6.addWidget(self.product_combobox)
+
+        self.district_comboBox = QComboBox(self.frame_4)
+        self.district_comboBox.setObjectName(u"district_comboBox")
+
+        self.horizontalLayout_6.addWidget(self.district_comboBox)
+
+        self.reset_filter = QPushButton(self.frame_4)
+        self.reset_filter.setObjectName(u"reset_filter")
+        icon1 = QIcon(QIcon.fromTheme(u"view-refresh"))
+        self.reset_filter.setIcon(icon1)
+
+        self.horizontalLayout_6.addWidget(self.reset_filter)
+
+        self.horizontalLayout_6.setStretch(0, 2)
+        self.horizontalLayout_6.setStretch(1, 2)
+        self.horizontalLayout_6.setStretch(2, 1)
+        self.horizontalLayout_6.setStretch(3, 1)
+
+        self.gridLayout.addWidget(self.frame_4, 1, 1, 1, 1)
+
+        self.frame_2 = QFrame(self.centralwidget)
+        self.frame_2.setObjectName(u"frame_2")
+        self.frame_2.setFrameShape(QFrame.Shape.StyledPanel)
+        self.frame_2.setFrameShadow(QFrame.Shadow.Raised)
+        self.horizontalLayout_5 = QHBoxLayout(self.frame_2)
+        self.horizontalLayout_5.setObjectName(u"horizontalLayout_5")
+        self.horizontalLayout = QHBoxLayout()
+        self.horizontalLayout.setObjectName(u"horizontalLayout")
+        self.label_2 = QLabel(self.frame_2)
+        self.label_2.setObjectName(u"label_2")
+
+        self.horizontalLayout.addWidget(self.label_2)
+
+        self.source_directory_line_edit = QLineEdit(self.frame_2)
+        self.source_directory_line_edit.setObjectName(u"source_directory_line_edit")
+
+        self.horizontalLayout.addWidget(self.source_directory_line_edit)
+
+        self.browse_button = QPushButton(self.frame_2)
+        self.browse_button.setObjectName(u"browse_button")
+        icon2 = QIcon(QIcon.fromTheme(u"folder"))
+        self.browse_button.setIcon(icon2)
+
+        self.horizontalLayout.addWidget(self.browse_button)
+
+
+        self.horizontalLayout_5.addLayout(self.horizontalLayout)
+
+        self.process_button = QPushButton(self.frame_2)
+        self.process_button.setObjectName(u"process_button")
+        icon3 = QIcon(QIcon.fromTheme(u"document-properties"))
+        self.process_button.setIcon(icon3)
+        self.process_button.setFlat(False)
+
+        self.horizontalLayout_5.addWidget(self.process_button)
+
+        self.merge_embossbutton = QPushButton(self.frame_2)
+        self.merge_embossbutton.setObjectName(u"merge_embossbutton")
+        icon4 = QIcon(QIcon.fromTheme(u"document-new"))
+        self.merge_embossbutton.setIcon(icon4)
+
+        self.horizontalLayout_5.addWidget(self.merge_embossbutton)
+
+
+        self.gridLayout.addWidget(self.frame_2, 1, 0, 1, 1)
+
+        self.tableWidget = QTableWidget(self.centralwidget)
+        if (self.tableWidget.columnCount() < 4):
+            self.tableWidget.setColumnCount(4)
+        __qtablewidgetitem = QTableWidgetItem()
+        self.tableWidget.setHorizontalHeaderItem(0, __qtablewidgetitem)
+        __qtablewidgetitem1 = QTableWidgetItem()
+        self.tableWidget.setHorizontalHeaderItem(1, __qtablewidgetitem1)
+        __qtablewidgetitem2 = QTableWidgetItem()
+        self.tableWidget.setHorizontalHeaderItem(2, __qtablewidgetitem2)
+        __qtablewidgetitem3 = QTableWidgetItem()
+        self.tableWidget.setHorizontalHeaderItem(3, __qtablewidgetitem3)
+        self.tableWidget.setObjectName(u"tableWidget")
+
+        self.gridLayout.addWidget(self.tableWidget, 3, 0, 1, 3)
+
+        self.horizontalLayout_3 = QHBoxLayout()
+        self.horizontalLayout_3.setObjectName(u"horizontalLayout_3")
+        self.label = QLabel(self.centralwidget)
+        self.label.setObjectName(u"label")
+        self.label.setMinimumSize(QSize(156, 146))
+        self.label.setMaximumSize(QSize(156, 156))
+        self.label.setPixmap(QPixmap(u":/images/images/companylogo.png"))
+        self.label.setScaledContents(True)
+
+        self.horizontalLayout_3.addWidget(self.label)
+
+        self.label_3 = QLabel(self.centralwidget)
+        self.label_3.setObjectName(u"label_3")
+        self.label_3.setMinimumSize(QSize(156, 156))
+        self.label_3.setMaximumSize(QSize(156, 156))
+        self.label_3.setPixmap(QPixmap(u":/images/images/applogo.png"))
+        self.label_3.setScaledContents(True)
+
+        self.horizontalLayout_3.addWidget(self.label_3)
+
+
+        self.gridLayout.addLayout(self.horizontalLayout_3, 0, 0, 1, 3)
+
+        self.gridLayout.setColumnStretch(0, 3)
+        self.gridLayout.setColumnStretch(1, 1)
+        self.gridLayout.setColumnStretch(2, 1)
+
+        self.gridLayout_2.addLayout(self.gridLayout, 0, 0, 1, 1)
+
+        MainWindow.setCentralWidget(self.centralwidget)
+        self.menubar = QMenuBar(MainWindow)
+        self.menubar.setObjectName(u"menubar")
+        self.menubar.setGeometry(QRect(0, 0, 1518, 33))
+        self.menuFile = QMenu(self.menubar)
+        self.menuFile.setObjectName(u"menuFile")
+        self.menuAbout = QMenu(self.menubar)
+        self.menuAbout.setObjectName(u"menuAbout")
+        self.menuHelp = QMenu(self.menubar)
+        self.menuHelp.setObjectName(u"menuHelp")
+        MainWindow.setMenuBar(self.menubar)
+        self.statusbar = QStatusBar(MainWindow)
+        self.statusbar.setObjectName(u"statusbar")
+        MainWindow.setStatusBar(self.statusbar)
+
+        self.menubar.addAction(self.menuFile.menuAction())
+        self.menubar.addAction(self.menuAbout.menuAction())
+        self.menubar.addAction(self.menuHelp.menuAction())
+        self.menuFile.addAction(self.actionSave_as_CSV)
+        self.menuFile.addAction(self.actionExit)
+        self.menuAbout.addAction(self.actionDeveloper)
+        self.menuHelp.addAction(self.actionDocumentation)
+
+        self.retranslateUi(MainWindow)
+
+        QMetaObject.connectSlotsByName(MainWindow)
+    # setupUi
+
+    def retranslateUi(self, MainWindow):
+        MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"MainWindow", None))
+        self.actionDocumentation.setText(QCoreApplication.translate("MainWindow", u"Documentation", None))
+        self.actionSave_as_CSV.setText(QCoreApplication.translate("MainWindow", u"Save as CSV", None))
+        self.actionExit.setText(QCoreApplication.translate("MainWindow", u"Exit ", None))
+        self.actionDeveloper.setText(QCoreApplication.translate("MainWindow", u"Developer", None))
+        self.search_button.setText(QCoreApplication.translate("MainWindow", u"Search", None))
+        self.branch_comboBox.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Branch", None))
+        self.product_combobox.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Product", None))
+        self.district_comboBox.setPlaceholderText(QCoreApplication.translate("MainWindow", u"District", None))
+        self.reset_filter.setText(QCoreApplication.translate("MainWindow", u"Reset Filters", None))
+        self.label_2.setText(QCoreApplication.translate("MainWindow", u"Source Directory ", None))
+#if QT_CONFIG(tooltip)
+        self.browse_button.setToolTip(QCoreApplication.translate("MainWindow", u"choose path to Embossing File", None))
+#endif // QT_CONFIG(tooltip)
+        self.browse_button.setText(QCoreApplication.translate("MainWindow", u"Browse", None))
+#if QT_CONFIG(tooltip)
+        self.process_button.setToolTip(QCoreApplication.translate("MainWindow", u"Process Embossing File to CSV ", None))
+#endif // QT_CONFIG(tooltip)
+        self.process_button.setText(QCoreApplication.translate("MainWindow", u"Process CSV", None))
+#if QT_CONFIG(tooltip)
+        self.merge_embossbutton.setToolTip(QCoreApplication.translate("MainWindow", u"Merge Embossing file by Date", None))
+#endif // QT_CONFIG(tooltip)
+        self.merge_embossbutton.setText(QCoreApplication.translate("MainWindow", u"Merge Emboss", None))
+        ___qtablewidgetitem = self.tableWidget.horizontalHeaderItem(0)
+        ___qtablewidgetitem.setText(QCoreApplication.translate("MainWindow", u"4-digit + CVV", None));
+        ___qtablewidgetitem1 = self.tableWidget.horizontalHeaderItem(1)
+        ___qtablewidgetitem1.setText(QCoreApplication.translate("MainWindow", u"PAN", None));
+        ___qtablewidgetitem2 = self.tableWidget.horizontalHeaderItem(2)
+        ___qtablewidgetitem2.setText(QCoreApplication.translate("MainWindow", u"Expiry Date", None));
+        ___qtablewidgetitem3 = self.tableWidget.horizontalHeaderItem(3)
+        ___qtablewidgetitem3.setText(QCoreApplication.translate("MainWindow", u"Customer Name", None));
+        self.label.setText("")
+        self.label_3.setText("")
+        self.menuFile.setTitle(QCoreApplication.translate("MainWindow", u"File", None))
+        self.menuAbout.setTitle(QCoreApplication.translate("MainWindow", u"About", None))
+#if QT_CONFIG(tooltip)
+        self.menuHelp.setToolTip("")
+#endif // QT_CONFIG(tooltip)
+        self.menuHelp.setTitle(QCoreApplication.translate("MainWindow", u"Help", None))
+    # retranslateUi
+
+# -*- coding: utf-8 -*-
+
+################################################################################
+## Form generated from reading UI file 'ConsolidatorApp.ui'
+##
+## Created by: Qt User Interface Compiler version 6.7.0
+##
+## WARNING! All changes made in this file will be lost when recompiling UI file!
+################################################################################
+
+from PySide6.QtCore import (QCoreApplication, QDate, QDateTime, QLocale,
+    QMetaObject, QObject, QPoint, QRect,
+    QSize, QTime, QUrl, Qt)
+from PySide6.QtGui import (QAction, QBrush, QColor, QConicalGradient,
+    QCursor, QFont, QFontDatabase, QGradient,
+    QIcon, QImage, QKeySequence, QLinearGradient,
+    QPainter, QPalette, QPixmap, QRadialGradient,
+    QTransform)
+from PySide6.QtWidgets import (QApplication, QComboBox, QFrame, QGridLayout,
+    QHBoxLayout, QHeaderView, QLabel, QLineEdit,
+    QMainWindow, QMenu, QMenuBar, QPushButton,
+    QSizePolicy, QStatusBar, QTableWidget, QTableWidgetItem,
+    QWidget)
+import resource_rc
+
+class Ui_MainWindow(object):
+    def setupUi(self, MainWindow):
+        if not MainWindow.objectName():
+            MainWindow.setObjectName(u"MainWindow")
+        MainWindow.resize(1446, 839)
+        MainWindow.setStyleSheet(u"\n"
+"QPushButton {\n"
+"                background-color: #00AEEF;  /* Primary color */\n"
+"                color: #ffffff;  /* Text color */\n"
+"                padding: 5px 10px;  /* Padding */\n"
+"                border: none;  /* No border */\n"
+"                border-radius: 2px;  /* Remove border radius */\n"
+"                font-size: 1rem;  /* Font size */\n"
+"                margin: 0;  /* Remove margin */\n"
+"               font-size: 12px;\n"
+"              \n"
+"            }\n"
+"            QPushButton:hover {\n"
+"                background-color: #0099CC;  /* Slightly darker blue for hover */\n"
+"\n"
+"            }\n"
+"            QPushButton:pressed {\n"
+"                background-color: #0088BB;  /* Even darker blue for pressed */\n"
+"            }\n"
+"\n"
+" QLineEdit {\n"
+"                padding: 1px;\n"
+"                border: 1px solid #ccc;\n"
+"                font-size: 12px;\n"
+"                border-radius: 5px; /* Rounded corners */\n"
+"             \n"
+"            }\n"
+"          "
+                        "  QLineEdit:focus {\n"
+"                border: 1px solid #00AEEF; /* Blue border when focused */\n"
+"            }\n"
+"\n"
+"QComboBox,QDateEdit{\n"
+"   font-size: 12px;\n"
+"\n"
+"\n"
+"}\n"
+"\n"
+"          ")
+        self.actionDocumentation = QAction(MainWindow)
+        self.actionDocumentation.setObjectName(u"actionDocumentation")
+        self.actionSave_as_CSV = QAction(MainWindow)
+        self.actionSave_as_CSV.setObjectName(u"actionSave_as_CSV")
+        self.actionExit = QAction(MainWindow)
+        self.actionExit.setObjectName(u"actionExit")
+        self.actionDeveloper = QAction(MainWindow)
+        self.actionDeveloper.setObjectName(u"actionDeveloper")
+        self.centralwidget = QWidget(MainWindow)
+        self.centralwidget.setObjectName(u"centralwidget")
+        self.gridLayout_2 = QGridLayout(self.centralwidget)
+        self.gridLayout_2.setObjectName(u"gridLayout_2")
+        self.gridLayout = QGridLayout()
+        self.gridLayout.setObjectName(u"gridLayout")
+        self.frame_3 = QFrame(self.centralwidget)
+        self.frame_3.setObjectName(u"frame_3")
+        self.frame_3.setFrameShape(QFrame.Shape.StyledPanel)
+        self.frame_3.setFrameShadow(QFrame.Shadow.Raised)
+        self.horizontalLayout_4 = QHBoxLayout(self.frame_3)
+        self.horizontalLayout_4.setObjectName(u"horizontalLayout_4")
+        self.horizontalLayout_2 = QHBoxLayout()
+        self.horizontalLayout_2.setObjectName(u"horizontalLayout_2")
+        self.search_line_edit = QLineEdit(self.frame_3)
+        self.search_line_edit.setObjectName(u"search_line_edit")
+
+        self.horizontalLayout_2.addWidget(self.search_line_edit)
+
+        self.search_button = QPushButton(self.frame_3)
+        self.search_button.setObjectName(u"search_button")
+        icon = QIcon(QIcon.fromTheme(u"edit-find"))
+        self.search_button.setIcon(icon)
+
+        self.horizontalLayout_2.addWidget(self.search_button)
+
+
+        self.horizontalLayout_4.addLayout(self.horizontalLayout_2)
+
+
+        self.gridLayout.addWidget(self.frame_3, 1, 2, 1, 1)
+
+        self.frame_4 = QFrame(self.centralwidget)
+        self.frame_4.setObjectName(u"frame_4")
+        self.frame_4.setFrameShape(QFrame.Shape.StyledPanel)
+        self.frame_4.setFrameShadow(QFrame.Shadow.Raised)
+        self.horizontalLayout_6 = QHBoxLayout(self.frame_4)
+        self.horizontalLayout_6.setSpacing(20)
+        self.horizontalLayout_6.setObjectName(u"horizontalLayout_6")
+        self.horizontalLayout_6.setContentsMargins(6, -1, -1, -1)
+        self.branch_comboBox = QComboBox(self.frame_4)
+        self.branch_comboBox.setObjectName(u"branch_comboBox")
+
+        self.horizontalLayout_6.addWidget(self.branch_comboBox)
+
+        self.product_combobox = QComboBox(self.frame_4)
+        self.product_combobox.setObjectName(u"product_combobox")
+
+        self.horizontalLayout_6.addWidget(self.product_combobox)
+
+        self.district_comboBox = QComboBox(self.frame_4)
+        self.district_comboBox.setObjectName(u"district_comboBox")
+
+        self.horizontalLayout_6.addWidget(self.district_comboBox)
+
+        self.reset_filter = QPushButton(self.frame_4)
+        self.reset_filter.setObjectName(u"reset_filter")
+        icon1 = QIcon(QIcon.fromTheme(u"view-refresh"))
+        self.reset_filter.setIcon(icon1)
+
+        self.horizontalLayout_6.addWidget(self.reset_filter)
+
+        self.horizontalLayout_6.setStretch(0, 2)
+        self.horizontalLayout_6.setStretch(1, 2)
+        self.horizontalLayout_6.setStretch(2, 1)
+        self.horizontalLayout_6.setStretch(3, 1)
+
+        self.gridLayout.addWidget(self.frame_4, 1, 1, 1, 1)
+
+        self.frame_2 = QFrame(self.centralwidget)
+        self.frame_2.setObjectName(u"frame_2")
+        self.frame_2.setFrameShape(QFrame.Shape.StyledPanel)
+        self.frame_2.setFrameShadow(QFrame.Shadow.Raised)
+        self.horizontalLayout_5 = QHBoxLayout(self.frame_2)
+        self.horizontalLayout_5.setObjectName(u"horizontalLayout_5")
+        self.horizontalLayout = QHBoxLayout()
+        self.horizontalLayout.setObjectName(u"horizontalLayout")
+        self.label_2 = QLabel(self.frame_2)
+        self.label_2.setObjectName(u"label_2")
+
+        self.horizontalLayout.addWidget(self.label_2)
+
+        self.source_directory_line_edit = QLineEdit(self.frame_2)
+        self.source_directory_line_edit.setObjectName(u"source_directory_line_edit")
+
+        self.horizontalLayout.addWidget(self.source_directory_line_edit)
+
+        self.browse_button = QPushButton(self.frame_2)
+        self.browse_button.setObjectName(u"browse_button")
+        icon2 = QIcon(QIcon.fromTheme(u"folder"))
+        self.browse_button.setIcon(icon2)
+
+        self.horizontalLayout.addWidget(self.browse_button)
+
+
+        self.horizontalLayout_5.addLayout(self.horizontalLayout)
+
+        self.process_button = QPushButton(self.frame_2)
+        self.process_button.setObjectName(u"process_button")
+        icon3 = QIcon(QIcon.fromTheme(u"document-properties"))
+        self.process_button.setIcon(icon3)
+        self.process_button.setFlat(False)
+
+        self.horizontalLayout_5.addWidget(self.process_button)
+
+        self.merge_embossbutton = QPushButton(self.frame_2)
+        self.merge_embossbutton.setObjectName(u"merge_embossbutton")
+        icon4 = QIcon(QIcon.fromTheme(u"document-new"))
+        self.merge_embossbutton.setIcon(icon4)
+
+        self.horizontalLayout_5.addWidget(self.merge_embossbutton)
+
+
+        self.gridLayout.addWidget(self.frame_2, 1, 0, 1, 1)
+
+        self.tableWidget = QTableWidget(self.centralwidget)
+        if (self.tableWidget.columnCount() < 4):
+            self.tableWidget.setColumnCount(4)
+        __qtablewidgetitem = QTableWidgetItem()
+        self.tableWidget.setHorizontalHeaderItem(0, __qtablewidgetitem)
+        __qtablewidgetitem1 = QTableWidgetItem()
+        self.tableWidget.setHorizontalHeaderItem(1, __qtablewidgetitem1)
+        __qtablewidgetitem2 = QTableWidgetItem()
+        self.tableWidget.setHorizontalHeaderItem(2, __qtablewidgetitem2)
+        __qtablewidgetitem3 = QTableWidgetItem()
+        self.tableWidget.setHorizontalHeaderItem(3, __qtablewidgetitem3)
+        self.tableWidget.setObjectName(u"tableWidget")
+
+        self.gridLayout.addWidget(self.tableWidget, 3, 0, 1, 3)
+
+        self.horizontalLayout_3 = QHBoxLayout()
+        self.horizontalLayout_3.setObjectName(u"horizontalLayout_3")
+        self.label = QLabel(self.centralwidget)
+        self.label.setObjectName(u"label")
+        self.label.setMinimumSize(QSize(156, 146))
+        self.label.setMaximumSize(QSize(156, 156))
+        self.label.setPixmap(QPixmap(u":/images/images/companylogo.png"))
+        self.label.setScaledContents(True)
+
+        self.horizontalLayout_3.addWidget(self.label)
+
+        self.label_3 = QLabel(self.centralwidget)
+        self.label_3.setObjectName(u"label_3")
+        self.label_3.setMinimumSize(QSize(156, 156))
+        self.label_3.setMaximumSize(QSize(156, 156))
+        self.label_3.setPixmap(QPixmap(u":/images/images/applogo.png"))
+        self.label_3.setScaledContents(True)
+
+        self.horizontalLayout_3.addWidget(self.label_3)
+
+
+        self.gridLayout.addLayout(self.horizontalLayout_3, 0, 0, 1, 3)
+
+        self.gridLayout.setColumnStretch(0, 3)
+        self.gridLayout.setColumnStretch(1, 1)
+        self.gridLayout.setColumnStretch(2, 1)
+
+        self.gridLayout_2.addLayout(self.gridLayout, 0, 0, 1, 1)
+
+        MainWindow.setCentralWidget(self.centralwidget)
+        self.menubar = QMenuBar(MainWindow)
+        self.menubar.setObjectName(u"menubar")
+        self.menubar.setGeometry(QRect(0, 0, 1446, 33))
+        self.menuFile = QMenu(self.menubar)
+        self.menuFile.setObjectName(u"menuFile")
+        self.menuAbout = QMenu(self.menubar)
+        self.menuAbout.setObjectName(u"menuAbout")
+        self.menuHelp = QMenu(self.menubar)
+        self.menuHelp.setObjectName(u"menuHelp")
+        MainWindow.setMenuBar(self.menubar)
+        self.statusbar = QStatusBar(MainWindow)
+        self.statusbar.setObjectName(u"statusbar")
+        MainWindow.setStatusBar(self.statusbar)
+
+        self.menubar.addAction(self.menuFile.menuAction())
+        self.menubar.addAction(self.menuAbout.menuAction())
+        self.menubar.addAction(self.menuHelp.menuAction())
+        self.menuFile.addAction(self.actionSave_as_CSV)
+        self.menuFile.addAction(self.actionExit)
+        self.menuAbout.addAction(self.actionDeveloper)
+        self.menuHelp.addAction(self.actionDocumentation)
+
+        self.retranslateUi(MainWindow)
+
+        QMetaObject.connectSlotsByName(MainWindow)
+    # setupUi
+
+    def retranslateUi(self, MainWindow):
+        MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"MainWindow", None))
+        self.actionDocumentation.setText(QCoreApplication.translate("MainWindow", u"Documentation", None))
+        self.actionSave_as_CSV.setText(QCoreApplication.translate("MainWindow", u"Save as CSV", None))
+        self.actionExit.setText(QCoreApplication.translate("MainWindow", u"Exit ", None))
+        self.actionDeveloper.setText(QCoreApplication.translate("MainWindow", u"Developer", None))
+        self.search_button.setText(QCoreApplication.translate("MainWindow", u"Search", None))
+        self.branch_comboBox.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Branch", None))
+        self.product_combobox.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Product", None))
+        self.district_comboBox.setPlaceholderText(QCoreApplication.translate("MainWindow", u"District", None))
+        self.reset_filter.setText(QCoreApplication.translate("MainWindow", u"Reset Filters", None))
+        self.label_2.setText(QCoreApplication.translate("MainWindow", u"Source Directory ", None))
+#if QT_CONFIG(tooltip)
+        self.browse_button.setToolTip(QCoreApplication.translate("MainWindow", u"choose path to Embossing File", None))
+#endif // QT_CONFIG(tooltip)
+        self.browse_button.setText(QCoreApplication.translate("MainWindow", u"Browse", None))
+#if QT_CONFIG(tooltip)
+        self.process_button.setToolTip(QCoreApplication.translate("MainWindow", u"Process Embossing File to CSV ", None))
+#endif // QT_CONFIG(tooltip)
+        self.process_button.setText(QCoreApplication.translate("MainWindow", u"Process CSV", None))
+#if QT_CONFIG(tooltip)
+        self.merge_embossbutton.setToolTip(QCoreApplication.translate("MainWindow", u"Merge Embossing file by Date", None))
+#endif // QT_CONFIG(tooltip)
+        self.merge_embossbutton.setText(QCoreApplication.translate("MainWindow", u"Merge Emboss", None))
+        ___qtablewidgetitem = self.tableWidget.horizontalHeaderItem(0)
+        ___qtablewidgetitem.setText(QCoreApplication.translate("MainWindow", u"4-digit + CVV", None));
+        ___qtablewidgetitem1 = self.tableWidget.horizontalHeaderItem(1)
+        ___qtablewidgetitem1.setText(QCoreApplication.translate("MainWindow", u"PAN", None));
+        ___qtablewidgetitem2 = self.tableWidget.horizontalHeaderItem(2)
+        ___qtablewidgetitem2.setText(QCoreApplication.translate("MainWindow", u"Expiry Date", None));
+        ___qtablewidgetitem3 = self.tableWidget.horizontalHeaderItem(3)
+        ___qtablewidgetitem3.setText(QCoreApplication.translate("MainWindow", u"Customer Name", None));
+        self.label.setText("")
+        self.label_3.setText("")
+        self.menuFile.setTitle(QCoreApplication.translate("MainWindow", u"File", None))
+        self.menuAbout.setTitle(QCoreApplication.translate("MainWindow", u"About", None))
+#if QT_CONFIG(tooltip)
+        self.menuHelp.setToolTip("")
+#endif // QT_CONFIG(tooltip)
+        self.menuHelp.setTitle(QCoreApplication.translate("MainWindow", u"Help", None))
+    # retranslateUi
+
+# -*- coding: utf-8 -*-
+
+################################################################################
+## Form generated from reading UI file 'ConsolidatorApp.ui'
+##
+## Created by: Qt User Interface Compiler version 6.7.0
+##
+## WARNING! All changes made in this file will be lost when recompiling UI file!
+################################################################################
+
+from PySide6.QtCore import (QCoreApplication, QDate, QDateTime, QLocale,
+    QMetaObject, QObject, QPoint, QRect,
+    QSize, QTime, QUrl, Qt)
+from PySide6.QtGui import (QAction, QBrush, QColor, QConicalGradient,
+    QCursor, QFont, QFontDatabase, QGradient,
+    QIcon, QImage, QKeySequence, QLinearGradient,
+    QPainter, QPalette, QPixmap, QRadialGradient,
+    QTransform)
+from PySide6.QtWidgets import (QApplication, QComboBox, QFrame, QGridLayout,
+    QHBoxLayout, QHeaderView, QLabel, QLineEdit,
+    QMainWindow, QMenu, QMenuBar, QPushButton,
+    QSizePolicy, QStatusBar, QTableWidget, QTableWidgetItem,
+    QWidget)
+import resource_rc
+
+class Ui_MainWindow(object):
+    def setupUi(self, MainWindow):
+        if not MainWindow.objectName():
+            MainWindow.setObjectName(u"MainWindow")
+        MainWindow.resize(1446, 839)
+        MainWindow.setStyleSheet(u"\n"
+"QPushButton {\n"
+"                background-color: #00AEEF;  /* Primary color */\n"
+"                color: #ffffff;  /* Text color */\n"
+"                padding: 5px 10px;  /* Padding */\n"
+"                border: none;  /* No border */\n"
+"                border-radius: 2px;  /* Remove border radius */\n"
+"                font-size: 1rem;  /* Font size */\n"
+"                margin: 0;  /* Remove margin */\n"
+"               font-size: 12px;\n"
+"              \n"
+"            }\n"
+"            QPushButton:hover {\n"
+"                background-color: #0099CC;  /* Slightly darker blue for hover */\n"
+"\n"
+"            }\n"
+"            QPushButton:pressed {\n"
+"                background-color: #0088BB;  /* Even darker blue for pressed */\n"
+"            }\n"
+"\n"
+" QLineEdit {\n"
+"                padding: 1px;\n"
+"                border: 1px solid #ccc;\n"
+"                font-size: 12px;\n"
+"                border-radius: 5px; /* Rounded corners */\n"
+"             \n"
+"            }\n"
+"          "
+                        "  QLineEdit:focus {\n"
+"                border: 1px solid #00AEEF; /* Blue border when focused */\n"
+"            }\n"
+"\n"
+"QComboBox,QDateEdit{\n"
+"   font-size: 12px;\n"
+"\n"
+"\n"
+"}\n"
+"\n"
+"          ")
+        self.actionDocumentation = QAction(MainWindow)
+        self.actionDocumentation.setObjectName(u"actionDocumentation")
+        self.actionSave_as_CSV = QAction(MainWindow)
+        self.actionSave_as_CSV.setObjectName(u"actionSave_as_CSV")
+        self.actionExit = QAction(MainWindow)
+        self.actionExit.setObjectName(u"actionExit")
+        self.actionDeveloper = QAction(MainWindow)
+        self.actionDeveloper.setObjectName(u"actionDeveloper")
+        self.centralwidget = QWidget(MainWindow)
+        self.centralwidget.setObjectName(u"centralwidget")
+        self.gridLayout_2 = QGridLayout(self.centralwidget)
+        self.gridLayout_2.setObjectName(u"gridLayout_2")
+        self.gridLayout = QGridLayout()
+        self.gridLayout.setObjectName(u"gridLayout")
+        self.frame_3 = QFrame(self.centralwidget)
+        self.frame_3.setObjectName(u"frame_3")
+        self.frame_3.setFrameShape(QFrame.Shape.StyledPanel)
+        self.frame_3.setFrameShadow(QFrame.Shadow.Raised)
+        self.horizontalLayout_4 = QHBoxLayout(self.frame_3)
+        self.horizontalLayout_4.setObjectName(u"horizontalLayout_4")
+        self.horizontalLayout_2 = QHBoxLayout()
+        self.horizontalLayout_2.setObjectName(u"horizontalLayout_2")
+        self.search_line_edit = QLineEdit(self.frame_3)
+        self.search_line_edit.setObjectName(u"search_line_edit")
+
+        self.horizontalLayout_2.addWidget(self.search_line_edit)
+
+        self.search_button = QPushButton(self.frame_3)
+        self.search_button.setObjectName(u"search_button")
+        icon = QIcon(QIcon.fromTheme(u"edit-find"))
+        self.search_button.setIcon(icon)
+
+        self.horizontalLayout_2.addWidget(self.search_button)
+
+
+        self.horizontalLayout_4.addLayout(self.horizontalLayout_2)
+
+
+        self.gridLayout.addWidget(self.frame_3, 1, 2, 1, 1)
+
+        self.frame_4 = QFrame(self.centralwidget)
+        self.frame_4.setObjectName(u"frame_4")
+        self.frame_4.setFrameShape(QFrame.Shape.StyledPanel)
+        self.frame_4.setFrameShadow(QFrame.Shadow.Raised)
+        self.horizontalLayout_6 = QHBoxLayout(self.frame_4)
+        self.horizontalLayout_6.setSpacing(20)
+        self.horizontalLayout_6.setObjectName(u"horizontalLayout_6")
+        self.horizontalLayout_6.setContentsMargins(6, -1, -1, -1)
+        self.branch_comboBox = QComboBox(self.frame_4)
+        self.branch_comboBox.setObjectName(u"branch_comboBox")
+
+        self.horizontalLayout_6.addWidget(self.branch_comboBox)
+
+        self.product_combobox = QComboBox(self.frame_4)
+        self.product_combobox.setObjectName(u"product_combobox")
+
+        self.horizontalLayout_6.addWidget(self.product_combobox)
+
+        self.district_comboBox = QComboBox(self.frame_4)
+        self.district_comboBox.setObjectName(u"district_comboBox")
+
+        self.horizontalLayout_6.addWidget(self.district_comboBox)
+
+        self.reset_filter = QPushButton(self.frame_4)
+        self.reset_filter.setObjectName(u"reset_filter")
+        icon1 = QIcon(QIcon.fromTheme(u"view-refresh"))
+        self.reset_filter.setIcon(icon1)
+
+        self.horizontalLayout_6.addWidget(self.reset_filter)
+
+        self.horizontalLayout_6.setStretch(0, 2)
+        self.horizontalLayout_6.setStretch(1, 2)
+        self.horizontalLayout_6.setStretch(2, 1)
+        self.horizontalLayout_6.setStretch(3, 1)
+
+        self.gridLayout.addWidget(self.frame_4, 1, 1, 1, 1)
+
+        self.frame_2 = QFrame(self.centralwidget)
+        self.frame_2.setObjectName(u"frame_2")
+        self.frame_2.setFrameShape(QFrame.Shape.StyledPanel)
+        self.frame_2.setFrameShadow(QFrame.Shadow.Raised)
+        self.horizontalLayout_5 = QHBoxLayout(self.frame_2)
+        self.horizontalLayout_5.setObjectName(u"horizontalLayout_5")
+        self.horizontalLayout = QHBoxLayout()
+        self.horizontalLayout.setObjectName(u"horizontalLayout")
+        self.label_2 = QLabel(self.frame_2)
+        self.label_2.setObjectName(u"label_2")
+
+        self.horizontalLayout.addWidget(self.label_2)
+
+        self.source_directory_line_edit = QLineEdit(self.frame_2)
+        self.source_directory_line_edit.setObjectName(u"source_directory_line_edit")
+
+        self.horizontalLayout.addWidget(self.source_directory_line_edit)
+
+        self.browse_button = QPushButton(self.frame_2)
+        self.browse_button.setObjectName(u"browse_button")
+        icon2 = QIcon(QIcon.fromTheme(u"folder"))
+        self.browse_button.setIcon(icon2)
+
+        self.horizontalLayout.addWidget(self.browse_button)
+
+
+        self.horizontalLayout_5.addLayout(self.horizontalLayout)
+
+        self.process_button = QPushButton(self.frame_2)
+        self.process_button.setObjectName(u"process_button")
+        icon3 = QIcon(QIcon.fromTheme(u"document-properties"))
+        self.process_button.setIcon(icon3)
+        self.process_button.setFlat(False)
+
+        self.horizontalLayout_5.addWidget(self.process_button)
+
+        self.merge_embossbutton = QPushButton(self.frame_2)
+        self.merge_embossbutton.setObjectName(u"merge_embossbutton")
+        icon4 = QIcon(QIcon.fromTheme(u"document-new"))
+        self.merge_embossbutton.setIcon(icon4)
+
+        self.horizontalLayout_5.addWidget(self.merge_embossbutton)
+
+
+        self.gridLayout.addWidget(self.frame_2, 1, 0, 1, 1)
+
+        self.tableWidget = QTableWidget(self.centralwidget)
+        if (self.tableWidget.columnCount() < 4):
+            self.tableWidget.setColumnCount(4)
+        __qtablewidgetitem = QTableWidgetItem()
+        self.tableWidget.setHorizontalHeaderItem(0, __qtablewidgetitem)
+        __qtablewidgetitem1 = QTableWidgetItem()
+        self.tableWidget.setHorizontalHeaderItem(1, __qtablewidgetitem1)
+        __qtablewidgetitem2 = QTableWidgetItem()
+        self.tableWidget.setHorizontalHeaderItem(2, __qtablewidgetitem2)
+        __qtablewidgetitem3 = QTableWidgetItem()
+        self.tableWidget.setHorizontalHeaderItem(3, __qtablewidgetitem3)
+        self.tableWidget.setObjectName(u"tableWidget")
+
+        self.gridLayout.addWidget(self.tableWidget, 3, 0, 1, 3)
+
+        self.horizontalLayout_3 = QHBoxLayout()
+        self.horizontalLayout_3.setObjectName(u"horizontalLayout_3")
+        self.label = QLabel(self.centralwidget)
+        self.label.setObjectName(u"label")
+        self.label.setMinimumSize(QSize(156, 146))
+        self.label.setMaximumSize(QSize(156, 156))
+        self.label.setPixmap(QPixmap(u":/images/images/companylogo.png"))
+        self.label.setScaledContents(True)
+
+        self.horizontalLayout_3.addWidget(self.label)
+
+        self.label_3 = QLabel(self.centralwidget)
+        self.label_3.setObjectName(u"label_3")
+        self.label_3.setMinimumSize(QSize(156, 156))
+        self.label_3.setMaximumSize(QSize(156, 156))
+        self.label_3.setPixmap(QPixmap(u":/images/images/applogo.png"))
+        self.label_3.setScaledContents(True)
+
+        self.horizontalLayout_3.addWidget(self.label_3)
+
+
+        self.gridLayout.addLayout(self.horizontalLayout_3, 0, 0, 1, 3)
+
+        self.gridLayout.setColumnStretch(0, 3)
+        self.gridLayout.setColumnStretch(1, 1)
+        self.gridLayout.setColumnStretch(2, 1)
+
+        self.gridLayout_2.addLayout(self.gridLayout, 0, 0, 1, 1)
+
+        MainWindow.setCentralWidget(self.centralwidget)
+        self.menubar = QMenuBar(MainWindow)
+        self.menubar.setObjectName(u"menubar")
+        self.menubar.setGeometry(QRect(0, 0, 1446, 33))
+        self.menuFile = QMenu(self.menubar)
+        self.menuFile.setObjectName(u"menuFile")
+        self.menuAbout = QMenu(self.menubar)
+        self.menuAbout.setObjectName(u"menuAbout")
+        self.menuHelp = QMenu(self.menubar)
+        self.menuHelp.setObjectName(u"menuHelp")
+        MainWindow.setMenuBar(self.menubar)
+        self.statusbar = QStatusBar(MainWindow)
+        self.statusbar.setObjectName(u"statusbar")
+        MainWindow.setStatusBar(self.statusbar)
+
+        self.menubar.addAction(self.menuFile.menuAction())
+        self.menubar.addAction(self.menuAbout.menuAction())
+        self.menubar.addAction(self.menuHelp.menuAction())
+        self.menuFile.addAction(self.actionSave_as_CSV)
+        self.menuFile.addAction(self.actionExit)
+        self.menuAbout.addAction(self.actionDeveloper)
+        self.menuHelp.addAction(self.actionDocumentation)
+
+        self.retranslateUi(MainWindow)
+
+        QMetaObject.connectSlotsByName(MainWindow)
+    # setupUi
+
+    def retranslateUi(self, MainWindow):
+        MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"MainWindow", None))
+        self.actionDocumentation.setText(QCoreApplication.translate("MainWindow", u"Documentation", None))
+        self.actionSave_as_CSV.setText(QCoreApplication.translate("MainWindow", u"Save as CSV", None))
+        self.actionExit.setText(QCoreApplication.translate("MainWindow", u"Exit ", None))
+        self.actionDeveloper.setText(QCoreApplication.translate("MainWindow", u"Developer", None))
+        self.search_button.setText(QCoreApplication.translate("MainWindow", u"Search", None))
+        self.branch_comboBox.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Branches", None))
+        self.product_combobox.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Products", None))
+        self.district_comboBox.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Districts", None))
+        self.reset_filter.setText(QCoreApplication.translate("MainWindow", u"Reset Filters", None))
+        self.label_2.setText(QCoreApplication.translate("MainWindow", u"Source Directory ", None))
+#if QT_CONFIG(tooltip)
+        self.browse_button.setToolTip(QCoreApplication.translate("MainWindow", u"choose path to Embossing File", None))
+#endif // QT_CONFIG(tooltip)
+        self.browse_button.setText(QCoreApplication.translate("MainWindow", u"Browse", None))
+#if QT_CONFIG(tooltip)
+        self.process_button.setToolTip(QCoreApplication.translate("MainWindow", u"Process Embossing File to CSV ", None))
+#endif // QT_CONFIG(tooltip)
+        self.process_button.setText(QCoreApplication.translate("MainWindow", u"Process CSV", None))
+#if QT_CONFIG(tooltip)
+        self.merge_embossbutton.setToolTip(QCoreApplication.translate("MainWindow", u"Merge Embossing file by Date", None))
+#endif // QT_CONFIG(tooltip)
+        self.merge_embossbutton.setText(QCoreApplication.translate("MainWindow", u"Merge Emboss", None))
+        ___qtablewidgetitem = self.tableWidget.horizontalHeaderItem(0)
+        ___qtablewidgetitem.setText(QCoreApplication.translate("MainWindow", u"4-digit + CVV", None));
+        ___qtablewidgetitem1 = self.tableWidget.horizontalHeaderItem(1)
+        ___qtablewidgetitem1.setText(QCoreApplication.translate("MainWindow", u"PAN", None));
+        ___qtablewidgetitem2 = self.tableWidget.horizontalHeaderItem(2)
+        ___qtablewidgetitem2.setText(QCoreApplication.translate("MainWindow", u"Expiry Date", None));
+        ___qtablewidgetitem3 = self.tableWidget.horizontalHeaderItem(3)
+        ___qtablewidgetitem3.setText(QCoreApplication.translate("MainWindow", u"Customer Name", None));
+        self.label.setText("")
+        self.label_3.setText("")
+        self.menuFile.setTitle(QCoreApplication.translate("MainWindow", u"File", None))
+        self.menuAbout.setTitle(QCoreApplication.translate("MainWindow", u"About", None))
+#if QT_CONFIG(tooltip)
+        self.menuHelp.setToolTip("")
+#endif // QT_CONFIG(tooltip)
+        self.menuHelp.setTitle(QCoreApplication.translate("MainWindow", u"Help", None))
+    # retranslateUi
+
+# -*- coding: utf-8 -*-
+
+################################################################################
+## Form generated from reading UI file 'ConsolidatorApp.ui'
+##
+## Created by: Qt User Interface Compiler version 6.7.0
+##
+## WARNING! All changes made in this file will be lost when recompiling UI file!
+################################################################################
+
+from PySide6.QtCore import (QCoreApplication, QDate, QDateTime, QLocale,
+    QMetaObject, QObject, QPoint, QRect,
+    QSize, QTime, QUrl, Qt)
+from PySide6.QtGui import (QAction, QBrush, QColor, QConicalGradient,
+    QCursor, QFont, QFontDatabase, QGradient,
+    QIcon, QImage, QKeySequence, QLinearGradient,
+    QPainter, QPalette, QPixmap, QRadialGradient,
+    QTransform)
+from PySide6.QtWidgets import (QApplication, QComboBox, QFrame, QGridLayout,
+    QHBoxLayout, QHeaderView, QLabel, QLineEdit,
+    QMainWindow, QMenu, QMenuBar, QPushButton,
+    QSizePolicy, QStatusBar, QTableWidget, QTableWidgetItem,
+    QWidget)
+import resource_rc
+
+class Ui_MainWindow(object):
+    def setupUi(self, MainWindow):
+        if not MainWindow.objectName():
+            MainWindow.setObjectName(u"MainWindow")
+        MainWindow.resize(1472, 1052)
+        MainWindow.setStyleSheet(u"\n"
+"QPushButton {\n"
+"                background-color: #00AEEF;  /* Primary color */\n"
+"                color: #ffffff;  /* Text color */\n"
+"                padding: 5px 10px;  /* Padding */\n"
+"                border: none;  /* No border */\n"
+"                border-radius: 2px;  /* Remove border radius */\n"
+"                font-size: 1rem;  /* Font size */\n"
+"                margin: 0;  /* Remove margin */\n"
+"               font-size: 12px;\n"
+"              \n"
+"            }\n"
+"            QPushButton:hover {\n"
+"                background-color: #0099CC;  /* Slightly darker blue for hover */\n"
+"\n"
+"            }\n"
+"            QPushButton:pressed {\n"
+"                background-color: #0088BB;  /* Even darker blue for pressed */\n"
+"            }\n"
+"\n"
+" QLineEdit {\n"
+"                padding: 1px;\n"
+"                border: 1px solid #ccc;\n"
+"                font-size: 12px;\n"
+"                border-radius: 5px; /* Rounded corners */\n"
+"             \n"
+"            }\n"
+"          "
+                        "  QLineEdit:focus {\n"
+"                border: 1px solid #00AEEF; /* Blue border when focused */\n"
+"            }\n"
+"\n"
+"QComboBox,QDateEdit{\n"
+"   font-size: 12px;\n"
+"\n"
+"\n"
+"}\n"
+"\n"
+"          ")
+        self.actionDocumentation = QAction(MainWindow)
+        self.actionDocumentation.setObjectName(u"actionDocumentation")
+        self.actionSave_as_CSV = QAction(MainWindow)
+        self.actionSave_as_CSV.setObjectName(u"actionSave_as_CSV")
+        self.actionExit = QAction(MainWindow)
+        self.actionExit.setObjectName(u"actionExit")
+        self.actionDeveloper = QAction(MainWindow)
+        self.actionDeveloper.setObjectName(u"actionDeveloper")
+        self.centralwidget = QWidget(MainWindow)
+        self.centralwidget.setObjectName(u"centralwidget")
+        self.gridLayout_2 = QGridLayout(self.centralwidget)
+        self.gridLayout_2.setObjectName(u"gridLayout_2")
+        self.gridLayout = QGridLayout()
+        self.gridLayout.setObjectName(u"gridLayout")
+        self.frame_3 = QFrame(self.centralwidget)
+        self.frame_3.setObjectName(u"frame_3")
+        self.frame_3.setFrameShape(QFrame.Shape.StyledPanel)
+        self.frame_3.setFrameShadow(QFrame.Shadow.Raised)
+        self.horizontalLayout_4 = QHBoxLayout(self.frame_3)
+        self.horizontalLayout_4.setObjectName(u"horizontalLayout_4")
+        self.horizontalLayout_2 = QHBoxLayout()
+        self.horizontalLayout_2.setObjectName(u"horizontalLayout_2")
+        self.search_line_edit = QLineEdit(self.frame_3)
+        self.search_line_edit.setObjectName(u"search_line_edit")
+
+        self.horizontalLayout_2.addWidget(self.search_line_edit)
+
+        self.search_button = QPushButton(self.frame_3)
+        self.search_button.setObjectName(u"search_button")
+        icon = QIcon(QIcon.fromTheme(u"edit-find"))
+        self.search_button.setIcon(icon)
+
+        self.horizontalLayout_2.addWidget(self.search_button)
+
+
+        self.horizontalLayout_4.addLayout(self.horizontalLayout_2)
+
+
+        self.gridLayout.addWidget(self.frame_3, 1, 2, 1, 1)
+
+        self.frame_4 = QFrame(self.centralwidget)
+        self.frame_4.setObjectName(u"frame_4")
+        self.frame_4.setFrameShape(QFrame.Shape.StyledPanel)
+        self.frame_4.setFrameShadow(QFrame.Shadow.Raised)
+        self.horizontalLayout_6 = QHBoxLayout(self.frame_4)
+        self.horizontalLayout_6.setSpacing(20)
+        self.horizontalLayout_6.setObjectName(u"horizontalLayout_6")
+        self.horizontalLayout_6.setContentsMargins(6, -1, -1, -1)
+        self.branch_comboBox = QComboBox(self.frame_4)
+        self.branch_comboBox.setObjectName(u"branch_comboBox")
+
+        self.horizontalLayout_6.addWidget(self.branch_comboBox)
+
+        self.product_combobox = QComboBox(self.frame_4)
+        self.product_combobox.setObjectName(u"product_combobox")
+
+        self.horizontalLayout_6.addWidget(self.product_combobox)
+
+        self.district_comboBox = QComboBox(self.frame_4)
+        self.district_comboBox.setObjectName(u"district_comboBox")
+
+        self.horizontalLayout_6.addWidget(self.district_comboBox)
+
+        self.reset_filter = QPushButton(self.frame_4)
+        self.reset_filter.setObjectName(u"reset_filter")
+        icon1 = QIcon(QIcon.fromTheme(u"view-refresh"))
+        self.reset_filter.setIcon(icon1)
+
+        self.horizontalLayout_6.addWidget(self.reset_filter)
+
+        self.horizontalLayout_6.setStretch(0, 2)
+        self.horizontalLayout_6.setStretch(1, 2)
+        self.horizontalLayout_6.setStretch(2, 1)
+        self.horizontalLayout_6.setStretch(3, 1)
+
+        self.gridLayout.addWidget(self.frame_4, 1, 1, 1, 1)
+
+        self.frame_2 = QFrame(self.centralwidget)
+        self.frame_2.setObjectName(u"frame_2")
+        self.frame_2.setFrameShape(QFrame.Shape.StyledPanel)
+        self.frame_2.setFrameShadow(QFrame.Shadow.Raised)
+        self.horizontalLayout_5 = QHBoxLayout(self.frame_2)
+        self.horizontalLayout_5.setObjectName(u"horizontalLayout_5")
+        self.horizontalLayout = QHBoxLayout()
+        self.horizontalLayout.setObjectName(u"horizontalLayout")
+        self.label_2 = QLabel(self.frame_2)
+        self.label_2.setObjectName(u"label_2")
+
+        self.horizontalLayout.addWidget(self.label_2)
+
+        self.source_directory_line_edit = QLineEdit(self.frame_2)
+        self.source_directory_line_edit.setObjectName(u"source_directory_line_edit")
+
+        self.horizontalLayout.addWidget(self.source_directory_line_edit)
+
+        self.browse_button = QPushButton(self.frame_2)
+        self.browse_button.setObjectName(u"browse_button")
+        icon2 = QIcon(QIcon.fromTheme(u"folder"))
+        self.browse_button.setIcon(icon2)
+
+        self.horizontalLayout.addWidget(self.browse_button)
+
+
+        self.horizontalLayout_5.addLayout(self.horizontalLayout)
+
+        self.process_button = QPushButton(self.frame_2)
+        self.process_button.setObjectName(u"process_button")
+        icon3 = QIcon(QIcon.fromTheme(u"document-properties"))
+        self.process_button.setIcon(icon3)
+        self.process_button.setFlat(False)
+
+        self.horizontalLayout_5.addWidget(self.process_button)
+
+        self.merge_embossbutton = QPushButton(self.frame_2)
+        self.merge_embossbutton.setObjectName(u"merge_embossbutton")
+        icon4 = QIcon(QIcon.fromTheme(u"document-new"))
+        self.merge_embossbutton.setIcon(icon4)
+
+        self.horizontalLayout_5.addWidget(self.merge_embossbutton)
+
+
+        self.gridLayout.addWidget(self.frame_2, 1, 0, 1, 1)
+
+        self.tableWidget = QTableWidget(self.centralwidget)
+        if (self.tableWidget.columnCount() < 4):
+            self.tableWidget.setColumnCount(4)
+        __qtablewidgetitem = QTableWidgetItem()
+        self.tableWidget.setHorizontalHeaderItem(0, __qtablewidgetitem)
+        __qtablewidgetitem1 = QTableWidgetItem()
+        self.tableWidget.setHorizontalHeaderItem(1, __qtablewidgetitem1)
+        __qtablewidgetitem2 = QTableWidgetItem()
+        self.tableWidget.setHorizontalHeaderItem(2, __qtablewidgetitem2)
+        __qtablewidgetitem3 = QTableWidgetItem()
+        self.tableWidget.setHorizontalHeaderItem(3, __qtablewidgetitem3)
+        self.tableWidget.setObjectName(u"tableWidget")
+
+        self.gridLayout.addWidget(self.tableWidget, 3, 0, 1, 3)
+
+        self.horizontalLayout_3 = QHBoxLayout()
+        self.horizontalLayout_3.setObjectName(u"horizontalLayout_3")
+        self.label = QLabel(self.centralwidget)
+        self.label.setObjectName(u"label")
+        self.label.setMinimumSize(QSize(156, 146))
+        self.label.setMaximumSize(QSize(156, 156))
+        self.label.setPixmap(QPixmap(u":/images/images/companylogo.png"))
+        self.label.setScaledContents(True)
+
+        self.horizontalLayout_3.addWidget(self.label)
+
+        self.label_3 = QLabel(self.centralwidget)
+        self.label_3.setObjectName(u"label_3")
+        self.label_3.setMinimumSize(QSize(156, 156))
+        self.label_3.setMaximumSize(QSize(156, 156))
+        self.label_3.setPixmap(QPixmap(u":/images/images/applogo.png"))
+        self.label_3.setScaledContents(True)
+
+        self.horizontalLayout_3.addWidget(self.label_3)
+
+
+        self.gridLayout.addLayout(self.horizontalLayout_3, 0, 0, 1, 3)
+
+        self.gridLayout.setColumnStretch(0, 3)
+        self.gridLayout.setColumnStretch(1, 1)
+        self.gridLayout.setColumnStretch(2, 1)
+
+        self.gridLayout_2.addLayout(self.gridLayout, 0, 0, 1, 1)
+
+        MainWindow.setCentralWidget(self.centralwidget)
+        self.menubar = QMenuBar(MainWindow)
+        self.menubar.setObjectName(u"menubar")
+        self.menubar.setGeometry(QRect(0, 0, 1472, 33))
+        self.menuFile = QMenu(self.menubar)
+        self.menuFile.setObjectName(u"menuFile")
+        self.menuAbout = QMenu(self.menubar)
+        self.menuAbout.setObjectName(u"menuAbout")
+        self.menuHelp = QMenu(self.menubar)
+        self.menuHelp.setObjectName(u"menuHelp")
+        MainWindow.setMenuBar(self.menubar)
+        self.statusbar = QStatusBar(MainWindow)
+        self.statusbar.setObjectName(u"statusbar")
+        MainWindow.setStatusBar(self.statusbar)
+
+        self.menubar.addAction(self.menuFile.menuAction())
+        self.menubar.addAction(self.menuAbout.menuAction())
+        self.menubar.addAction(self.menuHelp.menuAction())
+        self.menuFile.addAction(self.actionSave_as_CSV)
+        self.menuFile.addAction(self.actionExit)
+        self.menuAbout.addAction(self.actionDeveloper)
+        self.menuHelp.addAction(self.actionDocumentation)
+
+        self.retranslateUi(MainWindow)
+
+        QMetaObject.connectSlotsByName(MainWindow)
+    # setupUi
+
+    def retranslateUi(self, MainWindow):
+        MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"MainWindow", None))
+        self.actionDocumentation.setText(QCoreApplication.translate("MainWindow", u"Documentation", None))
+        self.actionSave_as_CSV.setText(QCoreApplication.translate("MainWindow", u"Save as CSV", None))
+        self.actionExit.setText(QCoreApplication.translate("MainWindow", u"Exit ", None))
+        self.actionDeveloper.setText(QCoreApplication.translate("MainWindow", u"Developer", None))
+        self.search_button.setText(QCoreApplication.translate("MainWindow", u"Search", None))
+        self.branch_comboBox.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Branches", None))
+        self.product_combobox.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Products", None))
+        self.district_comboBox.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Districts", None))
+        self.reset_filter.setText(QCoreApplication.translate("MainWindow", u"Reset Filters", None))
+        self.label_2.setText(QCoreApplication.translate("MainWindow", u"Source Directory ", None))
+#if QT_CONFIG(tooltip)
+        self.browse_button.setToolTip(QCoreApplication.translate("MainWindow", u"choose path to Embossing File", None))
+#endif // QT_CONFIG(tooltip)
+        self.browse_button.setText(QCoreApplication.translate("MainWindow", u"Browse", None))
+#if QT_CONFIG(tooltip)
+        self.process_button.setToolTip(QCoreApplication.translate("MainWindow", u"Process Embossing File to CSV ", None))
+#endif // QT_CONFIG(tooltip)
+        self.process_button.setText(QCoreApplication.translate("MainWindow", u"Process CSV", None))
+#if QT_CONFIG(tooltip)
+        self.merge_embossbutton.setToolTip(QCoreApplication.translate("MainWindow", u"Merge Embossing file by Date", None))
+#endif // QT_CONFIG(tooltip)
+        self.merge_embossbutton.setText(QCoreApplication.translate("MainWindow", u"Merge Emboss", None))
+        ___qtablewidgetitem = self.tableWidget.horizontalHeaderItem(0)
+        ___qtablewidgetitem.setText(QCoreApplication.translate("MainWindow", u"4-digit + CVV", None));
+        ___qtablewidgetitem1 = self.tableWidget.horizontalHeaderItem(1)
+        ___qtablewidgetitem1.setText(QCoreApplication.translate("MainWindow", u"PAN", None));
+        ___qtablewidgetitem2 = self.tableWidget.horizontalHeaderItem(2)
+        ___qtablewidgetitem2.setText(QCoreApplication.translate("MainWindow", u"Expiry Date", None));
+        ___qtablewidgetitem3 = self.tableWidget.horizontalHeaderItem(3)
+        ___qtablewidgetitem3.setText(QCoreApplication.translate("MainWindow", u"Customer Name", None));
+        self.label.setText("")
+        self.label_3.setText("")
+        self.menuFile.setTitle(QCoreApplication.translate("MainWindow", u"File", None))
+        self.menuAbout.setTitle(QCoreApplication.translate("MainWindow", u"About", None))
+#if QT_CONFIG(tooltip)
+        self.menuHelp.setToolTip("")
+#endif // QT_CONFIG(tooltip)
+        self.menuHelp.setTitle(QCoreApplication.translate("MainWindow", u"Help", None))
+    # retranslateUi
+
+# -*- coding: utf-8 -*-
+
+################################################################################
+## Form generated from reading UI file 'ConsolidatorApp.ui'
+##
+## Created by: Qt User Interface Compiler version 6.7.0
+##
+## WARNING! All changes made in this file will be lost when recompiling UI file!
+################################################################################
+
+from PySide6.QtCore import (QCoreApplication, QDate, QDateTime, QLocale,
+    QMetaObject, QObject, QPoint, QRect,
+    QSize, QTime, QUrl, Qt)
+from PySide6.QtGui import (QAction, QBrush, QColor, QConicalGradient,
+    QCursor, QFont, QFontDatabase, QGradient,
+    QIcon, QImage, QKeySequence, QLinearGradient,
+    QPainter, QPalette, QPixmap, QRadialGradient,
+    QTransform)
+from PySide6.QtWidgets import (QApplication, QComboBox, QFrame, QGridLayout,
+    QHBoxLayout, QHeaderView, QLabel, QLineEdit,
+    QMainWindow, QMenu, QMenuBar, QPushButton,
+    QSizePolicy, QStatusBar, QTableWidget, QTableWidgetItem,
+    QWidget)
+import resource_rc
+
+class Ui_MainWindow(object):
+    def setupUi(self, MainWindow):
+        if not MainWindow.objectName():
+            MainWindow.setObjectName(u"MainWindow")
+        MainWindow.resize(1484, 1007)
+        MainWindow.setStyleSheet(u"\n"
+"QPushButton {\n"
+"                background-color: #00AEEF;  /* Primary color */\n"
+"                color: #ffffff;  /* Text color */\n"
+"                padding: 5px 10px;  /* Padding */\n"
+"                border: none;  /* No border */\n"
+"                border-radius: 2px;  /* Remove border radius */\n"
+"                font-size: 1rem;  /* Font size */\n"
+"                margin: 0;  /* Remove margin */\n"
+"               font-size: 12px;\n"
+"              \n"
+"            }\n"
+"            QPushButton:hover {\n"
+"                background-color: #0099CC;  /* Slightly darker blue for hover */\n"
+"\n"
+"            }\n"
+"            QPushButton:pressed {\n"
+"                background-color: #0088BB;  /* Even darker blue for pressed */\n"
+"            }\n"
+"\n"
+" QLineEdit {\n"
+"                padding: 1px;\n"
+"                border: 1px solid #ccc;\n"
+"                font-size: 12px;\n"
+"                border-radius: 5px; /* Rounded corners */\n"
+"             \n"
+"            }\n"
+"          "
+                        "  QLineEdit:focus {\n"
+"                border: 1px solid #00AEEF; /* Blue border when focused */\n"
+"            }\n"
+"\n"
+"QComboBox,QDateEdit{\n"
+"   font-size: 12px;\n"
+"\n"
+"\n"
+"}\n"
+"\n"
+"          ")
+        self.actionDocumentation = QAction(MainWindow)
+        self.actionDocumentation.setObjectName(u"actionDocumentation")
+        self.actionSave_as_CSV = QAction(MainWindow)
+        self.actionSave_as_CSV.setObjectName(u"actionSave_as_CSV")
+        self.actionExit = QAction(MainWindow)
+        self.actionExit.setObjectName(u"actionExit")
+        self.actionDeveloper = QAction(MainWindow)
+        self.actionDeveloper.setObjectName(u"actionDeveloper")
+        self.centralwidget = QWidget(MainWindow)
+        self.centralwidget.setObjectName(u"centralwidget")
+        self.gridLayout_2 = QGridLayout(self.centralwidget)
+        self.gridLayout_2.setObjectName(u"gridLayout_2")
+        self.gridLayout = QGridLayout()
+        self.gridLayout.setObjectName(u"gridLayout")
+        self.frame_3 = QFrame(self.centralwidget)
+        self.frame_3.setObjectName(u"frame_3")
+        self.frame_3.setFrameShape(QFrame.Shape.StyledPanel)
+        self.frame_3.setFrameShadow(QFrame.Shadow.Raised)
+        self.horizontalLayout_4 = QHBoxLayout(self.frame_3)
+        self.horizontalLayout_4.setObjectName(u"horizontalLayout_4")
+        self.horizontalLayout_2 = QHBoxLayout()
+        self.horizontalLayout_2.setObjectName(u"horizontalLayout_2")
+        self.search_line_edit = QLineEdit(self.frame_3)
+        self.search_line_edit.setObjectName(u"search_line_edit")
+
+        self.horizontalLayout_2.addWidget(self.search_line_edit)
+
+        self.search_button = QPushButton(self.frame_3)
+        self.search_button.setObjectName(u"search_button")
+        icon = QIcon(QIcon.fromTheme(u"edit-find"))
+        self.search_button.setIcon(icon)
+
+        self.horizontalLayout_2.addWidget(self.search_button)
+
+
+        self.horizontalLayout_4.addLayout(self.horizontalLayout_2)
+
+
+        self.gridLayout.addWidget(self.frame_3, 1, 2, 1, 1)
+
+        self.frame_4 = QFrame(self.centralwidget)
+        self.frame_4.setObjectName(u"frame_4")
+        self.frame_4.setFrameShape(QFrame.Shape.StyledPanel)
+        self.frame_4.setFrameShadow(QFrame.Shadow.Raised)
+        self.horizontalLayout_6 = QHBoxLayout(self.frame_4)
+        self.horizontalLayout_6.setSpacing(20)
+        self.horizontalLayout_6.setObjectName(u"horizontalLayout_6")
+        self.horizontalLayout_6.setContentsMargins(6, -1, -1, -1)
+        self.branch_comboBox = QComboBox(self.frame_4)
+        self.branch_comboBox.setObjectName(u"branch_comboBox")
+
+        self.horizontalLayout_6.addWidget(self.branch_comboBox)
+
+        self.product_combobox = QComboBox(self.frame_4)
+        self.product_combobox.setObjectName(u"product_combobox")
+
+        self.horizontalLayout_6.addWidget(self.product_combobox)
+
+        self.district_comboBox = QComboBox(self.frame_4)
+        self.district_comboBox.setObjectName(u"district_comboBox")
+
+        self.horizontalLayout_6.addWidget(self.district_comboBox)
+
+        self.reset_filter = QPushButton(self.frame_4)
+        self.reset_filter.setObjectName(u"reset_filter")
+        icon1 = QIcon(QIcon.fromTheme(u"view-refresh"))
+        self.reset_filter.setIcon(icon1)
+
+        self.horizontalLayout_6.addWidget(self.reset_filter)
+
+        self.horizontalLayout_6.setStretch(0, 2)
+        self.horizontalLayout_6.setStretch(1, 2)
+        self.horizontalLayout_6.setStretch(2, 1)
+        self.horizontalLayout_6.setStretch(3, 1)
+
+        self.gridLayout.addWidget(self.frame_4, 1, 1, 1, 1)
+
+        self.frame_2 = QFrame(self.centralwidget)
+        self.frame_2.setObjectName(u"frame_2")
+        self.frame_2.setFrameShape(QFrame.Shape.StyledPanel)
+        self.frame_2.setFrameShadow(QFrame.Shadow.Raised)
+        self.horizontalLayout_5 = QHBoxLayout(self.frame_2)
+        self.horizontalLayout_5.setObjectName(u"horizontalLayout_5")
+        self.horizontalLayout = QHBoxLayout()
+        self.horizontalLayout.setObjectName(u"horizontalLayout")
+        self.label_2 = QLabel(self.frame_2)
+        self.label_2.setObjectName(u"label_2")
+
+        self.horizontalLayout.addWidget(self.label_2)
+
+        self.source_directory_line_edit = QLineEdit(self.frame_2)
+        self.source_directory_line_edit.setObjectName(u"source_directory_line_edit")
+
+        self.horizontalLayout.addWidget(self.source_directory_line_edit)
+
+        self.browse_button = QPushButton(self.frame_2)
+        self.browse_button.setObjectName(u"browse_button")
+        icon2 = QIcon(QIcon.fromTheme(u"folder"))
+        self.browse_button.setIcon(icon2)
+
+        self.horizontalLayout.addWidget(self.browse_button)
+
+
+        self.horizontalLayout_5.addLayout(self.horizontalLayout)
+
+        self.process_button = QPushButton(self.frame_2)
+        self.process_button.setObjectName(u"process_button")
+        icon3 = QIcon(QIcon.fromTheme(u"document-properties"))
+        self.process_button.setIcon(icon3)
+        self.process_button.setFlat(False)
+
+        self.horizontalLayout_5.addWidget(self.process_button)
+
+        self.merge_embossbutton = QPushButton(self.frame_2)
+        self.merge_embossbutton.setObjectName(u"merge_embossbutton")
+        icon4 = QIcon(QIcon.fromTheme(u"document-new"))
+        self.merge_embossbutton.setIcon(icon4)
+
+        self.horizontalLayout_5.addWidget(self.merge_embossbutton)
+
+
+        self.gridLayout.addWidget(self.frame_2, 1, 0, 1, 1)
+
+        self.tableWidget = QTableWidget(self.centralwidget)
+        if (self.tableWidget.columnCount() < 4):
+            self.tableWidget.setColumnCount(4)
+        __qtablewidgetitem = QTableWidgetItem()
+        self.tableWidget.setHorizontalHeaderItem(0, __qtablewidgetitem)
+        __qtablewidgetitem1 = QTableWidgetItem()
+        self.tableWidget.setHorizontalHeaderItem(1, __qtablewidgetitem1)
+        __qtablewidgetitem2 = QTableWidgetItem()
+        self.tableWidget.setHorizontalHeaderItem(2, __qtablewidgetitem2)
+        __qtablewidgetitem3 = QTableWidgetItem()
+        self.tableWidget.setHorizontalHeaderItem(3, __qtablewidgetitem3)
+        self.tableWidget.setObjectName(u"tableWidget")
+
+        self.gridLayout.addWidget(self.tableWidget, 3, 0, 1, 3)
+
+        self.horizontalLayout_3 = QHBoxLayout()
+        self.horizontalLayout_3.setObjectName(u"horizontalLayout_3")
+        self.label = QLabel(self.centralwidget)
+        self.label.setObjectName(u"label")
+        self.label.setMinimumSize(QSize(156, 146))
+        self.label.setMaximumSize(QSize(156, 156))
+        self.label.setPixmap(QPixmap(u":/images/images/companylogo.png"))
+        self.label.setScaledContents(True)
+
+        self.horizontalLayout_3.addWidget(self.label)
+
+        self.label_3 = QLabel(self.centralwidget)
+        self.label_3.setObjectName(u"label_3")
+        self.label_3.setMinimumSize(QSize(156, 156))
+        self.label_3.setMaximumSize(QSize(156, 156))
+        self.label_3.setPixmap(QPixmap(u":/images/images/applogo.png"))
+        self.label_3.setScaledContents(True)
+
+        self.horizontalLayout_3.addWidget(self.label_3)
+
+
+        self.gridLayout.addLayout(self.horizontalLayout_3, 0, 0, 1, 3)
+
+        self.gridLayout.setColumnStretch(0, 3)
+        self.gridLayout.setColumnStretch(1, 1)
+        self.gridLayout.setColumnStretch(2, 1)
+
+        self.gridLayout_2.addLayout(self.gridLayout, 0, 0, 1, 1)
+
+        MainWindow.setCentralWidget(self.centralwidget)
+        self.menubar = QMenuBar(MainWindow)
+        self.menubar.setObjectName(u"menubar")
+        self.menubar.setGeometry(QRect(0, 0, 1484, 33))
+        self.menuFile = QMenu(self.menubar)
+        self.menuFile.setObjectName(u"menuFile")
+        self.menuAbout = QMenu(self.menubar)
+        self.menuAbout.setObjectName(u"menuAbout")
+        self.menuHelp = QMenu(self.menubar)
+        self.menuHelp.setObjectName(u"menuHelp")
+        MainWindow.setMenuBar(self.menubar)
+        self.statusbar = QStatusBar(MainWindow)
+        self.statusbar.setObjectName(u"statusbar")
+        MainWindow.setStatusBar(self.statusbar)
+
+        self.menubar.addAction(self.menuFile.menuAction())
+        self.menubar.addAction(self.menuAbout.menuAction())
+        self.menubar.addAction(self.menuHelp.menuAction())
+        self.menuFile.addAction(self.actionSave_as_CSV)
+        self.menuFile.addAction(self.actionExit)
+        self.menuAbout.addAction(self.actionDeveloper)
+        self.menuHelp.addAction(self.actionDocumentation)
+
+        self.retranslateUi(MainWindow)
+
+        QMetaObject.connectSlotsByName(MainWindow)
+    # setupUi
+
+    def retranslateUi(self, MainWindow):
+        MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"MainWindow", None))
+        self.actionDocumentation.setText(QCoreApplication.translate("MainWindow", u"Documentation", None))
+        self.actionSave_as_CSV.setText(QCoreApplication.translate("MainWindow", u"Save as CSV", None))
+        self.actionExit.setText(QCoreApplication.translate("MainWindow", u"Exit ", None))
+        self.actionDeveloper.setText(QCoreApplication.translate("MainWindow", u"Developer", None))
+        self.search_button.setText(QCoreApplication.translate("MainWindow", u"Search", None))
+        self.branch_comboBox.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Branches", None))
+        self.product_combobox.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Products", None))
+        self.district_comboBox.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Districts", None))
+        self.reset_filter.setText(QCoreApplication.translate("MainWindow", u"Reset Filters", None))
+        self.label_2.setText(QCoreApplication.translate("MainWindow", u"Source Directory ", None))
+#if QT_CONFIG(tooltip)
+        self.browse_button.setToolTip(QCoreApplication.translate("MainWindow", u"choose path to Embossing File", None))
+#endif // QT_CONFIG(tooltip)
+        self.browse_button.setText(QCoreApplication.translate("MainWindow", u"Browse", None))
+#if QT_CONFIG(tooltip)
+        self.process_button.setToolTip(QCoreApplication.translate("MainWindow", u"Process Embossing File to CSV ", None))
+#endif // QT_CONFIG(tooltip)
+        self.process_button.setText(QCoreApplication.translate("MainWindow", u"Process CSV", None))
+#if QT_CONFIG(tooltip)
+        self.merge_embossbutton.setToolTip(QCoreApplication.translate("MainWindow", u"Merge Embossing file by Date", None))
+#endif // QT_CONFIG(tooltip)
+        self.merge_embossbutton.setText(QCoreApplication.translate("MainWindow", u"Merge Emboss", None))
+        ___qtablewidgetitem = self.tableWidget.horizontalHeaderItem(0)
+        ___qtablewidgetitem.setText(QCoreApplication.translate("MainWindow", u"4-digit + CVV", None));
+        ___qtablewidgetitem1 = self.tableWidget.horizontalHeaderItem(1)
+        ___qtablewidgetitem1.setText(QCoreApplication.translate("MainWindow", u"PAN", None));
+        ___qtablewidgetitem2 = self.tableWidget.horizontalHeaderItem(2)
+        ___qtablewidgetitem2.setText(QCoreApplication.translate("MainWindow", u"Expiry Date", None));
+        ___qtablewidgetitem3 = self.tableWidget.horizontalHeaderItem(3)
+        ___qtablewidgetitem3.setText(QCoreApplication.translate("MainWindow", u"Customer Name", None));
+        self.label.setText("")
+        self.label_3.setText("")
+        self.menuFile.setTitle(QCoreApplication.translate("MainWindow", u"File", None))
+        self.menuAbout.setTitle(QCoreApplication.translate("MainWindow", u"About", None))
+#if QT_CONFIG(tooltip)
+        self.menuHelp.setToolTip("")
+#endif // QT_CONFIG(tooltip)
+        self.menuHelp.setTitle(QCoreApplication.translate("MainWindow", u"Help", None))
+    # retranslateUi
+

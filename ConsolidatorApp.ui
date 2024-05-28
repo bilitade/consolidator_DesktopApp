@@ -6,15 +6,16 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1439</width>
-    <height>895</height>
+    <width>1535</width>
+    <height>999</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">QPushButton {
+   <string notr="true">
+QPushButton {
                 background-color: #00AEEF;  /* Primary color */
                 color: #ffffff;  /* Text color */
                 padding: 5px 10px;  /* Padding */
@@ -22,10 +23,12 @@
                 border-radius: 2px;  /* Remove border radius */
                 font-size: 1rem;  /* Font size */
                 margin: 0;  /* Remove margin */
+               font-size: 12px;
               
             }
             QPushButton:hover {
                 background-color: #0099CC;  /* Slightly darker blue for hover */
+
             }
             QPushButton:pressed {
                 background-color: #0088BB;  /* Even darker blue for pressed */
@@ -34,15 +37,16 @@
  QLineEdit {
                 padding: 1px;
                 border: 1px solid #ccc;
-                border-radius: 10px; /* Rounded corners */
-                font-size: 16px;
+                font-size: 12px;
+                border-radius: 5px; /* Rounded corners */
+             
             }
             QLineEdit:focus {
                 border: 1px solid #00AEEF; /* Blue border when focused */
             }
 
 QComboBox,QDateEdit{
-   font-size: 14px;
+   font-size: 12px;
 
 
 }
@@ -52,7 +56,7 @@ QComboBox,QDateEdit{
   <widget class="QWidget" name="centralwidget">
    <layout class="QGridLayout" name="gridLayout_2">
     <item row="0" column="0">
-     <layout class="QGridLayout" name="gridLayout" columnstretch="1,1,1">
+     <layout class="QGridLayout" name="gridLayout" columnstretch="3,1,1">
       <item row="1" column="2">
        <widget class="QFrame" name="frame_3">
         <property name="frameShape">
@@ -90,7 +94,7 @@ QComboBox,QDateEdit{
         <property name="frameShadow">
          <enum>QFrame::Shadow::Raised</enum>
         </property>
-        <layout class="QHBoxLayout" name="horizontalLayout_6">
+        <layout class="QHBoxLayout" name="horizontalLayout_6" stretch="2,2,1,1">
          <property name="spacing">
           <number>20</number>
          </property>
@@ -100,14 +104,21 @@ QComboBox,QDateEdit{
          <item>
           <widget class="QComboBox" name="branch_comboBox">
            <property name="placeholderText">
-            <string>Branch</string>
+            <string>Branches</string>
            </property>
           </widget>
          </item>
          <item>
           <widget class="QComboBox" name="product_combobox">
            <property name="placeholderText">
-            <string>Product</string>
+            <string>Products</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QComboBox" name="district_comboBox">
+           <property name="placeholderText">
+            <string>Districts</string>
            </property>
           </widget>
          </item>
@@ -147,6 +158,9 @@ QComboBox,QDateEdit{
            </item>
            <item>
             <widget class="QPushButton" name="browse_button">
+             <property name="toolTip">
+              <string>choose path to Embossing File</string>
+             </property>
              <property name="text">
               <string>Browse</string>
              </property>
@@ -159,14 +173,30 @@ QComboBox,QDateEdit{
          </item>
          <item>
           <widget class="QPushButton" name="process_button">
+           <property name="toolTip">
+            <string>Process Embossing File to CSV </string>
+           </property>
            <property name="text">
-            <string>Process</string>
+            <string>Process CSV</string>
            </property>
            <property name="icon">
             <iconset theme="document-properties"/>
            </property>
            <property name="flat">
             <bool>false</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="merge_embossbutton">
+           <property name="toolTip">
+            <string>Merge Embossing file by Date</string>
+           </property>
+           <property name="text">
+            <string>Merge Emboss</string>
+           </property>
+           <property name="icon">
+            <iconset theme="document-new"/>
            </property>
           </widget>
          </item>
@@ -260,7 +290,7 @@ QComboBox,QDateEdit{
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1439</width>
+     <width>1535</width>
      <height>33</height>
     </rect>
    </property>
@@ -278,6 +308,9 @@ QComboBox,QDateEdit{
     <addaction name="actionDeveloper"/>
    </widget>
    <widget class="QMenu" name="menuHelp">
+    <property name="toolTip">
+     <string extracomment="Merge Embossing FIle by Date"/>
+    </property>
     <property name="title">
      <string>Help</string>
     </property>

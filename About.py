@@ -6,7 +6,7 @@ class AboutDialog(QDialog, Ui_Dialog):
         super().__init__(parent)
         self.setupUi(self)
         self.setWindowTitle("About")
-        self.setFixedSize(557, 482)
+   
 
         # Connect the OK button to close the dialog
         self.buttonBox.accepted.connect(self.accept)
