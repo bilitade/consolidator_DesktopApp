@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1535</width>
-    <height>999</height>
+    <width>1379</width>
+    <height>946</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -56,32 +56,58 @@ QComboBox,QDateEdit{
   <widget class="QWidget" name="centralwidget">
    <layout class="QGridLayout" name="gridLayout_2">
     <item row="0" column="0">
-     <layout class="QGridLayout" name="gridLayout" columnstretch="3,1,1">
-      <item row="1" column="2">
-       <widget class="QFrame" name="frame_3">
+     <layout class="QGridLayout" name="gridLayout" columnstretch="3,0,0">
+      <item row="1" column="0">
+       <widget class="QFrame" name="frame_2">
         <property name="frameShape">
          <enum>QFrame::Shape::StyledPanel</enum>
         </property>
         <property name="frameShadow">
          <enum>QFrame::Shadow::Raised</enum>
         </property>
-        <layout class="QHBoxLayout" name="horizontalLayout_4">
+        <layout class="QHBoxLayout" name="horizontalLayout_5">
          <item>
-          <layout class="QHBoxLayout" name="horizontalLayout_2">
+          <layout class="QHBoxLayout" name="horizontalLayout">
            <item>
-            <widget class="QLineEdit" name="search_line_edit"/>
+            <widget class="QLabel" name="label_2">
+             <property name="text">
+              <string>Source Directory </string>
+             </property>
+            </widget>
            </item>
            <item>
-            <widget class="QPushButton" name="search_button">
+            <widget class="QLineEdit" name="source_directory_line_edit"/>
+           </item>
+           <item>
+            <widget class="QPushButton" name="browse_button">
+             <property name="toolTip">
+              <string>choose path to Embossing File</string>
+             </property>
              <property name="text">
-              <string>Search</string>
+              <string>Browse</string>
              </property>
              <property name="icon">
-              <iconset theme="edit-find"/>
+              <iconset theme="folder"/>
              </property>
             </widget>
            </item>
           </layout>
+         </item>
+         <item>
+          <widget class="QPushButton" name="process_button">
+           <property name="toolTip">
+            <string>Process Embossing File to CSV </string>
+           </property>
+           <property name="text">
+            <string>Process to CSV</string>
+           </property>
+           <property name="icon">
+            <iconset theme="document-properties"/>
+           </property>
+           <property name="flat">
+            <bool>false</bool>
+           </property>
+          </widget>
          </item>
         </layout>
        </widget>
@@ -133,98 +159,6 @@ QComboBox,QDateEdit{
           </widget>
          </item>
         </layout>
-       </widget>
-      </item>
-      <item row="1" column="0">
-       <widget class="QFrame" name="frame_2">
-        <property name="frameShape">
-         <enum>QFrame::Shape::StyledPanel</enum>
-        </property>
-        <property name="frameShadow">
-         <enum>QFrame::Shadow::Raised</enum>
-        </property>
-        <layout class="QHBoxLayout" name="horizontalLayout_5">
-         <item>
-          <layout class="QHBoxLayout" name="horizontalLayout">
-           <item>
-            <widget class="QLabel" name="label_2">
-             <property name="text">
-              <string>Source Directory </string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QLineEdit" name="source_directory_line_edit"/>
-           </item>
-           <item>
-            <widget class="QPushButton" name="browse_button">
-             <property name="toolTip">
-              <string>choose path to Embossing File</string>
-             </property>
-             <property name="text">
-              <string>Browse</string>
-             </property>
-             <property name="icon">
-              <iconset theme="folder"/>
-             </property>
-            </widget>
-           </item>
-          </layout>
-         </item>
-         <item>
-          <widget class="QPushButton" name="process_button">
-           <property name="toolTip">
-            <string>Process Embossing File to CSV </string>
-           </property>
-           <property name="text">
-            <string>Process CSV</string>
-           </property>
-           <property name="icon">
-            <iconset theme="document-properties"/>
-           </property>
-           <property name="flat">
-            <bool>false</bool>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QPushButton" name="merge_embossbutton">
-           <property name="toolTip">
-            <string>Merge Embossing file by Date</string>
-           </property>
-           <property name="text">
-            <string>Merge Emboss</string>
-           </property>
-           <property name="icon">
-            <iconset theme="document-new"/>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </widget>
-      </item>
-      <item row="3" column="0" colspan="3">
-       <widget class="QTableWidget" name="tableWidget">
-        <column>
-         <property name="text">
-          <string>4-digit + CVV</string>
-         </property>
-        </column>
-        <column>
-         <property name="text">
-          <string>PAN</string>
-         </property>
-        </column>
-        <column>
-         <property name="text">
-          <string>Expiry Date</string>
-         </property>
-        </column>
-        <column>
-         <property name="text">
-          <string>Customer Name</string>
-         </property>
-        </column>
        </widget>
       </item>
       <item row="0" column="0" colspan="3">
@@ -281,6 +215,59 @@ QComboBox,QDateEdit{
         </item>
        </layout>
       </item>
+      <item row="1" column="2">
+       <widget class="QFrame" name="frame_3">
+        <property name="frameShape">
+         <enum>QFrame::Shape::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Shadow::Raised</enum>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_4">
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_2">
+           <item>
+            <widget class="QLineEdit" name="search_line_edit"/>
+           </item>
+           <item>
+            <widget class="QPushButton" name="search_button">
+             <property name="text">
+              <string>Search</string>
+             </property>
+             <property name="icon">
+              <iconset theme="edit-find"/>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item row="3" column="0" colspan="3">
+       <widget class="QTableWidget" name="tableWidget">
+        <column>
+         <property name="text">
+          <string>4-digit + CVV</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>PAN</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Expiry Date</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Customer Name</string>
+         </property>
+        </column>
+       </widget>
+      </item>
      </layout>
     </item>
    </layout>
@@ -290,7 +277,7 @@ QComboBox,QDateEdit{
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1535</width>
+     <width>1379</width>
      <height>33</height>
     </rect>
    </property>
@@ -316,9 +303,18 @@ QComboBox,QDateEdit{
     </property>
     <addaction name="actionDocumentation"/>
    </widget>
+   <widget class="QMenu" name="menuMerges">
+    <property name="title">
+     <string>Emboss Merges</string>
+    </property>
+    <addaction name="actionBy_Date"/>
+    <addaction name="actionBy_Product"/>
+    <addaction name="actionBy_Date_Range"/>
+   </widget>
    <addaction name="menuFile"/>
    <addaction name="menuAbout"/>
    <addaction name="menuHelp"/>
+   <addaction name="menuMerges"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
   <action name="actionDocumentation">
@@ -339,6 +335,21 @@ QComboBox,QDateEdit{
   <action name="actionDeveloper">
    <property name="text">
     <string>Developer</string>
+   </property>
+  </action>
+  <action name="actionBy_Date">
+   <property name="text">
+    <string>By Date</string>
+   </property>
+  </action>
+  <action name="actionBy_Product">
+   <property name="text">
+    <string>By Product</string>
+   </property>
+  </action>
+  <action name="actionBy_Date_Range">
+   <property name="text">
+    <string>By  Date Range</string>
    </property>
   </action>
  </widget>

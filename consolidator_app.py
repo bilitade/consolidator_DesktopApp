@@ -1,12 +1,14 @@
 import sys
-from PySide6.QtWidgets import QApplication, QMainWindow, QTableWidgetItem, QTableWidget, QHeaderView, QFileDialog, QHBoxLayout, QDialog, QLabel, QVBoxLayout, QPushButton, QMessageBox
+from PySide6.QtWidgets import QApplication, QMainWindow, QTableWidgetItem, QHeaderView, QFileDialog, QMessageBox
 from PySide6.QtCore import Qt
 import csv
 import os
+
 from branch_list import get_branches
 from data_processor import DataProcessor
 from ConsolidatorApp_ui import Ui_MainWindow
 from About import AboutDialog
+from date_range_dialog import DateRangeDialog
 
 class ConsolidatorApp(QMainWindow, Ui_MainWindow):
     def __init__(self) -> None:
@@ -51,8 +53,9 @@ class ConsolidatorApp(QMainWindow, Ui_MainWindow):
         self.actionSave_as_CSV.triggered.connect(self.save_as_csv)
         self.actionExit.triggered.connect(self.exit_application)
         self.actionDeveloper.triggered.connect(self.show_about_dialog)
-        self.merge_embossbutton.clicked.connect(self.merge_files)
-        
+        self.actionBy_Date.triggered.connect(self.merge_files)
+        self.actionBy_Date_Range.triggered.connect(self.show_date_range_dialog)
+        self.actionBy_Product.triggered.connect(self.merge_files_by_product)
     def load_csv(self):
         filename = "./output.csv"
         if os.path.exists(filename):
@@ -191,6 +194,31 @@ class ConsolidatorApp(QMainWindow, Ui_MainWindow):
             QMessageBox.information(self, "Success", "Emboss merged by Date Successfully")
         else:
             QMessageBox.critical(self, "Error", result)
+    def show_date_range_dialog(self):
+        dialog = DateRangeDialog(self)
+        if dialog.exec():
+            start_date = dialog.start_date_edit.date().toPython()
+            end_date = dialog.end_date_edit.date().toPython()
+            self.merge_files_by_date_range(start_date, end_date)
+
+    def merge_files_by_date_range(self, start_date, end_date):
+        source_dir = self.source_directory_line_edit.text()
+        result = self.data_processor.merge_files_by_date_range( start_date, end_date,source_dir)
+        if "successfully" in result.lower():
+            QMessageBox.information(self, "Success", "Files merged by date range successfully")
+        else:
+            QMessageBox.critical(self, "Error", result)
+
+
+
+    def merge_files_by_product(self):
+        source_dir = self.source_directory_line_edit.text()
+        result = self.data_processor.merge_files_by_product(source_dir)
+        if "successfully" in result.lower():
+            QMessageBox.information(self, "Success", "Files merged by product successfully")
+        else:
+            QMessageBox.critical(self, "Error", result)
+
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)

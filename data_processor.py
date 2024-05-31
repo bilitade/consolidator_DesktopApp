@@ -105,57 +105,90 @@ class DataProcessor:
             rows = self.parse_file(input_file_name, input_directory, branch_data)
             all_rows.extend(rows)
 
-        output_file_name = os.path.join(self.base_directory, './output.csv')
+        output_file_name = os.path.join(self.base_directory, 'output.csv')
         self.save_to_csv(output_file_name, all_rows)
 
         print(f"All data has been processed and saved to '{output_file_name}'.")
         return "Process completed successfully"
-    
+
     def merge_files_by_date(self, specified_directory=None):
         input_directory = self.get_input_directory(specified_directory)
         if not os.path.exists(input_directory):
             return "No folder exists. Please select the appropriate folder."
 
-        # Get all files in the input directory
         all_files = os.listdir(input_directory)
         if not all_files:
             return "The folder is empty or does not contain any files."
 
-        # Dictionary to hold merged data categorized by date
         merged_data = {}
 
         for file_name in all_files:
-            # Extract the date from the file name
-            date_str = file_name.split('_')[4].split('.')[0]  # Assuming the date is the fifth part of the file name
+            date_str = file_name.split('_')[4].split('.')[0]
             try:
-                # Correct the year by adding "20" prefix
                 corrected_date_str = '20' + date_str[:6]
-                # Parse the date string to ensure it's valid
                 date = datetime.strptime(corrected_date_str, '%Y%m%d').date()
             except ValueError:
-                continue  # Skip files with invalid date formats
+                continue
 
-            # Read the file content
             file_path = os.path.join(input_directory, file_name)
             try:
                 with open(file_path, 'r') as file:
-                    file_data = file.read().strip()  # Strip any leading/trailing whitespace/newlines
+                    file_data = file.read().strip()
             except FileNotFoundError:
-                continue  # Skip files that can't be found
+                continue
 
-            # Add data to the corresponding date's list
             if date not in merged_data:
                 merged_data[date] = []
             merged_data[date].append(file_data)
 
-        # Create the merged output directory if it doesn't exist
-        merged_output_directory = os.path.join(self.base_directory, "Merged_embosses")
+        merged_output_directory = os.path.join(self.base_directory, "Merged_by_Date")
         os.makedirs(merged_output_directory, exist_ok=True)
 
-        # Merge files for each date and write to output files
         for date, data_list in merged_data.items():
             output_file_name = f"Emboss_file_{date.strftime('%Y_%m_%d')}.txt"
             output_file_path = os.path.join(merged_output_directory, output_file_name)
+
+            try:
+                with open(output_file_path, 'w') as output_file:
+                    for data in data_list:
+                        output_file.write(data + '\n')
+            except IOError as e:
+                return f"Error: Unable to write to '{output_file_path}'. {e}"
+
+        return "All files have been merged and saved successfully."
+
+    def merge_files_by_product(self, specified_directory=None):
+        input_directory = self.get_input_directory(specified_directory)
+        if not os.path.exists(input_directory):
+            return "No folder exists. Please make sure the 'inputfiles' folder exists."
+
+        merged_data = {}
+        all_files = os.listdir(input_directory)
+
+        for file_name in all_files:
+            parts = file_name.split('_')
+            if len(parts) < 5:
+                continue  # Skip files that don't match the expected format
+            
+            product_name = parts[2]
+            file_path = os.path.join(input_directory, file_name)
+
+            try:
+                with open(file_path, 'r') as file:
+                    file_data = file.read().strip()
+            except FileNotFoundError:
+                continue  # Skip files that can't be found
+
+            if product_name not in merged_data:
+                merged_data[product_name] = []
+            merged_data[product_name].append(file_data)
+
+        output_directory = os.path.join(self.base_directory, "Merged_By_Product")
+        os.makedirs(output_directory, exist_ok=True)
+
+        for product, data_list in merged_data.items():
+            output_file_name = f"Emboss_file_{product}.txt"
+            output_file_path = os.path.join(output_directory, output_file_name)
 
             try:
                 with open(output_file_path, 'w') as output_file:
@@ -164,57 +197,51 @@ class DataProcessor:
             except IOError as e:
                 return f"Error: Unable to write to '{output_file_path}'. {e}"
 
-        return "All files have been merged and saved successfully."
+        return "All files have been merged by product successfully."
+
+    def merge_files_by_date_range(self, start_date, end_date, specified_directory=None):
         input_directory = self.get_input_directory(specified_directory)
         if not os.path.exists(input_directory):
             return "No folder exists. Please select the appropriate folder."
 
-        # Get all files in the input directory
         all_files = os.listdir(input_directory)
         if not all_files:
             return "The folder is empty or does not contain any files."
 
-        # Dictionary to hold merged data categorized by date
-        merged_data = {}
+        merged_data = []
 
         for file_name in all_files:
-            # Extract the date from the file name
-            date_str = file_name.split('_')[4].split('.')[0]  # Assuming the date is the fifth part of the file name
+            date_str = file_name.split('_')[4].split('.')[0]
             try:
-                # Correct the year by adding "20" prefix
                 corrected_date_str = '20' + date_str[:6]
-                # Parse the date string to ensure it's valid
                 date = datetime.strptime(corrected_date_str, '%Y%m%d').date()
             except ValueError:
-                continue  # Skip files with invalid date formats
+                continue
 
-            # Read the file content
-            file_path = os.path.join(input_directory, file_name)
-            try:
-                with open(file_path, 'r') as file:
-                    file_data = file.read().strip()  # Strip any leading/trailing whitespace/newlines
-            except FileNotFoundError:
-                continue  # Skip files that can't be found
+            if start_date <= date <= end_date:
+                file_path = os.path.join(input_directory, file_name)
+                try:
+                    with open(file_path, 'r') as file:
+                        file_data = file.read().strip()
+                        merged_data.append(file_data)
+                except FileNotFoundError:
+                    continue
 
-            # Add data to the corresponding date's list
-            if date not in merged_data:
-                merged_data[date] = []
-            merged_data[date].append(file_data)
+        output_directory = os.path.join(self.base_directory, "Merged_by_date_range")
+        os.makedirs(output_directory, exist_ok=True)
 
-        # Create the merged output directory if it doesn't exist
-        merged_output_directory = os.path.join(self.base_directory, "Merged_embosses")
-        os.makedirs(merged_output_directory, exist_ok=True)
+        output_file_name = f"Emboss_file_{start_date.strftime('%Y%m%d')}-{end_date.strftime('%Y%m%d')}.txt"
+        output_file_path = os.path.join(output_directory, output_file_name)
 
-        # Merge files for each date and write to output files
-        for date, data_list in merged_data.items():
-            output_file_name = f"Emboss_file_{date.strftime('%Y_%m_%d')}.txt"
-            output_file_path = os.path.join(merged_output_directory, output_file_name)
+        try:
+            with open(output_file_path, 'w') as output_file:
+                for data in merged_data:
+                    output_file.write(data + '\n')
+        except IOError as e:
+            return f"Error: Unable to write to '{output_file_path}'. {e}"
 
-            try:
-                with open(output_file_path, 'w') as output_file:
-                    for data in data_list:
-                        output_file.write(data)
-            except IOError as e:
-                return f"Error: Unable to write to '{output_file_path}'. {e}"
+        return f"All files within the date range have been successfully merged and saved to '{output_file_path}'."
 
-        return "All files have been merged and saved successfully."
+
+
+
