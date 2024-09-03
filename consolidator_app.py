@@ -113,7 +113,7 @@ class ConsolidatorApp(QMainWindow, Ui_MainWindow):
 
     def populate_product_filter(self):
         self.product_combobox.clear()
-        product_options = ["All Product", "GAMTA", "HAIFB"]
+        product_options = ["All Product", "GAMTA", "HAIFB","DEPON"]
         self.product_combobox.addItems(product_options)
 
     def populate_branch_filter(self):
