@@ -144,8 +144,9 @@ class DataProcessor:
         merged_output_directory = os.path.join(self.base_directory, "Merged_by_Date")
         os.makedirs(merged_output_directory, exist_ok=True)
 
+        timestamp = datetime.now().strftime('%Y%m%d%H%M%S')
         for date, data_list in merged_data.items():
-            output_file_name = f"PersoFile_00006_{date.strftime('%Y_%m_%d')}.txt"
+            output_file_name = f"PersoFile_00006_{date.strftime('%Y_%m_%d')}.{timestamp}"
             output_file_path = os.path.join(merged_output_directory, output_file_name)
 
             try:
@@ -186,8 +187,9 @@ class DataProcessor:
         output_directory = os.path.join(self.base_directory, "Merged_By_Product")
         os.makedirs(output_directory, exist_ok=True)
 
+        timestamp = datetime.now().strftime('%Y%m%d%H%M%S')
         for product, data_list in merged_data.items():
-            output_file_name = f"PersoFile_00006_{product}.txt"
+            output_file_name = f"PersoFile_00006_{product}.{timestamp}"
             output_file_path = os.path.join(output_directory, output_file_name)
 
             try:
@@ -230,7 +232,8 @@ class DataProcessor:
         output_directory = os.path.join(self.base_directory, "Merged_by_date_range")
         os.makedirs(output_directory, exist_ok=True)
 
-        output_file_name = f"PersoFile_00006_{start_date.strftime('%Y%m%d')}-{end_date.strftime('%Y%m%d')}.txt"
+        timestamp = datetime.now().strftime('%Y%m%d%H%M%S')
+        output_file_name = f"PersoFile_00006_{start_date.strftime('%Y%m%d')}-{end_date.strftime('%Y%m%d')}.{timestamp}"
         output_file_path = os.path.join(output_directory, output_file_name)
 
         try:
