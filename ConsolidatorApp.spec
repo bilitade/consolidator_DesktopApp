@@ -40,6 +40,7 @@ exe = EXE(
     codesign_identity=None,
     entitlements_file=None,
     icon='./icon.ico',
+    version='./app_version.txt', 
     description='Card Embossing file ConsolidatorApp App, Use Full to automate card identification packing , reporting  and merging embossing file ',  
     company_name='Cooperative Bank of Oromia',  
     copyright='© 2024 Cooperative Bank of Oromia. All rights reserved.',  

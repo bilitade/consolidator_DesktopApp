@@ -2,7 +2,7 @@ import pandas as pd
 import json
 
 # Load the CSV file into a DataFrame
-csv_file_path = 'branch_district_id.csv'
+csv_file_path = 'branch_distict_code_latest.csv'
 df = pd.read_csv(csv_file_path)
 
 # Create a dictionary to hold the data
